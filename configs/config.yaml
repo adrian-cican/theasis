@@ -1,0 +1,16 @@
+data:
+  raw_dir: data/raw
+  processed_dir: data/processed
+  external_dir: data/external
+
+features:
+  sample_rule: 1min
+  max_lag_minutes: 180
+
+model:
+  name: isolation_forest
+  random_state: 42
+
+experiments:
+  root_dir: experiments
+
