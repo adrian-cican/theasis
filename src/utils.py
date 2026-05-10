@@ -29,38 +29,19 @@ pump_power_cols = ["VSD-901_POWER"]
 pump_rpm_cols = ["VSD-901_RPM"]
 pump_speed_cols = ["VSD-901_SPEED"]
 
+# Columns that can be perturbed
+NUMERIC_COLS = [
+    "FT-201", "FT-801", "FT-901",
+    "PT-901", "PT-902", "PT-903",
+    "TT-901", "TT-902", "TT-903", "TT-904",
+    "VSD-901_CORRENT", "VSD-901_POWER", "VSD-901_RPM", "VSD-901_SPEED",
+]
 
-
-
-def inject_realistic_fault(df, anchor_col, target_value, start_perc=0.7):
-    df_faulty = df.copy()
-    n = len(df_faulty)
-    start_idx = int(n * start_perc)
-    
-    # 1. Calcular correlações da coluna âncora com as outras
-    corr_matrix = df.corr()[anchor_col]
-    
-    # 2. Calcular o Delta necessário para o âncora chegar ao target (ex: Warning level)
-    current_val = df_faulty[anchor_col].iloc[start_idx]
-    total_delta = target_value - current_val
-    
-    # 3. Gerar a rampa de falha
-    ramp = np.linspace(0, total_delta, n - start_idx)
-    
-    # 4. Injetar no âncora e propagar para os outros baseado na correlação
-    for col in df_faulty.columns:
-        if col in TAG_INFO: # Apenas sensores reais
-            r = corr_matrix[col]
-            # Só propagamos se a correlação for minimamente relevante (> 0.3)
-            if abs(r) > 0.3:
-                # O sinal (+ ou -) da correlação garante que se um sobe, 
-                # o outro sobe ou desce conforme o comportamento real
-                df_faulty.iloc[start_idx:, df_faulty.columns.get_loc(col)] += ramp * r
-                
-    df_faulty['is_anomaly'] = 0
-    df_faulty.iloc[start_idx:, df_faulty.columns.get_loc('is_anomaly')] = 1
-    
-    return df_faulty
-
-# Exemplo: Simular aquecimento excessivo (TT-904 a chegar ao Warning de 90ºC)
-#dict_sessions[17] = inject_realistic_fault(dict_sessions[17], anchor_col="TT-904", target_value=90)
+# Warning / trip thresholds
+THRESHOLDS = {
+    "TT-901": {"warning": 135, "trip": 140},
+    "TT-902": {"warning": 105, "trip": 110},
+    "TT-903": {"warning": 105, "trip": 110},
+    "TT-904": {"warning":  90, "trip": 110},
+    "PT-903": {"warning":  0.4, "trip":  0.5},   # mbar
+}
