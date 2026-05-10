@@ -43,5 +43,6 @@ THRESHOLDS = {
     "TT-902": {"warning": 105, "trip": 110},
     "TT-903": {"warning": 105, "trip": 110},
     "TT-904": {"warning":  90, "trip": 110},
-    "PT-903": {"warning":  0.4, "trip":  0.5},   # mbar
+    "PT-903": {"warning":  0.4, "trip":  0.5},
+    "PT-901": {"warning":  0.4, "trip":  0.5},
 }

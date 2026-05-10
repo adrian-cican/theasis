@@ -3,6 +3,15 @@ import numpy as np
 from utils import THRESHOLDS
 
 def fault_injection(df: pd.DataFrame, main_sensor, length_time: float, start_from: float) -> pd.DataFrame:
+    """
+    Fault injection logic.
+    Propagates the error to sensors with correlation |r| >= 0.50
+    :param df:
+    :param main_sensor:
+    :param length_time:
+    :param start_from:
+    :return:
+    """
     warning_level = THRESHOLDS[main_sensor]["warning"]
     trip_level = THRESHOLDS[main_sensor]["trip"]
 
@@ -16,31 +25,8 @@ def fault_injection(df: pd.DataFrame, main_sensor, length_time: float, start_fro
     # Calculate the Pearson Correlation of the main sensor
     corr = data.corr(method="pearson", numeric_only=True)[main_sensor]
 
-
-
-def f1_fault(df: pd.DataFrame, length_time: float, start_from: float) -> pd.DataFrame:
-    """
-        Simulates Clogged Exhaust Filters:
-        - Main sensor affected: PT-903
-        - Propagates the error to sensors with correlation |r| >= 0.50
-    """
-
-    warning_level = THRESHOLDS["PT-903"]["warning"]
-    trip_level = THRESHOLDS["PT-903"]["trip"]
-
-    data        = df.copy()
-    n           = len(data)
-    start_idx   = int(round(n * start_from))        # Starting sample
-    length_min  = int(round(length_time * 60))      # Nº of samples we need to change (if we don't run out of samples)
-    end_idx     = min(start_idx + length_min, n)    # Ending sample
-    total_l     = end_idx - start_idx               # Nº of samples we will actually change
-
-
-    # Calculate the Pearson Correlation of the main sensor
-    corr = data.corr(method="pearson", numeric_only=True)["PT-903"]
-
     # Create the error trend
-    avg     = data["PT-903"].iloc[start_idx: start_idx + 10].mean()
+    avg     = data[main_sensor].iloc[start_idx: start_idx + 10].mean()
     delta   = trip_level - avg
     trend   = np.linspace(0, delta, total_l)
     noise   = np.random.normal(0, delta * 0.15, total_l)
@@ -57,7 +43,7 @@ def f1_fault(df: pd.DataFrame, length_time: float, start_from: float) -> pd.Data
     # Add a label to keep the anomaly state
     # 0 - No anomaly; 1 - Under de warning level; 2 - Above warning level
     data['anomaly_level']                                               = 0
-    injected_values                                                     = data["PT-903"].iloc[start_idx:end_idx]
+    injected_values                                                     = data[main_sensor].iloc[start_idx:end_idx]
     labels                                                              = np.where(injected_values >= warning_level, 2, 1)
     data.iloc[start_idx:end_idx, data.columns.get_loc('anomaly_level')] = labels
 
@@ -69,19 +55,42 @@ def f1_fault(df: pd.DataFrame, length_time: float, start_from: float) -> pd.Data
 
     return data
 
+
+def f1_fault(df: pd.DataFrame, length_time: float, start_from: float) -> pd.DataFrame:
+    """
+        Simulates Clogged Exhaust Filters:
+        - Main sensor affected: PT-903
+    """
+    return fault_injection(df, "PT-903", length_time, start_from)
+
 def f2_fault(df: pd.DataFrame, length_time: float, start_from: float) -> pd.DataFrame:
     """
         Simulates Insufficient Cooling:
         - Main sensor affected: TT-904
-        - Propagates the error to sensors with correlation |r| >= 0.50
     """
+    return fault_injection(df, "TT-904", length_time, start_from)
 
-    warning_level = THRESHOLDS["TT-904"]["warning"]
-    trip_level = THRESHOLDS["TT-904"]["trip"]
+# TODO: implement F3 (needs review)
 
-    data        = df.copy()
-    n           = len(data)
-    start_idx   = int(round(n * start_from))        # Starting sample
-    length_min  = int(round(length_time * 60))      # Nº of samples we need to change (if we don't run out of samples)
-    end_idx     = min(start_idx + length_min, n)    # Ending sample
-    total_l     = end_idx - start_idx               # Nº of samples we will actually change
+def f3_fault(df: pd.DataFrame, length_time: float, start_from: float) -> pd.DataFrame:
+    """
+        Simulates Float Valve Fault:
+        -
+    """
+    return fault_injection(df, "TT-904", length_time, start_from)
+
+
+# TODO: Needs Adjustments in the Warning/Trips Signals (Check with Helder)
+def f4_fault(df: pd.DataFrame, length_time: float, start_from: float) -> pd.DataFrame:
+    """
+        Simulates Clogged Inlet Filter:
+        - Main sensor affected: PT-901
+    """
+    return fault_injection(df, "PT-901", length_time, start_from)
+
+def f5_fault(df: pd.DataFrame, length_time: float, start_from: float) -> pd.DataFrame:
+    """
+        Simulates Defective Bearings:
+        - Main sensor affected: TT-904 (Fast localized Spike)
+    """
+    return fault_injection(df, "TT-904", length_time, start_from)
