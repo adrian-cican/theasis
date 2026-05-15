@@ -29,6 +29,8 @@ pump_power_cols = ["VSD-901_POWER"]
 pump_rpm_cols = ["VSD-901_RPM"]
 pump_speed_cols = ["VSD-901_SPEED"]
 
+pump_sensors = ['PT-903', 'TT-901', 'TT-902', 'TT-903', 'TT-904', 'VSD-901_CORRENT', 'VSD-901_POWER', 'VSD-901_RPM', 'LS-901']
+
 # Columns that can be perturbed
 NUMERIC_COLS = [
     "FT-201", "FT-801", "FT-901",
