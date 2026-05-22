@@ -1,4 +1,4 @@
-"""Shared utility functions."""
+""" Shared utility functions and constants """
 
 TAG_INFO = {
     "FT-201": {"label": "Biogas inlet flow", "unit": "Nm3/h"},
@@ -19,26 +19,6 @@ TAG_INFO = {
     "LS-901": {"label": "Oil level sensor", "unit": "true/false"},
 }
 
-pressure_cols = ["PT-901", "PT-902", "PT-903"]
-temp_cols = ["TT-901", "TT-902", "TT-903", "TT-904"]
-flow_cols = ["FT-201", "FT-801", "FT-901"]
-
-pump_oil_level_cols = ["LS-901"]
-pump_current_cols = ["VSD-901_CORRENT"]
-pump_power_cols = ["VSD-901_POWER"]
-pump_rpm_cols = ["VSD-901_RPM"]
-pump_speed_cols = ["VSD-901_SPEED"]
-
-pump_sensors = ['PT-903', 'TT-901', 'TT-902', 'TT-903', 'TT-904', 'VSD-901_CORRENT', 'VSD-901_POWER', 'VSD-901_RPM', 'LS-901']
-
-# Columns that can be perturbed
-NUMERIC_COLS = [
-    "FT-201", "FT-801", "FT-901",
-    "PT-901", "PT-902", "PT-903",
-    "TT-901", "TT-902", "TT-903", "TT-904",
-    "VSD-901_CORRENT", "VSD-901_POWER", "VSD-901_RPM", "VSD-901_SPEED",
-]
-
 # Warning / trip thresholds
 THRESHOLDS = {
     "TT-901": {"warning": 135, "trip": 140},
@@ -46,5 +26,4 @@ THRESHOLDS = {
     "TT-903": {"warning": 105, "trip": 110},
     "TT-904": {"warning":  90, "trip": 110},
     "PT-903": {"warning":  0.4, "trip":  0.5},
-    "PT-901": {"warning":  0.4, "trip":  0.5},
 }
