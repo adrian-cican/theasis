@@ -1,7 +1,0 @@
-{
-  "n_estimators": 200,
-  "contamination": 0.01,
-  "max_samples": 256,
-  "scaler": "StandardScaler",
-  "random_state": 42
-}
