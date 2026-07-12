@@ -1,0 +1,61 @@
+\begin{thebibliography}{11}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Cerqueus et~al.(2025)Cerqueus, Dolgui, Ivanov, Klimtchik, Lemoine, and Pashkevich]{Cerqueus2025}
+Audrey Cerqueus, Alexandre Dolgui, Dmitry Ivanov, Alexandr Klimtchik, David Lemoine, and Anatol Pashkevich.
+\newblock Applications of artificial intelligence in industry 4.0 and smart manufacturing.
+\newblock \emph{Engineering Applications of Artificial Intelligence}, page 110509, June 2025.
+
+\bibitem[Golec et~al.(2025)Golec, Hatay, Gill, and Buyya]{Golec2025}
+Muhammed Golec, Emir~Sahin Hatay, Sukhpal~Singh Gill, and Rajkumar Buyya.
+\newblock Artificial {Intelligence} ({AI}): {Foundations}, trends and future directions.
+\newblock \emph{Telematics and Informatics Reports}, page 100265, December 2025.
+
+\bibitem[{International Energy Agency}(2020)]{InternationalEnergyAgency2020}
+{International Energy Agency}.
+\newblock \emph{Outlook for biogas and biomethane: Prospects for organic growth}.
+\newblock {OECD}, March 2020.
+
+\bibitem[Krizhevsky et~al.(2012)Krizhevsky, Sutskever, and Hinton]{Alex2012}
+Alex Krizhevsky, Ilya Sutskever, and Geoffrey~E Hinton.
+\newblock {ImageNet} classification with deep convolutional neural networks.
+\newblock \emph{Advances in Neural Information Processing Systems}, 2012.
+
+\bibitem[{LeCun} et~al.(2015){LeCun}, Bengio, and Hinton]{Lecun2015}
+Yann {LeCun}, Yoshua Bengio, and Geoffrey Hinton.
+\newblock Deep learning.
+\newblock \emph{Nature}, pages 436--444, May 2015.
+
+\bibitem[Naquash et~al.(2025)Naquash, Hameed, Qyyum, Khan, Al-Muhtaseb, Riaz, and Lee]{Naquash2025}
+Ahmad Naquash, Zeeshan Hameed, Muhammad~Abdul Qyyum, Zakir Khan, Ala’a~H. Al-Muhtaseb, Amjad Riaz, and Moonyong Lee.
+\newblock Biohydrogen and biomethane production from biomass gasification: Compositional analysis, recent advancements, challenges, and prospects.
+\newblock \emph{Process Safety and Environmental Protection}, pages 1526--1537, February 2025.
+
+\bibitem[{OpenAI} et~al.(2024){OpenAI}, Achiam, Adler, Agarwal, Ahmad, Akkaya, Aleman, Almeida, Altenschmidt, Altman, Anadkat, Avila, Babuschkin, Balaji, Balcom, Baltescu, Bao, Bavarian, Belgum, Bello, Berdine, Bernadett-Shapiro, Berner, Bogdonoff, Boiko, Boyd, Brakman, Brockman, Brooks, Brundage, Button, Cai, Campbell, Cann, Carey, Carlson, Carmichael, Chan, Chang, Chantzis, Chen, Chen, Chen, Chen, Chen, Chess, Cho, Chu, Chung, Cummings, Currier, Dai, Decareaux, Degry, Deutsch, Deville, Dhar, Dohan, Dowling, Dunning, Ecoffet, Eleti, Eloundou, Farhi, Fedus, Felix, Fishman, Forte, Fulford, Gao, Georges, Gibson, Goel, Gogineni, Goh, Gontijo-Lopes, Gordon, Grafstein, Gray, Greene, Gross, Gu, Guo, Hallacy, Han, Harris, He, Heaton, Heidecke, Hesse, Hickey, Hickey, Hoeschele, Houghton, Hsu, Hu, Hu, Huizinga, Jain, Jain, Jang, Jiang, Jiang, Jin, Jin, Jomoto, Jonn, Jun, Kaftan, Kaiser, Kamali, Kanitscheider, Keskar, Khan, Kilpatrick, Kim, Kim, Kim, Kirchner, Kiros, Knight, Kokotajlo, Kondraciuk, Kondrich, Konstantinidis, Kosic, Krueger, Kuo, Lampe, Lan, Lee, Leike, Leung, Levy, Li, Lim, Lin, Lin, Litwin, Lopez, Lowe, Lue, Makanju, Malfacini, Manning, Markov, Markovski, Martin, Mayer, Mayne, {McGrew}, {McKinney}, {McLeavey}, {McMillan}, {McNeil}, Medina, Mehta, Menick, Metz, Mishchenko, Mishkin, Monaco, Morikawa, Mossing, Mu, Murati, Murk, Mély, Nair, Nakano, Nayak, Neelakantan, Ngo, Noh, Ouyang, O'Keefe, Pachocki, Paino, Palermo, Pantuliano, Parascandolo, Parish, Parparita, Passos, Pavlov, Peng, Perelman, Peres, Petrov, Pinto, Michael, Pokorny, Pokrass, Pong, Powell, Power, Power, Proehl, Puri, Radford, Rae, Ramesh, Raymond, Real, Rimbach, Ross, Rotsted, Roussez, Ryder, Saltarelli, Sanders, Santurkar, Sastry, Schmidt, Schnurr, Schulman, Selsam, Sheppard, Sherbakov, Shieh, Shoker, Shyam, Sidor, Sigler, Simens, Sitkin, Slama, Sohl, Sokolowsky, Song, Staudacher, Such, Summers, Sutskever, Tang, Tezak, Thompson, Tillet, Tootoonchian, Tseng, Tuggle, Turley, Tworek, Uribe, Vallone, Vijayvergiya, Voss, Wainwright, Wang, Wang, Wang, Ward, Wei, Weinmann, Welihinda, Welinder, Weng, Weng, Wiethoff, Willner, Winter, Wolrich, Wong, Workman, Wu, Wu, Wu, Xiao, Xu, Yoo, Yu, Yuan, Zaremba, Zellers, Zhang, Zhang, Zhao, Zheng, Zhuang, Zhuk, and Zoph]{OpenAI2024}
+{OpenAI}, Josh Achiam, Steven Adler, Sandhini Agarwal, Lama Ahmad, Ilge Akkaya, Florencia~Leoni Aleman, Diogo Almeida, Janko Altenschmidt, Sam Altman, Shyamal Anadkat, Red Avila, Igor Babuschkin, Suchir Balaji, Valerie Balcom, Paul Baltescu, Haiming Bao, Mohammad Bavarian, Jeff Belgum, Irwan Bello, Jake Berdine, Gabriel Bernadett-Shapiro, Christopher Berner, Lenny Bogdonoff, Oleg Boiko, Madelaine Boyd, Anna-Luisa Brakman, Greg Brockman, Tim Brooks, Miles Brundage, Kevin Button, Trevor Cai, Rosie Campbell, Andrew Cann, Brittany Carey, Chelsea Carlson, Rory Carmichael, Brooke Chan, Che Chang, Fotis Chantzis, Derek Chen, Sully Chen, Ruby Chen, Jason Chen, Mark Chen, Ben Chess, Chester Cho, Casey Chu, Hyung~Won Chung, Dave Cummings, Jeremiah Currier, Yunxing Dai, Cory Decareaux, Thomas Degry, Noah Deutsch, Damien Deville, Arka Dhar, David Dohan, Steve Dowling, Sheila Dunning, Adrien Ecoffet, Atty Eleti, Tyna Eloundou, David Farhi, Liam Fedus, Niko Felix, Simón~Posada Fishman, Juston Forte, Isabella Fulford, Leo Gao, Elie Georges, Christian Gibson, Vik Goel, Tarun Gogineni, Gabriel Goh, Rapha Gontijo-Lopes, Jonathan Gordon, Morgan Grafstein, Scott Gray, Ryan Greene, Joshua Gross, Shixiang~Shane Gu, Yufei Guo, Chris Hallacy, Jesse Han, Jeff Harris, Yuchen He, Mike Heaton, Johannes Heidecke, Chris Hesse, Alan Hickey, Wade Hickey, Peter Hoeschele, Brandon Houghton, Kenny Hsu, Shengli Hu, Xin Hu, Joost Huizinga, Shantanu Jain, Shawn Jain, Joanne Jang, Angela Jiang, Roger Jiang, Haozhun Jin, Denny Jin, Shino Jomoto, Billie Jonn, Heewoo Jun, Tomer Kaftan, Łukasz Kaiser, Ali Kamali, Ingmar Kanitscheider, Nitish~Shirish Keskar, Tabarak Khan, Logan Kilpatrick, Jong~Wook Kim, Christina Kim, Yongjik Kim, Jan~Hendrik Kirchner, Jamie Kiros, Matt Knight, Daniel Kokotajlo, Łukasz Kondraciuk, Andrew Kondrich, Aris Konstantinidis, Kyle Kosic, Gretchen Krueger, Vishal Kuo, Michael Lampe, Ikai Lan, Teddy Lee, Jan Leike, Jade Leung, Daniel Levy, Chak~Ming Li, Rachel Lim, Molly Lin, Stephanie Lin, Mateusz Litwin, Theresa Lopez, Ryan Lowe, Patricia Lue, Anna Makanju, Kim Malfacini, Sam Manning, Todor Markov, Yaniv Markovski, Bianca Martin, Katie Mayer, Andrew Mayne, Bob {McGrew}, Scott~Mayer {McKinney}, Christine {McLeavey}, Paul {McMillan}, Jake {McNeil}, David Medina, Aalok Mehta, Jacob Menick, Luke Metz, Andrey Mishchenko, Pamela Mishkin, Vinnie Monaco, Evan Morikawa, Daniel Mossing, Tong Mu, Mira Murati, Oleg Murk, David Mély, Ashvin Nair, Reiichiro Nakano, Rajeev Nayak, Arvind Neelakantan, Richard Ngo, Hyeonwoo Noh, Long Ouyang, Cullen O'Keefe, Jakub Pachocki, Alex Paino, Joe Palermo, Ashley Pantuliano, Giambattista Parascandolo, Joel Parish, Emy Parparita, Alex Passos, Mikhail Pavlov, Andrew Peng, Adam Perelman, Filipe de Avila~Belbute Peres, Michael Petrov, Henrique Ponde de~Oliveira Pinto, Michael, Pokorny, Michelle Pokrass, Vitchyr~H. Pong, Tolly Powell, Alethea Power, Boris Power, Elizabeth Proehl, Raul Puri, Alec Radford, Jack Rae, Aditya Ramesh, Cameron Raymond, Francis Real, Kendra Rimbach, Carl Ross, Bob Rotsted, Henri Roussez, Nick Ryder, Mario Saltarelli, Ted Sanders, Shibani Santurkar, Girish Sastry, Heather Schmidt, David Schnurr, John Schulman, Daniel Selsam, Kyla Sheppard, Toki Sherbakov, Jessica Shieh, Sarah Shoker, Pranav Shyam, Szymon Sidor, Eric Sigler, Maddie Simens, Jordan Sitkin, Katarina Slama, Ian Sohl, Benjamin Sokolowsky, Yang Song, Natalie Staudacher, Felipe~Petroski Such, Natalie Summers, Ilya Sutskever, Jie Tang, Nikolas Tezak, Madeleine~B. Thompson, Phil Tillet, Amin Tootoonchian, Elizabeth Tseng, Preston Tuggle, Nick Turley, Jerry Tworek, Juan Felipe~Cerón Uribe, Andrea Vallone, Arun Vijayvergiya, Chelsea Voss, Carroll Wainwright, Justin~Jay Wang, Alvin Wang, Ben Wang, Jonathan Ward, Jason Wei, C.~J. Weinmann, Akila Welihinda, Peter Welinder, Jiayi Weng, Lilian Weng, Matt Wiethoff, Dave Willner, Clemens Winter, Samuel Wolrich, Hannah Wong, Lauren Workman, Sherwin Wu, Jeff Wu, Michael Wu, Kai Xiao, Tao Xu, Sarah Yoo, Kevin Yu, Qiming Yuan, Wojciech Zaremba, Rowan Zellers, Chong Zhang, Marvin Zhang, Shengjia Zhao, Tianhao Zheng, Juntang Zhuang, William Zhuk, and Barret Zoph.
+\newblock {GPT}-4 technical report, March 2024.
+
+\bibitem[Sajadieh et~al.(2026)Sajadieh, Fattorini, Perrault, Gil, Parli, Santarlasci, Pava, Maslej, Altman, Brynjolfsson, Brodley, Clark, Dignum, Kumar, Landay, Lyons, Manyika, Niebles, Shoham, Tabassi, Wald, Walsh, and Weld]{Sajadieh2026}
+Sha Sajadieh, Loredana Fattorini, Raymond Perrault, Yolanda Gil, Vanessa Parli, Lapo Santarlasci, Juan Pava, Nestor Maslej, Russ Altman, Erik Brynjolfsson, Carla Brodley, Jack Clark, Virginia Dignum, Vipin Kumar, James Landay, Terah Lyons, James Manyika, Juan~Carlos Niebles, Yoav Shoham, Elham Tabassi, Russell Wald, Toby Walsh, and Dan Weld.
+\newblock Artificial intelligence index report 2026, June 2026.
+
+\bibitem[Shah et~al.(2021)Shah, Ahmad, Pant, and Vijay]{Shah2021}
+Goldy Shah, Ejaz Ahmad, K.K. Pant, and V.K. Vijay.
+\newblock Comprehending the contemporary state of art in biogas enrichment and {CO}2 capture technologies via swing adsorption.
+\newblock \emph{International Journal of Hydrogen Energy}, pages 6588--6612, February 2021.
+
+\bibitem[Silver et~al.(2016)Silver, Huang, Maddison, Guez, Sifre, van~den Driessche, Schrittwieser, Antonoglou, Panneershelvam, Lanctot, Dieleman, Grewe, Nham, Kalchbrenner, Sutskever, Lillicrap, Leach, Kavukcuoglu, Graepel, and Hassabis]{Silver2016}
+David Silver, Aja Huang, Chris~J. Maddison, Arthur Guez, Laurent Sifre, George van~den Driessche, Julian Schrittwieser, Ioannis Antonoglou, Veda Panneershelvam, Marc Lanctot, Sander Dieleman, Dominik Grewe, John Nham, Nal Kalchbrenner, Ilya Sutskever, Timothy Lillicrap, Madeleine Leach, Koray Kavukcuoglu, Thore Graepel, and Demis Hassabis.
+\newblock Mastering the game of go with deep neural networks and tree search.
+\newblock \emph{Nature}, pages 484--489, January 2016.
+
+\bibitem[Swinbourn et~al.(2024)Swinbourn, Li, and Wang]{Swinbourn2024}
+Ross Swinbourn, Chaoen Li, and Feng Wang.
+\newblock A comprehensive review on biomethane production from biogas separation and its techno-economic assessments.
+\newblock \emph{Chemsuschem}, 2024.
+
+\end{thebibliography}
