@@ -1,0 +1,58 @@
+This is BibTeX, Version 0.99e (TeX Live 2026)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: thesis.aux
+A level-1 auxiliary file: honourdeclaration.aux
+A level-1 auxiliary file: abstract.aux
+A level-1 auxiliary file: acknows.aux
+A level-1 auxiliary file: quote.aux
+A level-1 auxiliary file: abbrevs.aux
+A level-1 auxiliary file: chapter1.aux
+A level-1 auxiliary file: chapter2.aux
+A level-1 auxiliary file: chapter3.aux
+A level-1 auxiliary file: chapter4.aux
+A level-1 auxiliary file: chapter5.aux
+A level-1 auxiliary file: appendix1.aux
+A level-1 auxiliary file: appendix-AItransparency.aux
+The style file: plainnat.bst
+Database file #1: myrefs.bib
+You've used 11 entries,
+            2773 wiz_defined-function locations,
+            674 strings with 13137 characters,
+and the built_in function-call counts, 21745 in all, are:
+= -- 1472
+> -- 3226
+< -- 7
++ -- 1076
+- -- 1065
+* -- 2369
+:= -- 3718
+add.period$ -- 31
+call.type$ -- 11
+change.case$ -- 387
+chr.to.int$ -- 11
+cite$ -- 22
+duplicate$ -- 284
+empty$ -- 431
+format.name$ -- 1076
+if$ -- 4120
+int.to.chr$ -- 1
+int.to.str$ -- 1
+missing$ -- 10
+newline$ -- 61
+num.names$ -- 44
+pop$ -- 790
+preamble$ -- 1
+purify$ -- 377
+quote$ -- 0
+skip$ -- 568
+stack$ -- 0
+substring$ -- 190
+swap$ -- 86
+text.length$ -- 6
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 116
+warning$ -- 0
+while$ -- 47
+width$ -- 0
+write$ -- 141

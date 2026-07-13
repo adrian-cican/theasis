@@ -149,8 +149,8 @@ Due to its critical role in the plant operation, the vacuum pump is extensively 
 including pressure, temperature, electrical current, power consumption, and rotational speed, are continuously acquired to assess its operating condition and 
 detect potential abnormal behaviour.
 
-Since this dissertation focuses on the development of AI-based models for anomaly detection, fault detection, and predictive maintenance, the vacuum pump was 
-selected as the primary component under analysis. Figure~\ref{fig:vacuumpumplive} shows a photograph of a working vacuum pumo inside a biogas upgrading plant.
+Since this dissertation focuses on the development of AI-based models for AD, FD, and PdM, the vacuum pump was 
+selected as the primary component under analysis. Figure~\ref{fig:vacuumpumplive} shows a photograph of a working vacuum pump inside a biogas upgrading plant.
 
 \begin{figure}[htbp]
     \centering
@@ -162,26 +162,95 @@ selected as the primary component under analysis. Figure~\ref{fig:vacuumpumplive
 
 \subsubsection{Components} \label{sec:components}
 
-The vacuum pump used in the considered biogas upgrading plant, whose manufacturer cannot be disclosed due to confidentiality agreements, operates according to the rotary vane principle. Oil plays a 
-key role in the pump operation by sealing the clearances between moving parts, providing lubrication, and dissipating the heat generated during gas compression. Figure~\ref{fig:vacuumoperation} illustrates the operating principle, 
-providing the necessary background to understand the vacuum process. Gas enters from the top, passes through the vanes.
+The vacuum pump, whose manufacturer cannot be disclosed due to confidentiality agreements, operates according to the rotary vane principle. Oil plays a 
+key role in the pump operation by sealing the clearances between moving parts, providing lubrication, and dissipating the heat generated during gas compression. Figure~\ref{fig:vacuumoperation} illustrates the operating principle 
+of the pump, showing the gas flow path during the regeneration stage of the VPSA cycle. Gas extracted from the adsorption column first enters the vacuum pump and is subsequently discharged either back to the biogas inlet or to 
+the atmosphere, depending on the operating stage.
 
-A schematic representation of the pump is also provided in Figure~\ref{vacuumpump}, where the main internal components are identified. Since a detailed mechanical description of the pump is beyond the scope of this dissertation, 
-only the components that are relevant for understanding the monitored variables and the analysed failure modes are discussed.
 
 \begin{figure}[htbp]
-\centering
-
-\subfloat[Vacuum pump operating principle.]{
-    \includegraphics[width=0.48\textwidth]{imgs/vacuumoperation.png}
+    \centering
+    \includegraphics[width=0.80\textwidth]{imgs/vacuumoperation.png}
+    \caption{Vacuum pump operating principle. Adapted from Sysadvance}
     \label{fig:vacuumoperation}
-}
-\hfill
-\subfloat[Vacuum pump schematic.]{
-    \includegraphics[width=0.48\textwidth]{imgs/vp scheme.png}
-    \label{fig:vacuumpump}
-}
-
-\caption{Vacuum pump used in the considered VPSA system.}
-\label{fig:vacuum}
 \end{figure}
+
+A schematic representation of the pump is also presented in Figure~\ref{fig:vacuumpump}, where the main internal components can be identified. Since a detailed mechanical description of the pump is beyond the scope of this 
+dissertation, only the components relevant for understanding the monitored process variables and the considered fault scenarios are summarized in Table~\ref{tab:vp_components}.
+
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.79\textwidth]{imgs/vp scheme.png}
+    \caption{Vacuum pump scheme. Adapted from Sysadvance}
+    \label{fig:vacuumpump}
+\end{figure}
+
+
+\begin{table}[htbp]
+\centering
+\caption{Main vacuum pump components considered in this dissertation. Adapted from Sysadvance}
+\label{tab:vp_components}
+
+\begin{tabular}{ll@{\hspace{1.5cm}}ll}
+\hline
+\textbf{Component} & \textbf{Function} &
+\textbf{Component} & \textbf{Function} \\
+\hline
+
+TSA &
+Resistence Thermometer &
+PSA &
+Pressure Transmitter \\
+
+TS &
+Temperature Switch &
+PS &
+Pressure Switch \\
+
+LS &
+Level Switch &
+IF &
+Inlet Filter \\
+
+EF &
+Exhaust Filter &
+OF &
+Oil Filter \\
+
+OS &
+Oil Separator &
+FV &
+Float Valve \\
+
+AHE &
+Air-Oil Heat Exchanger &
+GB &
+Gas Ballast Valve \\
+
+\hline
+\end{tabular}
+\end{table}
+
+\begin{itemize}
+    \item \textbf{Gas Ballast Valve (GB):} Introduces a controlled amount of ambient air into the compression chamber to prevent the condensation of vapour inside 
+    the pump.
+    \item \textbf{Inlet Filter (IF):} Protects the vacuum pump by preventing dust and other solid particles from entering the compression chamber.
+    \item \textbf{Exhaust Filter (EF):} Removes oil aerosols from the discharged gas before it is released.
+    \item \textbf{Oil Filter (OF):} Removes contaminants from the lubricating oil.
+    \item \textbf{Oil Separator (OS):} Separates the lubricating oil from the discharged gas, allowing the recovered oil to be recirculated into the lubrication system.
+    \item \textbf{Air-Oil Heat Exchanger (AHE):} Dissipates the heat generated during pump operation by cooling the lubricating oil.
+    \item \textbf{Float Valve (FV):} Regulates the oil return from the oil separator to the compression chamber while preventing gas from flowing backwards through 
+    the lubrication circuit.
+    \item \textbf{Resistance Thermometer (TSA):} Continuously measures the temperature of the gas or lubricating oil, providing analog temperature measurements for 
+    process monitoring.
+    \item \textbf{Temperature Switch (TS):} Monitors the gas and oil temperatures and generates warning or trip signals when predefined temperature thresholds are exceeded.
+    \item \textbf{Pressure Transmitter (PSA):} Continuously measures the pressure inside the oil separator, providing analog pressure measurements used for process monitoring.
+    \item \textbf{Pressure Switch (PS):} Monitors the pressure inside the oil separator and activates warning or trip signals when predefined pressure limits are reached.
+    \item \textbf{Level Switch (LS):} Monitors the lubricating oil level inside the oil reservoir.
+\end{itemize}
+
+\subsubsection{Instrumentation} \label{sec:instrumentation}
+
+As discussed the pump registers various signals from its internal sensors. Also, this sensors have the possibility to set up warning and trip signals, in clase
+of possible malfunctions.
