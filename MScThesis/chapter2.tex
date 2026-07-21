@@ -1,8 +1,15 @@
+% !TeX root = thesis.tex
+
 \chapter{Background} \label{chap:background}
+
+This chapter introduces the technological background required to understand the industrial process addressed in this dissertation. It first presents the 
+fundamentals of biogas production and upgrading technologies, followed by a description of the VPSA process employed in the 
+considered biomethane plant. Finally, the vacuum pump, which constitutes the main asset analysed in this work, is presented together with its operating principle, 
+instrumentation, maintenance procedures, and common faults.
 
 \section{What is Biogas?} \label{sec:biogasupgrading}
 
-Biogas is a renewable fuel produced through the anaerobic digestion of biodegradable 
+Biogas is a renewable gaseous fuel produced through the anaerobic digestion of biodegradable 
 organic matter, a biological process in which microorganisms decompose organic 
 compounds in the absence of oxygen. This process converts complex organic materials 
 into simpler compounds while producing a gaseous mixture known as biogas. A wide 
@@ -92,7 +99,7 @@ A photograph of an example biomethane upgrading plant used in this work is prese
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=0.85\textwidth]{imgs/metagenad.jpg}
-    \caption{Industrial VPSA biomethane upgrading plant (adapted from Sysadvance)}
+    \caption{Industrial VPSA biomethane upgrading plant. Adapted from Sysadvance}
     \label{fig:metagenad}
 \end{figure}
 
@@ -120,7 +127,7 @@ compression energy and improves the overall efficiency of the process.
 
 \begin{figure}[htbp]
     \centering
-    \includegraphics[width=0.85\textwidth]{imgs/vpsa.png}
+    \includegraphics[width=0.70\textwidth]{imgs/vpsa.png}
     \caption{Operating cycle of a four-column VPSA system. Source: \cite{Shah2021}}
     \label{fig:vpsa}
 \end{figure}
@@ -171,18 +178,18 @@ the atmosphere, depending on the operating stage.
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=0.80\textwidth]{imgs/vacuumoperation.png}
-    \caption{Vacuum pump operating principle. Adapted from Sysadvance}
+    \caption{Vacuum pump operating principle. Adapted from the manufacturer's manual}
     \label{fig:vacuumoperation}
 \end{figure}
 
 A schematic representation of the pump is also presented in Figure~\ref{fig:vacuumpump}, where the main internal components can be identified. Since a detailed mechanical description of the pump is beyond the scope of this 
-dissertation, only the components relevant for understanding the monitored process variables and the considered fault scenarios are summarized in Table~\ref{tab:vp_components}.
+dissertation, only the components relevant for understanding the monitored process variables are summarized in Table~\ref{tab:vp_components}.
 
 
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=0.79\textwidth]{imgs/vp scheme.png}
-    \caption{Vacuum pump scheme. Adapted from Sysadvance}
+    \caption{Vacuum pump scheme. Adapted from the manufacturer's manual}
     \label{fig:vacuumpump}
 \end{figure}
 
@@ -194,8 +201,8 @@ dissertation, only the components relevant for understanding the monitored proce
 
 \begin{tabular}{ll@{\hspace{1.5cm}}ll}
 \hline
-\textbf{Component} & \textbf{Function} &
-\textbf{Component} & \textbf{Function} \\
+\textbf{Abbreviation} & \textbf{Component} &
+\textbf{Abbreviation} & \textbf{Component} \\
 \hline
 
 TSA &
@@ -252,5 +259,187 @@ Gas Ballast Valve \\
 
 \subsubsection{Instrumentation} \label{sec:instrumentation}
 
-As discussed the pump registers various signals from its internal sensors. Also, this sensors have the possibility to set up warning and trip signals, in clase
-of possible malfunctions.
+To ensure safe and reliable operation, the vacuum pump is equipped with several internal sensors that continuously monitor its operating conditions. 
+These sensors measure key process variables, such as pressure, temperature, and oil level, providing real-time information about the pump's health.
+
+In addition to continuous measurements, most sensors are associated with configurable \emph{warning} and \emph{trip} thresholds. A warning signal indicates that a 
+monitored variable is approaching an abnormal operating condition. A trip signal corresponds to a critical threshold at which the pump is automatically stopped to 
+prevent equipment damage or unsafe operation.
+
+Table~\ref{tab:instrumentation} summarizes the monitored variables together with their corresponding sensors and the associated warning and trip thresholds.
+
+\begin{table}[htbp]
+\centering
+\caption{Vacuum pump instrumentation and associated protection thresholds. Adapted from the manufacturer's manual.}
+\label{tab:instrumentation}
+
+\begin{tabular}{l l c c}
+\hline
+\textbf{Sensor} & \textbf{Measured Variable} & \textbf{Warning} & \textbf{Trip} \\
+\hline
+PSA/PS 0301  & Oil separator pressure    & 0.4 bar       & 0.5 bar \\
+TSA/0101     & Gas temperature           & 135 $^\circ$C & 140 $^\circ$C \\
+TSA/0102     & Gas Temperature           & 105 $^\circ$C & 110 $^\circ$C \\
+TSA/0103     & Gas Temperature           & 105 $^\circ$C & 110 $^\circ$C \\
+TSA/0104     & Oil temperature           & 90 $^\circ$C  & 110 $^\circ$C \\
+\hline
+\end{tabular}
+\end{table}
+
+In addition to the instrumentation presented above, the vacuum pump also provides the following monitored variables, which are not associated with configurable warning or trip thresholds:
+
+\begin{itemize}
+    \item \textbf{Oil Level Sensor:} Monitors the lubricating oil level inside the pump. Only reports whether the oil level is sufficient or low.
+    \item \textbf{Pump Current Sensor:} Measures the electrical current drawn by the pump motor, expressed in amperes (A).
+    \item \textbf{Pump Power Sensor:} Measures the electrical power consumed by the pump motor, expressed in watts (W).
+    \item \textbf{Pump RPM Sensor:} Measures the rotational speed of the pump shaft, expressed in revolutions per minute (RPM).
+    \item \textbf{Pump Speed Sensor:} Measures the operating speed of the pump as a percentage of its nominal speed.
+\end{itemize}
+
+\subsubsection{Maintenance \& Troubleshooting} \label{sec:maintenance}
+
+Understanding the recommended maintenance procedures and the most common failure possibilities of the vacuum pump is essential for this dissertation. Besides ensuring 
+reliable operation of the equipment, this information provides the basis for the fault scenarios considered throughout this work.
+
+According to the manufacturer's manual, preventive maintenance should be performed at regular operating intervals to ensure the reliability and service 
+life of the machine. Table~\ref{tab:maintenance} summarizes the recommended maintenance schedule for the main components.
+
+\begin{table}[htbp]
+\centering
+\caption{Recommended preventive maintenance schedule for the vacuum pump. Adapted from the manufacturer's manual.}
+\label{tab:maintenance}
+
+\begin{tabular}{ll}
+\hline
+\textbf{Task} & \textbf{Maintenance Interval} \\
+\hline
+Inspect oil level & Daily \\
+Check machine for oil leaks & Monthly \\
+Check the inlet filter cartridge. Change it if necessary & Monthly \\
+Clean the machine from dust and dirt & Every 6 months \\
+Clean the Gas Ballast Valve & Every 6 months \\
+Check and/or clean the Air-Heat Exchanger & Every 6 months \\
+Change the oil, oil filter and the exhaust filter  & Max every 4000 hours, at the latest after 1 year\\
+\hline
+\end{tabular}
+\end{table}
+
+In addition to the recommended maintenance procedures, the manufacturer provides a troubleshooting guide describing the most common faults, their possible causes, 
+and the corresponding corrective actions. This information is presented in the following Table~\ref{tab:troubleshooting}.
+
+\begin{table}[htbp]
+\centering
+\small
+\renewcommand{\arraystretch}{1.25}
+\caption{Common troubleshooting procedures for the vacuum pump. Adapted from the manufacturer's manual.}
+\label{tab:troubleshooting}
+
+\begin{tabularx}{\textwidth}{|p{0.28\textwidth}|X|X|}
+\hline
+\textbf{Problem} &
+\textbf{Possible Cause} &
+\textbf{Remedy} \\
+\hline
+
+\multirow{3}{*}{The machine does not start.}
+&
+The motor is not supplied with the correct voltage.
+&
+Check the power supply. \\
+\cline{2-3}
+&
+The motor is defective.
+&
+Replace the motor. \\
+\cline{2-3}
+&
+The coupling (CPL) is defective.
+&
+Replace the coupling (CPL). \\
+\hline
+
+\multirow{3}{*}{%
+\parbox{0.26\textwidth}{%
+The machine does not reach the specified vacuum level.}}
+&
+Oil level too low.
+&
+Top up the oil. \\
+\cline{2-3}
+&
+The inlet screen (IS) is partially clogged.
+&
+Clean the inlet screen (IS). \\
+\cline{2-3}
+&
+The inlet filter cartridge is partially clogged.
+&
+Replace the inlet filter cartridge. \\
+\hline
+
+\multirow{3}{*}{The machine runs very noisily.}
+&
+Worn coupling (CPL).
+&
+Replace the coupling (CPL). \\
+\cline{2-3}
+&
+Stuck vanes.
+&
+Contact the manufacturer for repair. \\
+\cline{2-3}
+&
+Defective bearings.
+&
+Contact the manufacturer for repair. \\
+\hline
+
+\multirow{4}{*}{The machine overheats.}
+&
+Insufficient cooling.
+&
+Remove dust and dirt from the machine.\newline
+Check the cooling fan. \\
+\cline{2-3}
+&
+Ambient temperature too high.
+&
+Observe the permitted ambient temperature. \\
+\cline{2-3}
+&
+Oil level too low.
+&
+Top up the oil. \\
+\cline{2-3}
+&
+The exhaust filters (EF) are partially clogged.
+&
+Replace the exhaust filters (EF). \\
+\hline
+
+\multirow{3}{*}{%
+\parbox{0.26\textwidth}{%
+The machine fumes or expels oil droplets through the gas discharge.}}
+
+&
+The exhaust filters (EF) are partially clogged.
+&
+Replace the exhaust filters (EF). \\
+\cline{2-3}
+&
+An exhaust filter (EF) O-ring is not fitted properly.
+&
+Ensure the correct position of the exhaust filters (EF) and the O-rings. \\
+\cline{2-3}
+&
+The float valve (FV) does not operate properly.
+&
+Check the float valve and the oil return line. Contact the manufacturer if necessary. \\
+\hline
+
+\end{tabularx}
+\end{table}
+
+Among the various faults identified by the manufacturer, a subset was selected for fault injection in a experimental dataset. These faults were chosen because 
+they represent common operating problems that can be reproduced by modifying the monitored process variables while remaining consistent with the physical behaviour 
+of the vacuum pump.

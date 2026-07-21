@@ -1,30 +1,54 @@
 \babel@toc {english}{}\relax 
 \contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}%
 \contentsline {section}{\numberline {1.1}Context}{1}{section.1.1}%
-\contentsline {section}{\numberline {1.2}The role of AI in the industry sector}{1}{section.1.2}%
+\contentsline {section}{\numberline {1.2}AI in Industry 4.0}{1}{section.1.2}%
 \contentsline {section}{\numberline {1.3}Motivation}{2}{section.1.3}%
 \contentsline {section}{\numberline {1.4}Objectives}{2}{section.1.4}%
-\contentsline {section}{\numberline {1.5}Company Presentation}{3}{section.1.5}%
-\contentsline {section}{\numberline {1.6}Theasis Structure}{3}{section.1.6}%
+\contentsline {section}{\numberline {1.5}Company Presentation}{2}{section.1.5}%
+\contentsline {section}{\numberline {1.6}Thesis Structure}{3}{section.1.6}%
 \contentsline {chapter}{\numberline {2}Background}{5}{chapter.2}%
 \contentsline {section}{\numberline {2.1}What is Biogas?}{5}{section.2.1}%
 \contentsline {section}{\numberline {2.2}Biogas Upgrading}{6}{section.2.2}%
 \contentsline {subsection}{\numberline {2.2.1}Biogas Upgrading Technologies}{6}{subsection.2.2.1}%
 \contentsline {section}{\numberline {2.3}Considered Biomethane Plant}{8}{section.2.3}%
-\contentsline {subsection}{\numberline {2.3.1}VPSA Process}{8}{subsection.2.3.1}%
+\contentsline {subsection}{\numberline {2.3.1}VPSA Process}{9}{subsection.2.3.1}%
 \contentsline {subsection}{\numberline {2.3.2}Vacuum Pump}{10}{subsection.2.3.2}%
-\contentsline {subsubsection}{\numberline {2.3.2.1}Components}{11}{subsubsection.2.3.2.1}%
-\contentsline {subsubsection}{\numberline {2.3.2.2}Instrumentation}{12}{subsubsection.2.3.2.2}%
-\contentsline {chapter}{\numberline {3}Another Chapter}{13}{chapter.3}%
-\contentsline {section}{\numberline {3.1}What is an AI System?}{13}{section.3.1}%
-\contentsline {chapter}{\numberline {4}Conclusions and Future Work}{15}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Results}{15}{section.4.1}%
-\contentsline {section}{\numberline {4.2}Further Work}{16}{section.4.2}%
-\contentsline {section}{\numberline {4.3}Impact on Sustainable Development Goals}{16}{section.4.3}%
-\contentsline {chapter}{\numberline {A}Loren Ipsum}{17}{appendix.A}%
-\contentsline {section}{\numberline {A.1}What is \emph {Loren Ipsum}?}{17}{section.A.1}%
-\contentsline {section}{\numberline {A.2}Where does Loren come from?}{17}{section.A.2}%
-\contentsline {section}{\numberline {A.3}Why using Loren?}{18}{section.A.3}%
-\contentsline {section}{\numberline {A.4}Where to Find Examples?}{18}{section.A.4}%
-\contentsline {chapter}{\numberline {B}Transparency on the Use of AI}{19}{appendix.B}%
-\contentsline {chapter}{References}{21}{section*.20}%
+\contentsline {subsubsection}{\numberline {2.3.2.1}Components}{10}{subsubsection.2.3.2.1}%
+\contentsline {subsubsection}{\numberline {2.3.2.2}Instrumentation}{13}{subsubsection.2.3.2.2}%
+\contentsline {subsubsection}{\numberline {2.3.2.3}Maintenance \& Troubleshooting}{14}{subsubsection.2.3.2.3}%
+\contentsline {chapter}{\numberline {3}State of the Art}{17}{chapter.3}%
+\contentsline {section}{\numberline {3.1}What is an AI System?}{17}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Machine Learning}{18}{section.3.2}%
+\contentsline {subsection}{\numberline {3.2.1}ML Paradigms}{18}{subsection.3.2.1}%
+\contentsline {subsubsection}{\numberline {3.2.1.1}Supervised Learning}{18}{subsubsection.3.2.1.1}%
+\contentsline {subsubsection}{\numberline {3.2.1.2}Unsupervised Learning}{19}{subsubsection.3.2.1.2}%
+\contentsline {subsubsection}{\numberline {3.2.1.3}Reinforcement Learning}{20}{subsubsection.3.2.1.3}%
+\contentsline {subsubsection}{\numberline {3.2.1.4}Self-Supervised Learning}{20}{subsubsection.3.2.1.4}%
+\contentsline {subsection}{\numberline {3.2.2}Representation Learning}{21}{subsection.3.2.2}%
+\contentsline {subsection}{\numberline {3.2.3}Deep Learning}{22}{subsection.3.2.3}%
+\contentsline {subsubsection}{\numberline {3.2.3.1}Artificial Neural Networks}{22}{subsubsection.3.2.3.1}%
+\contentsline {subsection}{\numberline {3.2.4}Training Deep Neural Networks}{23}{subsection.3.2.4}%
+\contentsline {subsection}{\numberline {3.2.5}Deep Learning Architectures}{24}{subsection.3.2.5}%
+\contentsline {subsubsection}{\numberline {3.2.5.1}Recurrent Neural Network}{24}{subsubsection.3.2.5.1}%
+\contentsline {subsubsection}{\numberline {3.2.5.2}Long Short-Term Memory}{25}{subsubsection.3.2.5.2}%
+\contentsline {subsection}{\numberline {3.2.6}Learning Strategies}{26}{subsection.3.2.6}%
+\contentsline {section}{\numberline {3.3}Industrial Monitoring and Maintenance}{28}{section.3.3}%
+\contentsline {subsection}{\numberline {3.3.1}Anomaly Detection}{28}{subsection.3.3.1}%
+\contentsline {subsection}{\numberline {3.3.2}Fault Detection}{29}{subsection.3.3.2}%
+\contentsline {subsection}{\numberline {3.3.3}Predictive Maintenance}{29}{subsection.3.3.3}%
+\contentsline {subsection}{\numberline {3.3.4}Relationship Between AD, FD and PdM}{29}{subsection.3.3.4}%
+\contentsline {section}{\numberline {3.4}Related Work}{30}{section.3.4}%
+\contentsline {subsection}{\numberline {3.4.1}Deep Learning for Industrial Monitoring}{30}{subsection.3.4.1}%
+\contentsline {subsection}{\numberline {3.4.2}Multi-Task Learning for Industrial Monitoring}{30}{subsection.3.4.2}%
+\contentsline {subsection}{\numberline {3.4.3}Research Gap}{31}{subsection.3.4.3}%
+\contentsline {chapter}{\numberline {4}Conclusions and Future Work}{33}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Results}{33}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Further Work}{34}{section.4.2}%
+\contentsline {section}{\numberline {4.3}Impact on Sustainable Development Goals}{34}{section.4.3}%
+\contentsline {chapter}{\numberline {A}Loren Ipsum}{35}{appendix.A}%
+\contentsline {section}{\numberline {A.1}What is \emph {Loren Ipsum}?}{35}{section.A.1}%
+\contentsline {section}{\numberline {A.2}Where does Loren come from?}{35}{section.A.2}%
+\contentsline {section}{\numberline {A.3}Why using Loren?}{36}{section.A.3}%
+\contentsline {section}{\numberline {A.4}Where to Find Examples?}{36}{section.A.4}%
+\contentsline {chapter}{\numberline {B}Transparency on the Use of AI}{37}{appendix.B}%
+\contentsline {chapter}{References}{39}{section*.34}%

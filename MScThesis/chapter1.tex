@@ -1,3 +1,5 @@
+% !TeX root = thesis.tex
+
 \chapter{Introduction} \label{chap:intro}
 
 \section*{}
@@ -5,9 +7,8 @@
 
 \section{Context} \label{sec:context}
 
-The 21st century has witnessed remarkable advances in Artificial Intelligence (AI) systems, reshaping
-numerous fields, including the industrial and defense sectors (\cite{Golec2025}). The
-introduction of AlexNet in 2012 (\cite{Alex2012}), AlphaGo's victory over Lee Sedol in 2016 (\cite{Silver2016}),
+The 21st century has witnessed remarkable advances in Artificial Intelligence (AI) systems, reshaping numerous industrial and societal sectors. (\cite{Golec2025}). 
+The introduction of AlexNet in 2012 (\cite{Alex2012}), AlphaGo's victory over Lee Sedol in 2016 (\cite{Silver2016}),
 and the public release of ChatGPT in 2022 (\cite{OpenAI2024}) are among the most significant milestones in modern AI,
 advancing the fields of Computer Vision (CV), Sequential Decision-Making, and Natural Language
 Processing (NLP), respectively. These breakthroughs were driven by a rapid growth in
@@ -17,7 +18,7 @@ and the widespread adoption of Deep Learning (DL) techniques (\cite{Sajadieh2026
 As a result, DL has become the dominant paradigm in modern Machine Learning (ML) due to its ability to
 learn highly complex and abstract representations directly from data (\cite{Lecun2015}).
 
-\section{The role of AI in the industry sector} \label{sec:aiindustry}
+\section{AI in Industry 4.0} \label{sec:aiindustry}
 
 Over the last fifteen years, the industrial sector has undergone a profound digital transformation,
 leading to the emergence of the Industry 4.0 paradigm. Industry 4.0 is characterized by the integration
@@ -36,12 +37,11 @@ reliability, and productivity in modern manufacturing environments (\cite{Cerque
 
 Despite the significant advances in AI technologies, the application of DL techniques in
 Anomaly Detection (AD), Fault Detection (FD), and PdM tasks for biomethane
-plants remains limited. This limitation creates a gap in the literature regarding the development
-of advanced data-driven solutions for this industrial domain. Furthermore, there is a lack of
-research on multitask learning models capable of performing different types of predictions
+plants remains limited. This limitation highlights a gap in the literature regarding the development of advanced data-driven solutions for the biomethane 
+upgrading industry. Furthermore, there is a lack of research on multi-task learning models capable of performing different types of predictions
 simultaneously in this industry. Therefore, the development and evaluation of such models
 represent a promising research direction. This thesis aims to train and evaluate different DL
-models (both multi-task and single-task) in order to investigate whether deep multitask learning
+models (both multi-task and single-task) in order to investigate whether deep multi-task learning
 approaches can improve prediction performance regarding AD, FD, and PdM when compared
 with traditional ML models.
 
@@ -51,14 +51,28 @@ The objectives of this thesis are:
 
 \begin{itemize}
     \item To perform an Exploratory Data Analysis (EDA) of the biomethane upgrading dataset in order to better understand the data, characterize the process variables and identify potential challenges for model development.
-    \item To develop and train different single-task DL models for anomaly detection, fault detection, and predictive maintenance tasks.
-    \item To develop and train different multi-task DL models using multiple architectural configurations capable of jointly performing several prediction tasks.
+    \item To develop and train single-task DL models for AD, FD, and PdM.
+    \item To develop and train multi-task DL models using multiple architectural configurations capable of jointly performing several prediction tasks.
     \item To develop and train traditional ML models for each prediction task, providing a baseline for comparison.
     \item To compare and evaluate the performance of all proposed models using appropriate evaluation metrics.
-    \item To evaluate the robustness of the developed models under sensor noise.
+    \item To evaluate the robustness of the developed models.
     \item To investigate whether multi-task learning improves predictive performance compared with single-task DL models and traditional ML approaches.
 \end{itemize}
 
 \section{Company Presentation} \label{sec:company}
 
-\section{Theasis Structure} \label{sec:theasis}
+This dissertation was developed in collaboration with Sysadvance, a Portuguese company specialized in gas separation and purification technologies. The company 
+develops industrial solutions for gas generation, purification, and biogas upgrading, providing the real industrial case study considered throughout this work.
+
+\section{Thesis Structure} \label{sec:thesis}
+
+This dissertation is organized into XX chapters.
+
+\begin{itemize}
+
+    \item \textbf{Chapter~\ref{chap:intro}} introduces the research context, motivation, objectives, and overall organization of the dissertation.
+    \item \textbf{Chapter~\ref{chap:background}} presents the theoretical background required to understand the problem addressed in this work. It introduces the concepts of biogas 
+and biomethane production, biogas upgrading technologies, the considered Vacuum Pressure Swing Adsorption (VPSA) plant, the operating principle of the vacuum 
+pump, and the monitored instrumentation.
+
+\end{itemize}

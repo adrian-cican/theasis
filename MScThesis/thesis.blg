@@ -15,44 +15,48 @@ A level-1 auxiliary file: appendix1.aux
 A level-1 auxiliary file: appendix-AItransparency.aux
 The style file: plainnat.bst
 Database file #1: myrefs.bib
-You've used 11 entries,
+Warning--entry type for "Isermann2006" isn't style-file defined
+--line 205 of file myrefs.bib
+Warning--empty publisher in Sutton2018
+You've used 30 entries,
             2773 wiz_defined-function locations,
-            674 strings with 13137 characters,
-and the built_in function-call counts, 21745 in all, are:
-= -- 1472
-> -- 3226
-< -- 7
-+ -- 1076
-- -- 1065
-* -- 2369
-:= -- 3718
-add.period$ -- 31
-call.type$ -- 11
-change.case$ -- 387
-chr.to.int$ -- 11
-cite$ -- 22
-duplicate$ -- 284
-empty$ -- 431
-format.name$ -- 1076
-if$ -- 4120
+            787 strings with 16888 characters,
+and the built_in function-call counts, 30617 in all, are:
+= -- 2246
+> -- 3757
+< -- 24
++ -- 1257
+- -- 1227
+* -- 3010
+:= -- 5062
+add.period$ -- 89
+call.type$ -- 30
+change.case$ -- 493
+chr.to.int$ -- 30
+cite$ -- 61
+duplicate$ -- 734
+empty$ -- 1125
+format.name$ -- 1265
+if$ -- 6017
 int.to.chr$ -- 1
 int.to.str$ -- 1
-missing$ -- 10
-newline$ -- 61
-num.names$ -- 44
-pop$ -- 790
+missing$ -- 34
+newline$ -- 157
+num.names$ -- 120
+pop$ -- 1040
 preamble$ -- 1
-purify$ -- 377
+purify$ -- 469
 quote$ -- 0
-skip$ -- 568
+skip$ -- 946
 stack$ -- 0
-substring$ -- 190
-swap$ -- 86
-text.length$ -- 6
+substring$ -- 436
+swap$ -- 177
+text.length$ -- 13
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 116
-warning$ -- 0
-while$ -- 47
+type$ -- 295
+warning$ -- 1
+while$ -- 121
 width$ -- 0
-write$ -- 141
+write$ -- 378
+(There were 2 warnings)

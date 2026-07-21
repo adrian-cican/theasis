@@ -1,15 +1,25 @@
 \babel@toc {english}{}\relax 
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {2.1}{\ignorespaces Sources of organic waste feedstock for biogas production. Source: \cite {InternationalEnergyAgency2020}}}{5}{figure.caption.10}%
-\contentsline {figure}{\numberline {2.2}{\ignorespaces Biogas upgrading and utilization. Source: \cite {InternationalEnergyAgency2020}}}{6}{figure.caption.11}%
-\contentsline {figure}{\numberline {2.3}{\ignorespaces Main biogas upgrading technologies: adsorption, membrane separation, cryogenic separation, and absorption. Source: \cite {Naquash2025}.}}{7}{figure.caption.12}%
-\contentsline {figure}{\numberline {2.4}{\ignorespaces Industrial VPSA biomethane upgrading plant (adapted from Sysadvance)}}{8}{figure.caption.13}%
-\contentsline {figure}{\numberline {2.5}{\ignorespaces Operating cycle of a four-column VPSA system. Source: \cite {Shah2021}}}{9}{figure.caption.14}%
-\contentsline {figure}{\numberline {2.6}{\ignorespaces Vacuum pump inside a biogas upgrading plant. Adapted from Sysadvance}}{10}{figure.caption.15}%
-\contentsline {figure}{\numberline {2.7}{\ignorespaces Vacuum pump operating principle. Adapted from Sysadvance}}{11}{figure.caption.16}%
-\contentsline {figure}{\numberline {2.8}{\ignorespaces Vacuum pump scheme. Adapted from Sysadvance}}{11}{figure.caption.17}%
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Sources of organic waste feedstock for biogas production. Source: \cite {InternationalEnergyAgency2020}}}{6}{figure.caption.10}%
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Biogas upgrading and utilization. Source: \cite {InternationalEnergyAgency2020}}}{7}{figure.caption.11}%
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Main biogas upgrading technologies: adsorption, membrane separation, cryogenic separation, and absorption. Source: \cite {Naquash2025}.}}{8}{figure.caption.12}%
+\contentsline {figure}{\numberline {2.4}{\ignorespaces Industrial VPSA biomethane upgrading plant. Adapted from Sysadvance}}{8}{figure.caption.13}%
+\contentsline {figure}{\numberline {2.5}{\ignorespaces Operating cycle of a four-column VPSA system. Source: \cite {Shah2021}}}{10}{figure.caption.14}%
+\contentsline {figure}{\numberline {2.6}{\ignorespaces Vacuum pump inside a biogas upgrading plant. Adapted from Sysadvance}}{11}{figure.caption.15}%
+\contentsline {figure}{\numberline {2.7}{\ignorespaces Vacuum pump operating principle. Adapted from the manufacturer's manual}}{11}{figure.caption.16}%
+\contentsline {figure}{\numberline {2.8}{\ignorespaces Vacuum pump scheme. Adapted from the manufacturer's manual}}{12}{figure.caption.17}%
 \addvspace {10\p@ }
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Three types of Iris flowers: Setosa, Versicolor and Virginica. Adapted from \cite {Murphy2022}}}{19}{figure.caption.23}%
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Agent–environment interaction in reinforcement learning. Adapted from \cite {Sutton2018}}}{20}{figure.caption.24}%
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Illustration of a representation learning model. Adapted from \cite {Goodfellow2016}}}{21}{figure.caption.25}%
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Illustration of a perceptron. Adapted from \cite {Mitchell2013}}}{22}{figure.caption.26}%
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Illustration of a MLP with 1 hidden layer. Adapted from \cite {Zhang2023}}}{23}{figure.caption.27}%
+\contentsline {figure}{\numberline {3.6}{\ignorespaces General training pipeline of a deep neural network. Backpropagation computes the gradient of the cost function; the optimization rule (e.g., SGD or Adam) then uses this gradient to update the parameters.}}{24}{figure.caption.28}%
+\contentsline {figure}{\numberline {3.7}{\ignorespaces Illustration of a RNN. Adapted from \cite {Goodfellow2016}}}{25}{figure.caption.29}%
+\contentsline {figure}{\numberline {3.8}{\ignorespaces Illustration of a LSTM. Adapted from \cite {Greff2017}}}{26}{figure.caption.30}%
+\contentsline {figure}{\numberline {3.9}{\ignorespaces Conceptual comparison between single-task learning and multi-task learning. In STL, each task requires an independent model, whereas MTL shares a common representation across multiple related tasks while maintaining task-specific output layers.}}{27}{figure.caption.31}%
+\contentsline {figure}{\numberline {3.10}{\ignorespaces Example for the multi-task feedforward neural network with an input layer, a hidden layer, and an output layer.. Adapted from \cite {Zhang2022}}}{27}{figure.caption.32}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }

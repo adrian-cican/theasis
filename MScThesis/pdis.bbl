@@ -1,69 +1,24 @@
-\begin{thebibliography}{30}
+\begin{thebibliography}{11}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
   \providecommand{\doi}[1]{doi: #1}\else
   \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
 
-\bibitem[Carvalho et~al.(2019)Carvalho, Soares, Vita, Francisco, Basto, and Alcalá]{Carvalho2019}
-Thyago~P. Carvalho, Fabrízzio A. A. M.~N. Soares, Roberto Vita, Roberto Da~P. Francisco, João~P. Basto, and Symone G.~S. Alcalá.
-\newblock A systematic literature review of machine learning methods applied to predictive maintenance.
-\newblock \emph{Computers \& Industrial Engineering}, page 106024, 2019.
-
 \bibitem[Cerqueus et~al.(2025)Cerqueus, Dolgui, Ivanov, Klimtchik, Lemoine, and Pashkevich]{Cerqueus2025}
 Audrey Cerqueus, Alexandre Dolgui, Dmitry Ivanov, Alexandr Klimtchik, David Lemoine, and Anatol Pashkevich.
 \newblock Applications of artificial intelligence in industry 4.0 and smart manufacturing.
 \newblock \emph{Engineering Applications of Artificial Intelligence}, page 110509, June 2025.
-
-\bibitem[Chandola et~al.(2009)Chandola, Banerjee, and Kumar]{Chandola2009}
-Varun Chandola, Arindam Banerjee, and Vipin Kumar.
-\newblock Anomaly detection: A survey.
-\newblock \emph{{ACM} Comput. Surv.}, 2009.
-
-\bibitem[Darban et~al.(2025)Darban, Webb, Pan, Aggarwal, and Salehi]{Darban2025}
-Zahra~zamanzadeh Darban, Geoffrey~i Webb, Shirui Pan, Charu Aggarwal, and Mahsa Salehi.
-\newblock Deep learning for time series anomaly detection: A survey.
-\newblock \emph{Acm Computing Surveys}, page~15, 2025.
-
-\bibitem[{European Data Protection Supervisor}(2025)]{European2025}
-{European Data Protection Supervisor}.
-\newblock \emph{{AI} Act Regulation ({EU}) 2024/1689: Regulation ({EU}) 2024/1689 of the European Parliament and of the Council of 13 June 2024 laying down harmonised rules on artificial intelligence and amending Regulations ({EC}) No 300/2008, ({EU}) No 167/2013, ({EU}) No 168/2013, ({EU}) 2018/858, ({EU}) 2018/1139 and ({EU}) 2019/2144 and Directives 2014/90/{EU}, ({EU}) 2016/797 and ({EU}) 2020/1828 (Artificial Intelligence Act) (Text with {EEA} relevance)}.
-\newblock Publications Office of the European Union, July 2025.
 
 \bibitem[Golec et~al.(2025)Golec, Hatay, Gill, and Buyya]{Golec2025}
 Muhammed Golec, Emir~Sahin Hatay, Sukhpal~Singh Gill, and Rajkumar Buyya.
 \newblock Artificial {Intelligence} ({AI}): {Foundations}, trends and future directions.
 \newblock \emph{Telematics and Informatics Reports}, page 100265, December 2025.
 
-\bibitem[Goodfellow et~al.(2016)Goodfellow, Bengio, and Courville]{Goodfellow2016}
-Ian Goodfellow, Yoshua Bengio, and Aaron Courville.
-\newblock \emph{Deep Learning}.
-\newblock MIT Press, 2016.
-\newblock \url{http://www.deeplearningbook.org}.
-
-\bibitem[Greff et~al.(2017)Greff, Srivastava, Koutník, Steunebrink, and Schmidhuber]{Greff2017}
-Klaus Greff, Rupesh~K. Srivastava, Jan Koutník, Bas~R. Steunebrink, and Jürgen Schmidhuber.
-\newblock {LSTM}: A search space odyssey.
-\newblock \emph{{IEEE} Transactions on Neural Networks and Learning Systems}, pages 2222--2232, 2017.
-
-\bibitem[Hochreiter and Schmidhuber(1997)]{Hochreiter1997}
-Sepp Hochreiter and J{\"u}rgen Schmidhuber.
-\newblock Long short-term memory.
-\newblock \emph{Neural Computation}, pages 1735--1780, 1997.
-
 \bibitem[{International Energy Agency}(2020)]{InternationalEnergyAgency2020}
 {International Energy Agency}.
 \newblock \emph{Outlook for biogas and biomethane: Prospects for organic growth}.
 \newblock {OECD}, March 2020.
-
-\bibitem[Isermann(2006)]{Isermann2006}
-Rolf Isermann.
-\newblock Fault-diagnosis systems: An introduction from fault detection to fault tolerance, 2006.
-
-\bibitem[Khan et~al.(2026)Khan, Cheng, Setti, Fummi, Cristani, and Capogrosso]{Khan2026}
-Uzair Khan, Dong~Seon Cheng, Francesco Setti, Franco Fummi, Marco Cristani, and Luigi Capogrosso.
-\newblock A comprehensive survey on deep learning-based predictive maintenance.
-\newblock \emph{{ACM} Trans. Embed. Comput. Syst.}, 2026.
 
 \bibitem[Krizhevsky et~al.(2012)Krizhevsky, Sutskever, and Hinton]{Alex2012}
 Alex Krizhevsky, Ilya Sutskever, and Geoffrey~E Hinton.
@@ -75,17 +30,6 @@ Yann {LeCun}, Yoshua Bengio, and Geoffrey Hinton.
 \newblock Deep learning.
 \newblock \emph{Nature}, pages 436--444, May 2015.
 
-\bibitem[Mitchell(2013)]{Mitchell2013}
-Tom~M. Mitchell.
-\newblock \emph{Machine learning}.
-\newblock {McGraw}-Hill, 2013.
-
-\bibitem[Murphy(2022)]{Murphy2022}
-Kevin~P. Murphy.
-\newblock \emph{Probabilistic Machine Learning: An introduction}.
-\newblock MIT Press, 2022.
-\newblock URL \url{http://probml.github.io/book1}.
-
 \bibitem[Naquash et~al.(2025)Naquash, Hameed, Qyyum, Khan, Al-Muhtaseb, Riaz, and Lee]{Naquash2025}
 Ahmad Naquash, Zeeshan Hameed, Muhammad~Abdul Qyyum, Zakir Khan, Ala’a~H. Al-Muhtaseb, Amjad Riaz, and Moonyong Lee.
 \newblock Biohydrogen and biomethane production from biomass gasification: Compositional analysis, recent advancements, challenges, and prospects.
@@ -94,16 +38,6 @@ Ahmad Naquash, Zeeshan Hameed, Muhammad~Abdul Qyyum, Zakir Khan, Ala’a~H. Al-M
 \bibitem[{OpenAI} et~al.(2024){OpenAI}, Achiam, Adler, Agarwal, Ahmad, Akkaya, Aleman, Almeida, Altenschmidt, Altman, Anadkat, Avila, Babuschkin, Balaji, Balcom, Baltescu, Bao, Bavarian, Belgum, Bello, Berdine, Bernadett-Shapiro, Berner, Bogdonoff, Boiko, Boyd, Brakman, Brockman, Brooks, Brundage, Button, Cai, Campbell, Cann, Carey, Carlson, Carmichael, Chan, Chang, Chantzis, Chen, Chen, Chen, Chen, Chen, Chess, Cho, Chu, Chung, Cummings, Currier, Dai, Decareaux, Degry, Deutsch, Deville, Dhar, Dohan, Dowling, Dunning, Ecoffet, Eleti, Eloundou, Farhi, Fedus, Felix, Fishman, Forte, Fulford, Gao, Georges, Gibson, Goel, Gogineni, Goh, Gontijo-Lopes, Gordon, Grafstein, Gray, Greene, Gross, Gu, Guo, Hallacy, Han, Harris, He, Heaton, Heidecke, Hesse, Hickey, Hickey, Hoeschele, Houghton, Hsu, Hu, Hu, Huizinga, Jain, Jain, Jang, Jiang, Jiang, Jin, Jin, Jomoto, Jonn, Jun, Kaftan, Kaiser, Kamali, Kanitscheider, Keskar, Khan, Kilpatrick, Kim, Kim, Kim, Kirchner, Kiros, Knight, Kokotajlo, Kondraciuk, Kondrich, Konstantinidis, Kosic, Krueger, Kuo, Lampe, Lan, Lee, Leike, Leung, Levy, Li, Lim, Lin, Lin, Litwin, Lopez, Lowe, Lue, Makanju, Malfacini, Manning, Markov, Markovski, Martin, Mayer, Mayne, {McGrew}, {McKinney}, {McLeavey}, {McMillan}, {McNeil}, Medina, Mehta, Menick, Metz, Mishchenko, Mishkin, Monaco, Morikawa, Mossing, Mu, Murati, Murk, Mély, Nair, Nakano, Nayak, Neelakantan, Ngo, Noh, Ouyang, O'Keefe, Pachocki, Paino, Palermo, Pantuliano, Parascandolo, Parish, Parparita, Passos, Pavlov, Peng, Perelman, Peres, Petrov, Pinto, Michael, Pokorny, Pokrass, Pong, Powell, Power, Power, Proehl, Puri, Radford, Rae, Ramesh, Raymond, Real, Rimbach, Ross, Rotsted, Roussez, Ryder, Saltarelli, Sanders, Santurkar, Sastry, Schmidt, Schnurr, Schulman, Selsam, Sheppard, Sherbakov, Shieh, Shoker, Shyam, Sidor, Sigler, Simens, Sitkin, Slama, Sohl, Sokolowsky, Song, Staudacher, Such, Summers, Sutskever, Tang, Tezak, Thompson, Tillet, Tootoonchian, Tseng, Tuggle, Turley, Tworek, Uribe, Vallone, Vijayvergiya, Voss, Wainwright, Wang, Wang, Wang, Ward, Wei, Weinmann, Welihinda, Welinder, Weng, Weng, Wiethoff, Willner, Winter, Wolrich, Wong, Workman, Wu, Wu, Wu, Xiao, Xu, Yoo, Yu, Yuan, Zaremba, Zellers, Zhang, Zhang, Zhao, Zheng, Zhuang, Zhuk, and Zoph]{OpenAI2024}
 {OpenAI}, Josh Achiam, Steven Adler, Sandhini Agarwal, Lama Ahmad, Ilge Akkaya, Florencia~Leoni Aleman, Diogo Almeida, Janko Altenschmidt, Sam Altman, Shyamal Anadkat, Red Avila, Igor Babuschkin, Suchir Balaji, Valerie Balcom, Paul Baltescu, Haiming Bao, Mohammad Bavarian, Jeff Belgum, Irwan Bello, Jake Berdine, Gabriel Bernadett-Shapiro, Christopher Berner, Lenny Bogdonoff, Oleg Boiko, Madelaine Boyd, Anna-Luisa Brakman, Greg Brockman, Tim Brooks, Miles Brundage, Kevin Button, Trevor Cai, Rosie Campbell, Andrew Cann, Brittany Carey, Chelsea Carlson, Rory Carmichael, Brooke Chan, Che Chang, Fotis Chantzis, Derek Chen, Sully Chen, Ruby Chen, Jason Chen, Mark Chen, Ben Chess, Chester Cho, Casey Chu, Hyung~Won Chung, Dave Cummings, Jeremiah Currier, Yunxing Dai, Cory Decareaux, Thomas Degry, Noah Deutsch, Damien Deville, Arka Dhar, David Dohan, Steve Dowling, Sheila Dunning, Adrien Ecoffet, Atty Eleti, Tyna Eloundou, David Farhi, Liam Fedus, Niko Felix, Simón~Posada Fishman, Juston Forte, Isabella Fulford, Leo Gao, Elie Georges, Christian Gibson, Vik Goel, Tarun Gogineni, Gabriel Goh, Rapha Gontijo-Lopes, Jonathan Gordon, Morgan Grafstein, Scott Gray, Ryan Greene, Joshua Gross, Shixiang~Shane Gu, Yufei Guo, Chris Hallacy, Jesse Han, Jeff Harris, Yuchen He, Mike Heaton, Johannes Heidecke, Chris Hesse, Alan Hickey, Wade Hickey, Peter Hoeschele, Brandon Houghton, Kenny Hsu, Shengli Hu, Xin Hu, Joost Huizinga, Shantanu Jain, Shawn Jain, Joanne Jang, Angela Jiang, Roger Jiang, Haozhun Jin, Denny Jin, Shino Jomoto, Billie Jonn, Heewoo Jun, Tomer Kaftan, Łukasz Kaiser, Ali Kamali, Ingmar Kanitscheider, Nitish~Shirish Keskar, Tabarak Khan, Logan Kilpatrick, Jong~Wook Kim, Christina Kim, Yongjik Kim, Jan~Hendrik Kirchner, Jamie Kiros, Matt Knight, Daniel Kokotajlo, Łukasz Kondraciuk, Andrew Kondrich, Aris Konstantinidis, Kyle Kosic, Gretchen Krueger, Vishal Kuo, Michael Lampe, Ikai Lan, Teddy Lee, Jan Leike, Jade Leung, Daniel Levy, Chak~Ming Li, Rachel Lim, Molly Lin, Stephanie Lin, Mateusz Litwin, Theresa Lopez, Ryan Lowe, Patricia Lue, Anna Makanju, Kim Malfacini, Sam Manning, Todor Markov, Yaniv Markovski, Bianca Martin, Katie Mayer, Andrew Mayne, Bob {McGrew}, Scott~Mayer {McKinney}, Christine {McLeavey}, Paul {McMillan}, Jake {McNeil}, David Medina, Aalok Mehta, Jacob Menick, Luke Metz, Andrey Mishchenko, Pamela Mishkin, Vinnie Monaco, Evan Morikawa, Daniel Mossing, Tong Mu, Mira Murati, Oleg Murk, David Mély, Ashvin Nair, Reiichiro Nakano, Rajeev Nayak, Arvind Neelakantan, Richard Ngo, Hyeonwoo Noh, Long Ouyang, Cullen O'Keefe, Jakub Pachocki, Alex Paino, Joe Palermo, Ashley Pantuliano, Giambattista Parascandolo, Joel Parish, Emy Parparita, Alex Passos, Mikhail Pavlov, Andrew Peng, Adam Perelman, Filipe de Avila~Belbute Peres, Michael Petrov, Henrique Ponde de~Oliveira Pinto, Michael, Pokorny, Michelle Pokrass, Vitchyr~H. Pong, Tolly Powell, Alethea Power, Boris Power, Elizabeth Proehl, Raul Puri, Alec Radford, Jack Rae, Aditya Ramesh, Cameron Raymond, Francis Real, Kendra Rimbach, Carl Ross, Bob Rotsted, Henri Roussez, Nick Ryder, Mario Saltarelli, Ted Sanders, Shibani Santurkar, Girish Sastry, Heather Schmidt, David Schnurr, John Schulman, Daniel Selsam, Kyla Sheppard, Toki Sherbakov, Jessica Shieh, Sarah Shoker, Pranav Shyam, Szymon Sidor, Eric Sigler, Maddie Simens, Jordan Sitkin, Katarina Slama, Ian Sohl, Benjamin Sokolowsky, Yang Song, Natalie Staudacher, Felipe~Petroski Such, Natalie Summers, Ilya Sutskever, Jie Tang, Nikolas Tezak, Madeleine~B. Thompson, Phil Tillet, Amin Tootoonchian, Elizabeth Tseng, Preston Tuggle, Nick Turley, Jerry Tworek, Juan Felipe~Cerón Uribe, Andrea Vallone, Arun Vijayvergiya, Chelsea Voss, Carroll Wainwright, Justin~Jay Wang, Alvin Wang, Ben Wang, Jonathan Ward, Jason Wei, C.~J. Weinmann, Akila Welihinda, Peter Welinder, Jiayi Weng, Lilian Weng, Matt Wiethoff, Dave Willner, Clemens Winter, Samuel Wolrich, Hannah Wong, Lauren Workman, Sherwin Wu, Jeff Wu, Michael Wu, Kai Xiao, Tao Xu, Sarah Yoo, Kevin Yu, Qiming Yuan, Wojciech Zaremba, Rowan Zellers, Chong Zhang, Marvin Zhang, Shengjia Zhao, Tianhao Zheng, Juntang Zhuang, William Zhuk, and Barret Zoph.
 \newblock {GPT}-4 technical report, March 2024.
-
-\bibitem[Rosenblatt(1958)]{Rosenblatt1958}
-F.~Rosenblatt.
-\newblock The perceptron: A probabilistic model for information storage and organization in the brain.
-\newblock \emph{Psychological Review}, pages 386--408, 1958.
-
-\bibitem[Russell and Norvig(2016)]{Russell2016}
-Stuart~J. Russell and Peter Norvig.
-\newblock \emph{Artificial intelligence: a modern approach}.
-\newblock Pearson, third edition, global edition edition, 2016.
 
 \bibitem[Sajadieh et~al.(2026)Sajadieh, Fattorini, Perrault, Gil, Parli, Santarlasci, Pava, Maslej, Altman, Brynjolfsson, Brodley, Clark, Dignum, Kumar, Landay, Lyons, Manyika, Niebles, Shoham, Tabassi, Wald, Walsh, and Weld]{Sajadieh2026}
 Sha Sajadieh, Loredana Fattorini, Raymond Perrault, Yolanda Gil, Vanessa Parli, Lapo Santarlasci, Juan Pava, Nestor Maslej, Russ Altman, Erik Brynjolfsson, Carla Brodley, Jack Clark, Virginia Dignum, Vipin Kumar, James Landay, Terah Lyons, James Manyika, Juan~Carlos Niebles, Yoav Shoham, Elham Tabassi, Russell Wald, Toby Walsh, and Dan Weld.
@@ -119,39 +53,9 @@ David Silver, Aja Huang, Chris~J. Maddison, Arthur Guez, Laurent Sifre, George v
 \newblock Mastering the game of go with deep neural networks and tree search.
 \newblock \emph{Nature}, pages 484--489, January 2016.
 
-\bibitem[Sutton and Barto(2018)]{Sutton2018}
-Richard~S Sutton and Andrew~G Barto.
-\newblock \emph{Reinforcement Learning: An Introduction}.
-\newblock 2018.
-
 \bibitem[Swinbourn et~al.(2024)Swinbourn, Li, and Wang]{Swinbourn2024}
 Ross Swinbourn, Chaoen Li, and Feng Wang.
 \newblock A comprehensive review on biomethane production from biogas separation and its techno-economic assessments.
 \newblock \emph{Chemsuschem}, 2024.
-
-\bibitem[Yan et~al.(2023)Yan, He, and He]{Yan2023}
-Jianhai Yan, Zhen He, and Shuguang He.
-\newblock Multitask learning of health state assessment and remaining useful life prediction for sensor-equipped machines.
-\newblock \emph{Reliability Engineering \& System Safety}, 2023.
-
-\bibitem[Yin(2026)]{Yin2026}
-Min Yin.
-\newblock Multi-task learning for anomaly detection and remaining useful life prediction in semiconductor manufacturing systems.
-\newblock \emph{The Journal of Applied Engineering and Technologies}, 2026.
-
-\bibitem[Zaidi et~al.(2026)Zaidi, Shenfield, Zhang, and Ikpehai]{Zaidi2026}
-Syed Haseeb~Haider Zaidi, Alex Shenfield, Hongwei Zhang, and Augustine Ikpehai.
-\newblock A systematic review of anomaly and fault detection using machine learning for industrial machinery.
-\newblock \emph{Algorithms}, 2026.
-
-\bibitem[Zhang et~al.(2023)Zhang, Li, Yin, Zhang, and Grzegorzek]{Zhang2023}
-Jinghua Zhang, Chen Li, Yimin Yin, Jiawei Zhang, and Marcin Grzegorzek.
-\newblock Applications of artificial neural networks in microorganism image analysis: a comprehensive review from conventional multilayer perceptron to popular convolutional neural network and potential visual transformer.
-\newblock \emph{Artificial Intelligence Review}, pages 1013--1070, 2023.
-
-\bibitem[Zhang and Yang(2022)]{Zhang2022}
-Yu~Zhang and Qiang Yang.
-\newblock A survey on multi-task learning.
-\newblock \emph{{IEEE} Transactions on Knowledge and Data Engineering}, pages 5586--5609, 2022.
 
 \end{thebibliography}
