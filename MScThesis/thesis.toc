@@ -3,9 +3,10 @@
 \contentsline {section}{\numberline {1.1}Context}{1}{section.1.1}%
 \contentsline {section}{\numberline {1.2}AI in Industry 4.0}{1}{section.1.2}%
 \contentsline {section}{\numberline {1.3}Motivation}{2}{section.1.3}%
-\contentsline {section}{\numberline {1.4}Objectives}{2}{section.1.4}%
-\contentsline {section}{\numberline {1.5}Company Presentation}{2}{section.1.5}%
-\contentsline {section}{\numberline {1.6}Thesis Structure}{3}{section.1.6}%
+\contentsline {section}{\numberline {1.4}Problem Definition}{2}{section.1.4}%
+\contentsline {section}{\numberline {1.5}Objectives}{3}{section.1.5}%
+\contentsline {section}{\numberline {1.6}Company Presentation}{4}{section.1.6}%
+\contentsline {section}{\numberline {1.7}Thesis Structure}{4}{section.1.7}%
 \contentsline {chapter}{\numberline {2}Background}{5}{chapter.2}%
 \contentsline {section}{\numberline {2.1}What is Biogas?}{5}{section.2.1}%
 \contentsline {section}{\numberline {2.2}Biogas Upgrading}{6}{section.2.2}%
@@ -24,31 +25,68 @@
 \contentsline {subsubsection}{\numberline {3.2.1.2}Unsupervised Learning}{19}{subsubsection.3.2.1.2}%
 \contentsline {subsubsection}{\numberline {3.2.1.3}Reinforcement Learning}{20}{subsubsection.3.2.1.3}%
 \contentsline {subsubsection}{\numberline {3.2.1.4}Self-Supervised Learning}{20}{subsubsection.3.2.1.4}%
-\contentsline {subsection}{\numberline {3.2.2}Representation Learning}{21}{subsection.3.2.2}%
-\contentsline {subsection}{\numberline {3.2.3}Deep Learning}{22}{subsection.3.2.3}%
-\contentsline {subsubsection}{\numberline {3.2.3.1}Artificial Neural Networks}{22}{subsubsection.3.2.3.1}%
-\contentsline {subsection}{\numberline {3.2.4}Training Deep Neural Networks}{23}{subsection.3.2.4}%
-\contentsline {subsection}{\numberline {3.2.5}Deep Learning Architectures}{24}{subsection.3.2.5}%
-\contentsline {subsubsection}{\numberline {3.2.5.1}Recurrent Neural Network}{24}{subsubsection.3.2.5.1}%
-\contentsline {subsubsection}{\numberline {3.2.5.2}Long Short-Term Memory}{25}{subsubsection.3.2.5.2}%
-\contentsline {subsection}{\numberline {3.2.6}Learning Strategies}{26}{subsection.3.2.6}%
+\contentsline {subsection}{\numberline {3.2.2}Tree-Based Ensemble Models}{20}{subsection.3.2.2}%
+\contentsline {subsection}{\numberline {3.2.3}Representation Learning}{21}{subsection.3.2.3}%
+\contentsline {subsection}{\numberline {3.2.4}Deep Learning}{22}{subsection.3.2.4}%
+\contentsline {subsubsection}{\numberline {3.2.4.1}Artificial Neural Networks}{23}{subsubsection.3.2.4.1}%
+\contentsline {subsection}{\numberline {3.2.5}Training Deep Neural Networks}{23}{subsection.3.2.5}%
+\contentsline {subsection}{\numberline {3.2.6}Deep Learning Architectures}{25}{subsection.3.2.6}%
+\contentsline {subsubsection}{\numberline {3.2.6.1}Recurrent Neural Network}{25}{subsubsection.3.2.6.1}%
+\contentsline {subsubsection}{\numberline {3.2.6.2}Long Short-Term Memory}{26}{subsubsection.3.2.6.2}%
+\contentsline {subsection}{\numberline {3.2.7}Learning Strategies}{27}{subsection.3.2.7}%
 \contentsline {section}{\numberline {3.3}Industrial Monitoring and Maintenance}{28}{section.3.3}%
-\contentsline {subsection}{\numberline {3.3.1}Anomaly Detection}{28}{subsection.3.3.1}%
+\contentsline {subsection}{\numberline {3.3.1}Anomaly Detection}{29}{subsection.3.3.1}%
 \contentsline {subsection}{\numberline {3.3.2}Fault Detection}{29}{subsection.3.3.2}%
-\contentsline {subsection}{\numberline {3.3.3}Predictive Maintenance}{29}{subsection.3.3.3}%
-\contentsline {subsection}{\numberline {3.3.4}Relationship Between AD, FD and PdM}{29}{subsection.3.3.4}%
-\contentsline {section}{\numberline {3.4}Related Work}{30}{section.3.4}%
-\contentsline {subsection}{\numberline {3.4.1}Deep Learning for Industrial Monitoring}{30}{subsection.3.4.1}%
-\contentsline {subsection}{\numberline {3.4.2}Multi-Task Learning for Industrial Monitoring}{30}{subsection.3.4.2}%
-\contentsline {subsection}{\numberline {3.4.3}Research Gap}{31}{subsection.3.4.3}%
-\contentsline {chapter}{\numberline {4}Conclusions and Future Work}{33}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Results}{33}{section.4.1}%
-\contentsline {section}{\numberline {4.2}Further Work}{34}{section.4.2}%
-\contentsline {section}{\numberline {4.3}Impact on Sustainable Development Goals}{34}{section.4.3}%
-\contentsline {chapter}{\numberline {A}Loren Ipsum}{35}{appendix.A}%
-\contentsline {section}{\numberline {A.1}What is \emph {Loren Ipsum}?}{35}{section.A.1}%
-\contentsline {section}{\numberline {A.2}Where does Loren come from?}{35}{section.A.2}%
-\contentsline {section}{\numberline {A.3}Why using Loren?}{36}{section.A.3}%
-\contentsline {section}{\numberline {A.4}Where to Find Examples?}{36}{section.A.4}%
-\contentsline {chapter}{\numberline {B}Transparency on the Use of AI}{37}{appendix.B}%
-\contentsline {chapter}{References}{39}{section*.34}%
+\contentsline {subsection}{\numberline {3.3.3}Predictive Maintenance}{30}{subsection.3.3.3}%
+\contentsline {subsection}{\numberline {3.3.4}Relationship Between AD, FD and PdM}{30}{subsection.3.3.4}%
+\contentsline {section}{\numberline {3.4}Related Work}{31}{section.3.4}%
+\contentsline {subsection}{\numberline {3.4.1}Deep Learning for Industrial Monitoring}{31}{subsection.3.4.1}%
+\contentsline {subsection}{\numberline {3.4.2}Multi-Task Learning for Industrial Monitoring}{31}{subsection.3.4.2}%
+\contentsline {subsection}{\numberline {3.4.3}Research Gap}{32}{subsection.3.4.3}%
+\contentsline {chapter}{\numberline {4}Methodology}{33}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Dataset Description}{33}{section.4.1}%
+\contentsline {subsection}{\numberline {4.1.1}Data Acquisition}{33}{subsection.4.1.1}%
+\contentsline {subsection}{\numberline {4.1.2}Process Variables}{34}{subsection.4.1.2}%
+\contentsline {section}{\numberline {4.2}Exploratory Data Analysis}{35}{section.4.2}%
+\contentsline {section}{\numberline {4.3}Data Cleaning}{39}{section.4.3}%
+\contentsline {section}{\numberline {4.4}Fault Injection}{40}{section.4.4}%
+\contentsline {subsection}{\numberline {4.4.1}Severity Levels}{41}{subsection.4.4.1}%
+\contentsline {subsection}{\numberline {4.4.2}Fault Scenarios}{42}{subsection.4.4.2}%
+\contentsline {subsection}{\numberline {4.4.3}Combined Fault Scenarios}{44}{subsection.4.4.3}%
+\contentsline {subsection}{\numberline {4.4.4}False Positive Scenarios}{45}{subsection.4.4.4}%
+\contentsline {subsection}{\numberline {4.4.5}Anomaly Labeling Scheme}{45}{subsection.4.4.5}%
+\contentsline {section}{\numberline {4.5}Train and Test Set Compilation}{46}{section.4.5}%
+\contentsline {section}{\numberline {4.6}Windowing}{48}{section.4.6}%
+\contentsline {section}{\numberline {4.7}Train/Validation Split and Normalization}{49}{section.4.7}%
+\contentsline {section}{\numberline {4.8}Task Formulation}{49}{section.4.8}%
+\contentsline {section}{\numberline {4.9}Model Development}{50}{section.4.9}%
+\contentsline {subsection}{\numberline {4.9.1}Traditional Machine Learning Baselines}{50}{subsection.4.9.1}%
+\contentsline {subsection}{\numberline {4.9.2}Single-Task Deep Learning Models}{51}{subsection.4.9.2}%
+\contentsline {subsection}{\numberline {4.9.3}Multi-Task Deep Learning Models}{51}{subsection.4.9.3}%
+\contentsline {subsection}{\numberline {4.9.4}Hyperparameter Tuning}{53}{subsection.4.9.4}%
+\contentsline {section}{\numberline {4.10}Evaluation Metrics}{54}{section.4.10}%
+\contentsline {chapter}{\numberline {5}Results}{57}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Anomaly Detection Results}{57}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Fault Detection Results}{59}{section.5.2}%
+\contentsline {section}{\numberline {5.3}Predictive Maintenance Results}{62}{section.5.3}%
+\contentsline {section}{\numberline {5.4}Summary of Findings}{63}{section.5.4}%
+\contentsline {chapter}{\numberline {6}Discussion}{65}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Deep Learning Against the Traditional Baselines}{65}{section.6.1}%
+\contentsline {section}{\numberline {6.2}What Temporal Context Provides}{65}{section.6.2}%
+\contentsline {section}{\numberline {6.3}Single-Task Against Multi-Task Learning}{66}{section.6.3}%
+\contentsline {section}{\numberline {6.4}Limitations}{66}{section.6.4}%
+\contentsline {chapter}{\numberline {7}Conclusions and Future Work}{67}{chapter.7}%
+\contentsline {section}{\numberline {7.1}Conclusions}{67}{section.7.1}%
+\contentsline {section}{\numberline {7.2}Future Work}{68}{section.7.2}%
+\contentsline {chapter}{\numberline {A}Exploratory Data Analysis Plots}{71}{appendix.A}%
+\contentsline {section}{\numberline {A.1}Time Series Over the Full Collection Period}{71}{section.A.1}%
+\contentsline {section}{\numberline {A.2}Distributions of the Continuous Process Variables}{71}{section.A.2}%
+\contentsline {section}{\numberline {A.3}Correlation Matrix Values}{74}{section.A.3}%
+\contentsline {section}{\numberline {A.4}Production Sessions}{75}{section.A.4}%
+\contentsline {chapter}{\numberline {B}Fault Injection Verification Plots}{83}{appendix.B}%
+\contentsline {section}{\numberline {B.1}Single Fault Scenarios — Session 16}{83}{section.B.1}%
+\contentsline {section}{\numberline {B.2}Single Fault Scenarios — Session 17}{83}{section.B.2}%
+\contentsline {section}{\numberline {B.3}Combined Fault Scenarios}{89}{section.B.3}%
+\contentsline {section}{\numberline {B.4}False Positive Scenarios}{89}{section.B.4}%
+\contentsline {chapter}{\numberline {C}Transparency on the Use of AI}{93}{appendix.C}%
+\contentsline {chapter}{References}{95}{section*.113}%

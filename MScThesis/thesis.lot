@@ -8,5 +8,28 @@
 \addvspace {10\p@ }
 \contentsline {table}{\numberline {3.1}{\ignorespaces Example of the Iris dataset used for supervised classification. Adapted from \cite {Murphy2022}}}{19}{table.caption.22}%
 \addvspace {10\p@ }
+\contentsline {table}{\numberline {4.1}{\ignorespaces Process variables included in the original dataset.}}{34}{table.caption.32}%
+\contentsline {table}{\numberline {4.2}{\ignorespaces Descriptive statistics and IQR-based outlier proportions for the continuous process variables (full dataset, all operating modes).}}{36}{table.caption.34}%
+\contentsline {table}{\numberline {4.3}{\ignorespaces Distribution of timestamp gaps larger than 1 minute across the collection period.}}{38}{table.caption.37}%
+\contentsline {table}{\numberline {4.4}{\ignorespaces Production sessions retained after data cleaning.}}{41}{table.caption.40}%
+\contentsline {table}{\numberline {4.5}{\ignorespaces Definition of fault severity levels relative to the manufacturer's warning and trip thresholds. $\Delta $ denotes the distance between the two thresholds.}}{42}{table.caption.41}%
+\contentsline {table}{\numberline {4.6}{\ignorespaces Fault scenarios and their main sensor and injected signal shape.}}{42}{table.caption.42}%
+\contentsline {table}{\numberline {4.7}{\ignorespaces Total observations by anomaly type across the compiled training and test datasets.}}{46}{table.caption.48}%
+\contentsline {table}{\numberline {4.8}{\ignorespaces Random assignment of each fault scenario to the training and test sets (seed 42).}}{47}{table.caption.49}%
+\contentsline {table}{\numberline {4.9}{\ignorespaces Hyperparameter grid used for the traditional machine learning baselines.}}{51}{table.caption.51}%
+\contentsline {table}{\numberline {4.10}{\ignorespaces Hyperparameter configurations tried for every deep learning model.}}{54}{table.caption.54}%
+\addvspace {10\p@ }
+\contentsline {table}{\numberline {5.1}{\ignorespaces Anomaly detection F1-score by model and window size.}}{58}{table.caption.55}%
+\contentsline {table}{\numberline {5.2}{\ignorespaces Anomaly detection ROC-AUC by model and window size.}}{59}{table.caption.57}%
+\contentsline {table}{\numberline {5.3}{\ignorespaces Fault detection mean F1-score by model and window size.}}{60}{table.caption.58}%
+\contentsline {table}{\numberline {5.4}{\ignorespaces Fault detection F1-score per fault type, with each model taken at its best window size.}}{61}{table.caption.60}%
+\contentsline {table}{\numberline {5.5}{\ignorespaces Predictive maintenance MAE by model and window size.}}{62}{table.caption.62}%
+\contentsline {table}{\numberline {5.6}{\ignorespaces Predictive maintenance $R^2$ by model and window size.}}{62}{table.caption.63}%
+\contentsline {table}{\numberline {5.7}{\ignorespaces Best configuration obtained by each model on each task.}}{63}{table.caption.65}%
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {table}{\numberline {A.1}{\ignorespaces Pearson correlation coefficients between the continuous process variables, restricted to production modes (Mode 8 and 9).}}{75}{table.caption.75}%
+\contentsline {table}{\numberline {A.2}{\ignorespaces Per-session mean values of a representative subset of the process variables.}}{75}{table.caption.76}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }

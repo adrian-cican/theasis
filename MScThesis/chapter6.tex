@@ -1,0 +1,61 @@
+% !TeX root = thesis.tex
+
+\chapter{Discussion} \label{chap:discussion}
+
+Chapter~\ref{chap:results} reported the results without interpreting them. This chapter explains what they
+mean and where they are limited.
+
+\section{Deep Learning Against the Traditional Baselines} \label{sec:disc_baselines}
+
+The DL models beat the baselines on all three tasks. The gap is widest on PdM, where the baselines produce
+a negative $R^2$ at most window sizes, meaning they do worse than always predicting the mean severity. On
+AD the baselines fail mostly on recall, detecting between 22\% and 37\% of the injected anomalies against
+75\% to 94\% for the DL models.
+
+The per-fault results show where the difference comes from. Both families detect the cooling fault well,
+because it drives TT-901 from around 61$^\circ$C to over 135$^\circ$C, far outside anything seen in normal
+operation. On the clogged filters fault the baselines never exceed 0.294 while the DL models reach 0.84.
+That fault is a slow drift in PT-903, a pressure signal that already oscillates over a comparable range
+with the VPSA cycle, so no single reading and no window average looks abnormal. Only the evolution of the
+sequence reveals it, and that is exactly what the summary statistics used by the baselines discard.
+
+\section{What Temporal Context Provides} \label{sec:disc_window}
+
+Longer windows helped less than expected. The DL models stay within a narrow band across the whole range
+and already score above 0.79 on AD with a window of 1, where there is no temporal context at all. No model
+reached its best result at the largest window size.
+
+The reason is how the faults were calibrated. Each severity level is anchored to the manufacturer's
+thresholds, so a fault pushes the sensor outside its normal band by construction. A single observation is
+often enough to see that. The baselines behave differently, improving up to a window of 16 or 32 and then
+declining, because each window is labelled by its last observation while the statistics are computed over
+the whole window. The longer the window, the less those statistics describe the moment being predicted.
+
+\section{Single-Task Against Multi-Task Learning} \label{sec:disc_stl_mtl}
+
+No family won on all three tasks. The single-task models were best on AD and PdM, the cascaded multi-task
+architecture was best on FD, and every margin was between 0.011 and 0.023. These differences are too small
+to rank the approaches.
+
+The useful finding is that one multi-task model matches three separate ones. The single-task approach needs
+three models trained, tuned and maintained independently; the multi-task models share one backbone and
+produce all three outputs at once. Equivalent performance at that cost favours the multi-task approach for
+a real deployment. Between the two, the cascaded variant matched or beat the joint variant everywhere, with
+the biggest difference on FD (0.720 against 0.640). This fits its design: its fault head is told whether an
+anomaly is present before deciding which fault it is, and FD is the task that depends most on that answer.
+
+\section{Limitations} \label{sec:disc_limitations}
+
+No real vacuum pump fault was available. Every fault was synthetically injected from the manufacturer's
+troubleshooting guide. The results show how well the models recognise the deviations that were designed,
+not real degradation.
+
+The faults were injected into only two of the eleven sessions. The two behave similarly, so the results say
+nothing about generalising to another plant, another pump, or another operating regime.
+
+Every model was evaluated at a fixed decision threshold of 0.50, rather than at a threshold chosen on
+validation data. A different threshold would change the balance between precision and recall for all
+classification models.
+
+The hyperparameter search was small. Six configurations per model, with 64 hidden units as the largest
+backbone, and that largest option was often selected as the best. Larger networks might do better.

@@ -1,9 +1,15 @@
-\begin{thebibliography}{30}
+\begin{thebibliography}{34}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
   \providecommand{\doi}[1]{doi: #1}\else
   \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Breiman(2001)]{Breiman2001}
+Leo Breiman.
+\newblock Random forests.
+\newblock \emph{Machine Learning}, 45\penalty0 (1):\penalty0 5--32, 2001.
+\newblock \doi{10.1023/A:1010933404324}.
 
 \bibitem[Carvalho et~al.(2019)Carvalho, Soares, Vita, Francisco, Basto, and Alcalá]{Carvalho2019}
 Thyago~P. Carvalho, Fabrízzio A. A. M.~N. Soares, Roberto Vita, Roberto Da~P. Francisco, João~P. Basto, and Symone G.~S. Alcalá.
@@ -19,6 +25,12 @@ Audrey Cerqueus, Alexandre Dolgui, Dmitry Ivanov, Alexandr Klimtchik, David Lemo
 Varun Chandola, Arindam Banerjee, and Vipin Kumar.
 \newblock Anomaly detection: A survey.
 \newblock \emph{{ACM} Comput. Surv.}, 2009.
+
+\bibitem[Chen and Guestrin(2016)]{Chen2016}
+Tianqi Chen and Carlos Guestrin.
+\newblock {XGBoost}: A scalable tree boosting system.
+\newblock In \emph{Proceedings of the 22nd ACM SIGKDD International Conference on Knowledge Discovery and Data Mining}, pages 785--794. ACM, 2016.
+\newblock \doi{10.1145/2939672.2939785}.
 
 \bibitem[Darban et~al.(2025)Darban, Webb, Pan, Aggarwal, and Salehi]{Darban2025}
 Zahra~zamanzadeh Darban, Geoffrey~i Webb, Shirui Pan, Charu Aggarwal, and Mahsa Salehi.
@@ -46,6 +58,11 @@ Klaus Greff, Rupesh~K. Srivastava, Jan Koutník, Bas~R. Steunebrink, and Jürgen
 \newblock {LSTM}: A search space odyssey.
 \newblock \emph{{IEEE} Transactions on Neural Networks and Learning Systems}, pages 2222--2232, 2017.
 
+\bibitem[Hastie et~al.(2009)Hastie, Tibshirani, and Friedman]{Hastie2009}
+Trevor Hastie, Robert Tibshirani, and Jerome Friedman.
+\newblock \emph{The Elements of Statistical Learning: Data Mining, Inference, and Prediction}.
+\newblock Springer, New York, 2 edition, 2009.
+
 \bibitem[Hochreiter and Schmidhuber(1997)]{Hochreiter1997}
 Sepp Hochreiter and J{\"u}rgen Schmidhuber.
 \newblock Long short-term memory.
@@ -64,6 +81,10 @@ Rolf Isermann.
 Uzair Khan, Dong~Seon Cheng, Francesco Setti, Franco Fummi, Marco Cristani, and Luigi Capogrosso.
 \newblock A comprehensive survey on deep learning-based predictive maintenance.
 \newblock \emph{{ACM} Trans. Embed. Comput. Syst.}, 2026.
+
+\bibitem[Kingma and Ba(2015)]{Kingma2015}
+Diederik~P. Kingma and Jimmy Ba.
+\newblock Adam: A method for stochastic optimization, 2015.
 
 \bibitem[Krizhevsky et~al.(2012)Krizhevsky, Sutskever, and Hinton]{Alex2012}
 Alex Krizhevsky, Ilya Sutskever, and Geoffrey~E Hinton.
@@ -100,6 +121,12 @@ F.~Rosenblatt.
 \newblock The perceptron: A probabilistic model for information storage and organization in the brain.
 \newblock \emph{Psychological Review}, pages 386--408, 1958.
 
+\bibitem[Rumelhart et~al.(1986)Rumelhart, Hinton, and Williams]{Rumelhart1986}
+David~E. Rumelhart, Geoffrey~E. Hinton, and Ronald~J. Williams.
+\newblock Learning representations by back-propagating errors.
+\newblock \emph{Nature}, 323\penalty0 (6088):\penalty0 533--536, 1986.
+\newblock \doi{10.1038/323533a0}.
+
 \bibitem[Russell and Norvig(2016)]{Russell2016}
 Stuart~J. Russell and Peter Norvig.
 \newblock \emph{Artificial intelligence: a modern approach}.
@@ -118,11 +145,6 @@ Goldy Shah, Ejaz Ahmad, K.K. Pant, and V.K. Vijay.
 David Silver, Aja Huang, Chris~J. Maddison, Arthur Guez, Laurent Sifre, George van~den Driessche, Julian Schrittwieser, Ioannis Antonoglou, Veda Panneershelvam, Marc Lanctot, Sander Dieleman, Dominik Grewe, John Nham, Nal Kalchbrenner, Ilya Sutskever, Timothy Lillicrap, Madeleine Leach, Koray Kavukcuoglu, Thore Graepel, and Demis Hassabis.
 \newblock Mastering the game of go with deep neural networks and tree search.
 \newblock \emph{Nature}, pages 484--489, January 2016.
-
-\bibitem[Sutton and Barto(2018)]{Sutton2018}
-Richard~S Sutton and Andrew~G Barto.
-\newblock \emph{Reinforcement Learning: An Introduction}.
-\newblock 2018.
 
 \bibitem[Swinbourn et~al.(2024)Swinbourn, Li, and Wang]{Swinbourn2024}
 Ross Swinbourn, Chaoen Li, and Feng Wang.

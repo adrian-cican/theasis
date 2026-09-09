@@ -1,8 +1,100 @@
 \relax 
 \providecommand\hyper@newdestlabel[2]{}
+\@writefile{toc}{\contentsline {chapter}{\numberline {4}Methodology}{33}{chapter.4}\protected@file@percent }
+\@writefile{lof}{\addvspace {10\p@ }}
+\@writefile{lot}{\addvspace {10\p@ }}
+\newlabel{chap:methodology}{{4}{33}{Methodology}{chapter.4}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.1}Dataset Description}{33}{section.4.1}\protected@file@percent }
+\newlabel{sec:dataset}{{4.1}{33}{Dataset Description}{section.4.1}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.1.1}Data Acquisition}{33}{subsection.4.1.1}\protected@file@percent }
+\newlabel{sec:data_acquisition}{{4.1.1}{33}{Data Acquisition}{subsection.4.1.1}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {4.1}{\ignorespaces Process variables included in the original dataset.}}{34}{table.caption.32}\protected@file@percent }
+\newlabel{tab:dataset_variables}{{4.1}{34}{Process variables included in the original dataset}{table.caption.32}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.1.2}Process Variables}{34}{subsection.4.1.2}\protected@file@percent }
+\newlabel{sec:process_variables}{{4.1.2}{34}{Process Variables}{subsection.4.1.2}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.1}{\ignorespaces Simplified process flow diagram identifying the position of the monitored process variables.}}{35}{figure.caption.33}\protected@file@percent }
+\newlabel{fig:plant pid}{{4.1}{35}{Simplified process flow diagram identifying the position of the monitored process variables}{figure.caption.33}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.2}Exploratory Data Analysis}{35}{section.4.2}\protected@file@percent }
+\newlabel{sec:eda}{{4.2}{35}{Exploratory Data Analysis}{section.4.2}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {4.2}{\ignorespaces Descriptive statistics and IQR-based outlier proportions for the continuous process variables (full dataset, all operating modes).}}{36}{table.caption.34}\protected@file@percent }
+\newlabel{tab:eda_summary}{{4.2}{36}{Descriptive statistics and IQR-based outlier proportions for the continuous process variables (full dataset, all operating modes)}{table.caption.34}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.2}{\ignorespaces Top: excerpt of PT-901 showing the repeating pattern associated with the VPSA cycle. Bottom: distributions of the three vacuum pressure sensors (PT-901, PT-902, PT-903).}}{37}{figure.caption.35}\protected@file@percent }
+\newlabel{fig:eda_pt901_cycle}{{4.2}{37}{Top: excerpt of PT-901 showing the repeating pattern associated with the VPSA cycle. Bottom: distributions of the three vacuum pressure sensors (PT-901, PT-902, PT-903)}{figure.caption.35}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.3}{\ignorespaces Top: PT-903 around the frozen sensor episode on 7 April, with the affected observations highlighted and the vacuum pump power (15-minute rolling mean) overlaid on a secondary axis. Bottom: the plant's operating mode over the same period.}}{38}{figure.caption.36}\protected@file@percent }
+\newlabel{fig:eda_pt903_frozen}{{4.3}{38}{Top: PT-903 around the frozen sensor episode on 7 April, with the affected observations highlighted and the vacuum pump power (15-minute rolling mean) overlaid on a secondary axis. Bottom: the plant's operating mode over the same period}{figure.caption.36}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {4.3}{\ignorespaces Distribution of timestamp gaps larger than 1 minute across the collection period.}}{38}{table.caption.37}\protected@file@percent }
+\newlabel{tab:eda_gaps}{{4.3}{38}{Distribution of timestamp gaps larger than 1 minute across the collection period}{table.caption.37}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.4}{\ignorespaces 30-minute moving average of the vacuum pump current (VSD-901\_CORRENT) across the full collection period, with the 7 largest data gaps (red) and the plant's production operating mode (green) highlighted.}}{38}{figure.caption.38}\protected@file@percent }
+\newlabel{fig:eda_gaps_overview}{{4.4}{38}{30-minute moving average of the vacuum pump current (VSD-901\_CORRENT) across the full collection period, with the 7 largest data gaps (red) and the plant's production operating mode (green) highlighted}{figure.caption.38}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.5}{\ignorespaces Correlation matrix of the continuous process variables, restricted to production modes (Mode 8 and 9).}}{39}{figure.caption.39}\protected@file@percent }
+\newlabel{fig:eda_correlation}{{4.5}{39}{Correlation matrix of the continuous process variables, restricted to production modes (Mode 8 and 9)}{figure.caption.39}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.3}Data Cleaning}{39}{section.4.3}\protected@file@percent }
+\newlabel{sec:cleaning}{{4.3}{39}{Data Cleaning}{section.4.3}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.4}Fault Injection}{40}{section.4.4}\protected@file@percent }
+\newlabel{sec:fault_scenarios}{{4.4}{40}{Fault Injection}{section.4.4}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {4.4}{\ignorespaces Production sessions retained after data cleaning.}}{41}{table.caption.40}\protected@file@percent }
+\newlabel{tab:cleaning_sessions}{{4.4}{41}{Production sessions retained after data cleaning}{table.caption.40}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.4.1}Severity Levels}{41}{subsection.4.4.1}\protected@file@percent }
+\newlabel{sec:fault_severity}{{4.4.1}{41}{Severity Levels}{subsection.4.4.1}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {4.5}{\ignorespaces Definition of fault severity levels relative to the manufacturer's warning and trip thresholds. $\Delta $ denotes the distance between the two thresholds.}}{42}{table.caption.41}\protected@file@percent }
+\newlabel{tab:fault_severity}{{4.5}{42}{Definition of fault severity levels relative to the manufacturer's warning and trip thresholds. $\Delta $ denotes the distance between the two thresholds}{table.caption.41}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.4.2}Fault Scenarios}{42}{subsection.4.4.2}\protected@file@percent }
+\newlabel{sec:fault_single}{{4.4.2}{42}{Fault Scenarios}{subsection.4.4.2}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {4.6}{\ignorespaces Fault scenarios and their main sensor and injected signal shape.}}{42}{table.caption.42}\protected@file@percent }
+\newlabel{tab:fault_types}{{4.6}{42}{Fault scenarios and their main sensor and injected signal shape}{table.caption.42}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.6}{\ignorespaces F1 (clogged exhaust filters), medium severity: PT-903 with and without the injected fault. The fault lasts 10 hours, starting 45\% of the way through the session.}}{43}{figure.caption.43}\protected@file@percent }
+\newlabel{fig:fault_f1}{{4.6}{43}{F1 (clogged exhaust filters), medium severity: PT-903 with and without the injected fault. The fault lasts 10 hours, starting 45\% of the way through the session}{figure.caption.43}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.7}{\ignorespaces F2 (insufficient cooling), medium severity: TT-901 with and without the injected fault. The fault lasts 5 hours, starting 45\% of the way through the session.}}{43}{figure.caption.44}\protected@file@percent }
+\newlabel{fig:fault_f2}{{4.7}{43}{F2 (insufficient cooling), medium severity: TT-901 with and without the injected fault. The fault lasts 5 hours, starting 45\% of the way through the session}{figure.caption.44}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.8}{\ignorespaces F3 (float valve fault), medium severity: PT-903 with and without the injected fault, showing the oscillatory pattern characteristic of this fault type. The fault lasts 10 hours, starting 45\% of the way through the session.}}{44}{figure.caption.45}\protected@file@percent }
+\newlabel{fig:fault_f3}{{4.8}{44}{F3 (float valve fault), medium severity: PT-903 with and without the injected fault, showing the oscillatory pattern characteristic of this fault type. The fault lasts 10 hours, starting 45\% of the way through the session}{figure.caption.45}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.9}{\ignorespaces F4 (defective bearing), medium severity: TT-904 with and without the injected fault, showing the short, localized temperature spike characteristic of this fault type. The fault lasts about 1.4 hours, starting 45\% of the way through the session.}}{44}{figure.caption.46}\protected@file@percent }
+\newlabel{fig:fault_f4}{{4.9}{44}{F4 (defective bearing), medium severity: TT-904 with and without the injected fault, showing the short, localized temperature spike characteristic of this fault type. The fault lasts about 1.4 hours, starting 45\% of the way through the session}{figure.caption.46}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.4.3}Combined Fault Scenarios}{44}{subsection.4.4.3}\protected@file@percent }
+\newlabel{sec:fault_combined}{{4.4.3}{44}{Combined Fault Scenarios}{subsection.4.4.3}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.10}{\ignorespaces Combo A (F1 severe + F3 small): PT-903 with and without the injected faults, with the F1 and F3 windows highlighted, showing their partial overlap in time.}}{45}{figure.caption.47}\protected@file@percent }
+\newlabel{fig:fault_combo_a}{{4.10}{45}{Combo A (F1 severe + F3 small): PT-903 with and without the injected faults, with the F1 and F3 windows highlighted, showing their partial overlap in time}{figure.caption.47}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.4.4}False Positive Scenarios}{45}{subsection.4.4.4}\protected@file@percent }
+\newlabel{sec:fault_fp}{{4.4.4}{45}{False Positive Scenarios}{subsection.4.4.4}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.4.5}Anomaly Labeling Scheme}{45}{subsection.4.4.5}\protected@file@percent }
+\newlabel{sec:fault_labeling}{{4.4.5}{45}{Anomaly Labeling Scheme}{subsection.4.4.5}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {4.7}{\ignorespaces Total observations by anomaly type across the compiled training and test datasets.}}{46}{table.caption.48}\protected@file@percent }
+\newlabel{tab:fault_data_totals}{{4.7}{46}{Total observations by anomaly type across the compiled training and test datasets}{table.caption.48}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.5}Train and Test Set Compilation}{46}{section.4.5}\protected@file@percent }
+\newlabel{sec:training_compilation}{{4.5}{46}{Train and Test Set Compilation}{section.4.5}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {4.8}{\ignorespaces Random assignment of each fault scenario to the training and test sets (seed 42).}}{47}{table.caption.49}\protected@file@percent }
+\newlabel{tab:fault_split}{{4.8}{47}{Random assignment of each fault scenario to the training and test sets (seed 42)}{table.caption.49}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.11}{\ignorespaces Full compiled training set, grouped by sensor type, with injected anomaly regions shaded and the boundary between normal sessions and fault files marked.}}{48}{figure.caption.50}\protected@file@percent }
+\newlabel{fig:training_set_full}{{4.11}{48}{Full compiled training set, grouped by sensor type, with injected anomaly regions shaded and the boundary between normal sessions and fault files marked}{figure.caption.50}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.6}Windowing}{48}{section.4.6}\protected@file@percent }
+\newlabel{sec:windowing}{{4.6}{48}{Windowing}{section.4.6}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.7}Train/Validation Split and Normalization}{49}{section.4.7}\protected@file@percent }
+\newlabel{sec:data_split}{{4.7}{49}{Train/Validation Split and Normalization}{section.4.7}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.8}Task Formulation}{49}{section.4.8}\protected@file@percent }
+\newlabel{sec:task_formulation}{{4.8}{49}{Task Formulation}{section.4.8}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.9}Model Development}{50}{section.4.9}\protected@file@percent }
+\newlabel{sec:model_development}{{4.9}{50}{Model Development}{section.4.9}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.9.1}Traditional Machine Learning Baselines}{50}{subsection.4.9.1}\protected@file@percent }
+\newlabel{sec:ml_baselines}{{4.9.1}{50}{Traditional Machine Learning Baselines}{subsection.4.9.1}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {4.9}{\ignorespaces Hyperparameter grid used for the traditional machine learning baselines.}}{51}{table.caption.51}\protected@file@percent }
+\newlabel{tab:ml_baseline_grid}{{4.9}{51}{Hyperparameter grid used for the traditional machine learning baselines}{table.caption.51}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.9.2}Single-Task Deep Learning Models}{51}{subsection.4.9.2}\protected@file@percent }
+\newlabel{sec:stl_models}{{4.9.2}{51}{Single-Task Deep Learning Models}{subsection.4.9.2}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.9.3}Multi-Task Deep Learning Models}{51}{subsection.4.9.3}\protected@file@percent }
+\newlabel{sec:mtl_models}{{4.9.3}{51}{Multi-Task Deep Learning Models}{subsection.4.9.3}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.12}{\ignorespaces Single-task deep learning models}}{52}{figure.caption.52}\protected@file@percent }
+\newlabel{fig:stl_models}{{4.12}{52}{Single-task deep learning models}{figure.caption.52}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.13}{\ignorespaces Multi-task deep learning architectures}}{53}{figure.caption.53}\protected@file@percent }
+\newlabel{fig:mtl_models}{{4.13}{53}{Multi-task deep learning architectures}{figure.caption.53}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.9.4}Hyperparameter Tuning}{53}{subsection.4.9.4}\protected@file@percent }
+\newlabel{sec:hyperparameters}{{4.9.4}{53}{Hyperparameter Tuning}{subsection.4.9.4}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {4.10}{\ignorespaces Hyperparameter configurations tried for every deep learning model.}}{54}{table.caption.54}\protected@file@percent }
+\newlabel{tab:hyperparameter_grid}{{4.10}{54}{Hyperparameter configurations tried for every deep learning model}{table.caption.54}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.10}Evaluation Metrics}{54}{section.4.10}\protected@file@percent }
+\newlabel{sec:evaluation_metrics}{{4.10}{54}{Evaluation Metrics}{section.4.10}{}}
 \@setckpt{chapter4}{
-\setcounter{page}{32}
-\setcounter{equation}{2}
+\setcounter{page}{56}
+\setcounter{equation}{1}
 \setcounter{enumi}{0}
 \setcounter{enumii}{0}
 \setcounter{enumiii}{0}
@@ -10,23 +102,25 @@
 \setcounter{footnote}{0}
 \setcounter{mpfootnote}{0}
 \setcounter{part}{0}
-\setcounter{chapter}{3}
-\setcounter{section}{4}
-\setcounter{subsection}{3}
+\setcounter{chapter}{4}
+\setcounter{section}{10}
+\setcounter{subsection}{0}
 \setcounter{subsubsection}{0}
 \setcounter{paragraph}{0}
 \setcounter{subparagraph}{0}
-\setcounter{figure}{10}
-\setcounter{table}{1}
+\setcounter{figure}{13}
+\setcounter{table}{10}
 \setcounter{caption@flags}{2}
 \setcounter{continuedfloat}{0}
 \setcounter{linenumber}{0}
-\setcounter{LN@truepage}{53}
+\setcounter{LN@truepage}{79}
 \setcounter{NAT@ctr}{0}
-\setcounter{section@level}{2}
+\setcounter{section@level}{1}
 \setcounter{Item}{0}
 \setcounter{Hfootnote}{0}
-\setcounter{bookmark@seq@number}{36}
+\setcounter{bookmark@seq@number}{60}
+\setcounter{parentequation}{0}
+\setcounter{r@tfl@t}{0}
 \setcounter{lstnumber}{1}
 \setcounter{lstlisting}{0}
 }

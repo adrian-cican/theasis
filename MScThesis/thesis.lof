@@ -3,7 +3,7 @@
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {2.1}{\ignorespaces Sources of organic waste feedstock for biogas production. Source: \cite {InternationalEnergyAgency2020}}}{6}{figure.caption.10}%
 \contentsline {figure}{\numberline {2.2}{\ignorespaces Biogas upgrading and utilization. Source: \cite {InternationalEnergyAgency2020}}}{7}{figure.caption.11}%
-\contentsline {figure}{\numberline {2.3}{\ignorespaces Main biogas upgrading technologies: adsorption, membrane separation, cryogenic separation, and absorption. Source: \cite {Naquash2025}.}}{8}{figure.caption.12}%
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Main biogas upgrading technologies: adsorption, membrane separation, cryogenic separation, and absorption, respectively. Source: \cite {Naquash2025}.}}{8}{figure.caption.12}%
 \contentsline {figure}{\numberline {2.4}{\ignorespaces Industrial VPSA biomethane upgrading plant. Adapted from Sysadvance}}{8}{figure.caption.13}%
 \contentsline {figure}{\numberline {2.5}{\ignorespaces Operating cycle of a four-column VPSA system. Source: \cite {Shah2021}}}{10}{figure.caption.14}%
 \contentsline {figure}{\numberline {2.6}{\ignorespaces Vacuum pump inside a biogas upgrading plant. Adapted from Sysadvance}}{11}{figure.caption.15}%
@@ -11,15 +11,76 @@
 \contentsline {figure}{\numberline {2.8}{\ignorespaces Vacuum pump scheme. Adapted from the manufacturer's manual}}{12}{figure.caption.17}%
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {3.1}{\ignorespaces Three types of Iris flowers: Setosa, Versicolor and Virginica. Adapted from \cite {Murphy2022}}}{19}{figure.caption.23}%
-\contentsline {figure}{\numberline {3.2}{\ignorespaces Agent–environment interaction in reinforcement learning. Adapted from \cite {Sutton2018}}}{20}{figure.caption.24}%
-\contentsline {figure}{\numberline {3.3}{\ignorespaces Illustration of a representation learning model. Adapted from \cite {Goodfellow2016}}}{21}{figure.caption.25}%
-\contentsline {figure}{\numberline {3.4}{\ignorespaces Illustration of a perceptron. Adapted from \cite {Mitchell2013}}}{22}{figure.caption.26}%
-\contentsline {figure}{\numberline {3.5}{\ignorespaces Illustration of a MLP with 1 hidden layer. Adapted from \cite {Zhang2023}}}{23}{figure.caption.27}%
-\contentsline {figure}{\numberline {3.6}{\ignorespaces General training pipeline of a deep neural network. Backpropagation computes the gradient of the cost function; the optimization rule (e.g., SGD or Adam) then uses this gradient to update the parameters.}}{24}{figure.caption.28}%
-\contentsline {figure}{\numberline {3.7}{\ignorespaces Illustration of a RNN. Adapted from \cite {Goodfellow2016}}}{25}{figure.caption.29}%
-\contentsline {figure}{\numberline {3.8}{\ignorespaces Illustration of a LSTM. Adapted from \cite {Greff2017}}}{26}{figure.caption.30}%
-\contentsline {figure}{\numberline {3.9}{\ignorespaces Conceptual comparison between single-task learning and multi-task learning. In STL, each task requires an independent model, whereas MTL shares a common representation across multiple related tasks while maintaining task-specific output layers.}}{27}{figure.caption.31}%
-\contentsline {figure}{\numberline {3.10}{\ignorespaces Example for the multi-task feedforward neural network with an input layer, a hidden layer, and an output layer.. Adapted from \cite {Zhang2022}}}{27}{figure.caption.32}%
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Illustration of a representation learning model. Adapted from \cite {Goodfellow2016}}}{22}{figure.caption.24}%
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Illustration of a perceptron. Adapted from \cite {Mitchell2013}}}{23}{figure.caption.25}%
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Illustration of a MLP with 1 hidden layer. Adapted from \cite {Zhang2023}}}{24}{figure.caption.26}%
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Training pipeline of a deep neural network}}{25}{figure.caption.27}%
+\contentsline {figure}{\numberline {3.6}{\ignorespaces Illustration of a RNN. Adapted from \cite {Goodfellow2016}}}{26}{figure.caption.28}%
+\contentsline {figure}{\numberline {3.7}{\ignorespaces Illustration of a LSTM. Adapted from \cite {Greff2017}}}{27}{figure.caption.29}%
+\contentsline {figure}{\numberline {3.8}{\ignorespaces Conceptual comparison between single-task learning and multi-task learning. In STL, each task requires an independent model, whereas MTL shares a common representation across multiple related tasks while maintaining task-specific output layers.}}{28}{figure.caption.30}%
+\contentsline {figure}{\numberline {3.9}{\ignorespaces Example for the multi-task feedforward neural network with an input layer, a hidden layer, and an output layer.. Adapted from \cite {Zhang2022}}}{28}{figure.caption.31}%
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Simplified process flow diagram identifying the position of the monitored process variables.}}{35}{figure.caption.33}%
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Top: excerpt of PT-901 showing the repeating pattern associated with the VPSA cycle. Bottom: distributions of the three vacuum pressure sensors (PT-901, PT-902, PT-903).}}{37}{figure.caption.35}%
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Top: PT-903 around the frozen sensor episode on 7 April, with the affected observations highlighted and the vacuum pump power (15-minute rolling mean) overlaid on a secondary axis. Bottom: the plant's operating mode over the same period.}}{38}{figure.caption.36}%
+\contentsline {figure}{\numberline {4.4}{\ignorespaces 30-minute moving average of the vacuum pump current (VSD-901\_CORRENT) across the full collection period, with the 7 largest data gaps (red) and the plant's production operating mode (green) highlighted.}}{38}{figure.caption.38}%
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Correlation matrix of the continuous process variables, restricted to production modes (Mode 8 and 9).}}{39}{figure.caption.39}%
+\contentsline {figure}{\numberline {4.6}{\ignorespaces F1 (clogged exhaust filters), medium severity: PT-903 with and without the injected fault. The fault lasts 10 hours, starting 45\% of the way through the session.}}{43}{figure.caption.43}%
+\contentsline {figure}{\numberline {4.7}{\ignorespaces F2 (insufficient cooling), medium severity: TT-901 with and without the injected fault. The fault lasts 5 hours, starting 45\% of the way through the session.}}{43}{figure.caption.44}%
+\contentsline {figure}{\numberline {4.8}{\ignorespaces F3 (float valve fault), medium severity: PT-903 with and without the injected fault, showing the oscillatory pattern characteristic of this fault type. The fault lasts 10 hours, starting 45\% of the way through the session.}}{44}{figure.caption.45}%
+\contentsline {figure}{\numberline {4.9}{\ignorespaces F4 (defective bearing), medium severity: TT-904 with and without the injected fault, showing the short, localized temperature spike characteristic of this fault type. The fault lasts about 1.4 hours, starting 45\% of the way through the session.}}{44}{figure.caption.46}%
+\contentsline {figure}{\numberline {4.10}{\ignorespaces Combo A (F1 severe + F3 small): PT-903 with and without the injected faults, with the F1 and F3 windows highlighted, showing their partial overlap in time.}}{45}{figure.caption.47}%
+\contentsline {figure}{\numberline {4.11}{\ignorespaces Full compiled training set, grouped by sensor type, with injected anomaly regions shaded and the boundary between normal sessions and fault files marked.}}{48}{figure.caption.50}%
+\contentsline {figure}{\numberline {4.12}{\ignorespaces Single-task deep learning models}}{52}{figure.caption.52}%
+\contentsline {figure}{\numberline {4.13}{\ignorespaces Multi-task deep learning architectures}}{53}{figure.caption.53}%
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Anomaly detection F1-score against window size, for all five models.}}{58}{figure.caption.56}%
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Fault detection mean F1-score against window size, for all five models.}}{60}{figure.caption.59}%
+\contentsline {figure}{\numberline {5.3}{\ignorespaces Fault detection F1-score by fault type, with each model taken at its best window size.}}{61}{figure.caption.61}%
+\contentsline {figure}{\numberline {5.4}{\ignorespaces Predictive maintenance MAE (left) and $R^2$ (right) against window size, for all five models. The dashed line on the right marks $R^2 = 0$, the value obtained by always predicting the mean severity of the training data.}}{63}{figure.caption.64}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {A.1}{\ignorespaces Vacuum pressure variables (PT-901, PT-902, PT-903) over the full collection period.}}{72}{figure.caption.70}%
+\contentsline {figure}{\numberline {A.2}{\ignorespaces Temperature variables (TT-901 to TT-904) over the full collection period.}}{72}{figure.caption.71}%
+\contentsline {figure}{\numberline {A.3}{\ignorespaces Gas flow variables (FT-201, FT-801, FT-901) over the full collection period.}}{73}{figure.caption.72}%
+\contentsline {figure}{\numberline {A.4}{\ignorespaces Vacuum pump motor variables (VSD-901\_CORRENT, VSD-901\_POWER, VSD-901\_RPM, VSD-901\_SPEED) over the full collection period.}}{73}{figure.caption.73}%
+\contentsline {figure}{\numberline {A.5}{\ignorespaces Distributions of the fourteen continuous process variables over the full collection period.}}{74}{figure.caption.74}%
+\contentsline {figure}{\numberline {A.6}{\ignorespaces Session 1 (2026-03-12 15:38 to 2026-03-14 15:57, 2{,}900 observations).}}{76}{figure.caption.77}%
+\contentsline {figure}{\numberline {A.7}{\ignorespaces Session 2 (2026-03-14 22:50 to 2026-03-16 04:48, 1{,}799 observations).}}{76}{figure.caption.78}%
+\contentsline {figure}{\numberline {A.8}{\ignorespaces Session 3 (2026-03-16 09:02 to 2026-03-19 16:24, 4{,}763 observations).}}{77}{figure.caption.79}%
+\contentsline {figure}{\numberline {A.9}{\ignorespaces Session 5 (2026-03-20 03:25 to 2026-03-21 06:10, 1{,}606 observations).}}{77}{figure.caption.80}%
+\contentsline {figure}{\numberline {A.10}{\ignorespaces Session 8 (2026-03-21 18:10 to 2026-03-22 14:44, 1{,}235 observations).}}{78}{figure.caption.81}%
+\contentsline {figure}{\numberline {A.11}{\ignorespaces Session 12 (2026-03-23 14:22 to 2026-03-25 08:57, 2{,}556 observations).}}{78}{figure.caption.82}%
+\contentsline {figure}{\numberline {A.12}{\ignorespaces Session 13 (2026-03-25 09:31 to 2026-03-31 14:28, 8{,}938 observations), the longest session retained.}}{79}{figure.caption.83}%
+\contentsline {figure}{\numberline {A.13}{\ignorespaces Session 14 (2026-03-31 15:00 to 2026-04-02 09:06, 2{,}527 observations).}}{79}{figure.caption.84}%
+\contentsline {figure}{\numberline {A.14}{\ignorespaces Session 15 (2026-04-02 10:28 to 2026-04-04 16:57, 3{,}270 observations).}}{80}{figure.caption.85}%
+\contentsline {figure}{\numberline {A.15}{\ignorespaces Session 16 (2026-04-04 19:45 to 2026-04-07 03:51, 3{,}367 observations), prior to fault injection.}}{80}{figure.caption.86}%
+\contentsline {figure}{\numberline {A.16}{\ignorespaces Session 17 (2026-04-07 07:42 to 2026-04-10 09:16, 4{,}415 observations), prior to fault injection. This is the session containing the frozen PT-903 episode discussed in Section~\ref {sec:eda}.}}{81}{figure.caption.87}%
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {B.1}{\ignorespaces F1 (clogged exhaust filters), small severity, Session 16: PT-903 with and without the injected fault. The fault lasts 6 hours, starting 30\% of the way through the session.}}{84}{figure.caption.88}%
+\contentsline {figure}{\numberline {B.2}{\ignorespaces F1 (clogged exhaust filters), severe severity, Session 16: PT-903 with and without the injected fault. The fault lasts 12 hours, starting 55\% of the way through the session.}}{84}{figure.caption.89}%
+\contentsline {figure}{\numberline {B.3}{\ignorespaces F2 (insufficient cooling), small severity, Session 16: TT-901 with and without the injected fault. The fault lasts 6 hours, starting 30\% of the way through the session.}}{84}{figure.caption.90}%
+\contentsline {figure}{\numberline {B.4}{\ignorespaces F2 (insufficient cooling), severe severity, Session 16: TT-901 with and without the injected fault. The fault lasts 8 hours, starting 10\% of the way through the session.}}{84}{figure.caption.91}%
+\contentsline {figure}{\numberline {B.5}{\ignorespaces F3 (float valve fault), small severity, Session 16: PT-903 with and without the injected fault. The fault lasts 6 hours, starting 30\% of the way through the session.}}{85}{figure.caption.92}%
+\contentsline {figure}{\numberline {B.6}{\ignorespaces F3 (float valve fault), severe severity, Session 16: PT-903 with and without the injected fault. The fault lasts 12 hours, starting 55\% of the way through the session.}}{85}{figure.caption.93}%
+\contentsline {figure}{\numberline {B.7}{\ignorespaces F4 (defective bearing), small severity, Session 16: TT-904 with and without the injected fault. The fault lasts 67 minutes, starting 30\% of the way through the session.}}{85}{figure.caption.94}%
+\contentsline {figure}{\numberline {B.8}{\ignorespaces F4 (defective bearing), severe severity, Session 16: TT-904 with and without the injected fault. The fault lasts 51 minutes, starting 55\% of the way through the session.}}{85}{figure.caption.95}%
+\contentsline {figure}{\numberline {B.9}{\ignorespaces F1 (clogged exhaust filters), small severity, Session 17: PT-903 with and without the injected fault. The fault lasts 6 hours, starting 30\% of the way through the session.}}{86}{figure.caption.96}%
+\contentsline {figure}{\numberline {B.10}{\ignorespaces F1 (clogged exhaust filters), medium severity, Session 17: PT-903 with and without the injected fault. The fault lasts 10 hours, starting 45\% of the way through the session.}}{86}{figure.caption.97}%
+\contentsline {figure}{\numberline {B.11}{\ignorespaces F1 (clogged exhaust filters), severe severity, Session 17: PT-903 with and without the injected fault. The fault lasts 12 hours, starting 55\% of the way through the session.}}{86}{figure.caption.98}%
+\contentsline {figure}{\numberline {B.12}{\ignorespaces F2 (insufficient cooling), small severity, Session 17: TT-901 with and without the injected fault. The fault lasts 6 hours, starting 30\% of the way through the session.}}{86}{figure.caption.99}%
+\contentsline {figure}{\numberline {B.13}{\ignorespaces F2 (insufficient cooling), medium severity, Session 17: TT-901 with and without the injected fault. The fault lasts 5 hours, starting 45\% of the way through the session.}}{87}{figure.caption.100}%
+\contentsline {figure}{\numberline {B.14}{\ignorespaces F2 (insufficient cooling), severe severity, Session 17: TT-901 with and without the injected fault. The fault lasts 8 hours, starting 10\% of the way through the session.}}{87}{figure.caption.101}%
+\contentsline {figure}{\numberline {B.15}{\ignorespaces F3 (float valve fault), small severity, Session 17: PT-903 with and without the injected fault. The fault lasts 6 hours, starting 30\% of the way through the session.}}{87}{figure.caption.102}%
+\contentsline {figure}{\numberline {B.16}{\ignorespaces F3 (float valve fault), medium severity, Session 17: PT-903 with and without the injected fault. The fault lasts 10 hours, starting 45\% of the way through the session.}}{87}{figure.caption.103}%
+\contentsline {figure}{\numberline {B.17}{\ignorespaces F3 (float valve fault), severe severity, Session 17: PT-903 with and without the injected fault. The fault lasts 12 hours, starting 55\% of the way through the session.}}{88}{figure.caption.104}%
+\contentsline {figure}{\numberline {B.18}{\ignorespaces F4 (defective bearing), small severity, Session 17: TT-904 with and without the injected fault. The fault lasts 67 minutes, starting 30\% of the way through the session.}}{88}{figure.caption.105}%
+\contentsline {figure}{\numberline {B.19}{\ignorespaces F4 (defective bearing), medium severity, Session 17: TT-904 with and without the injected fault. The fault lasts 84 minutes, starting 45\% of the way through the session.}}{88}{figure.caption.106}%
+\contentsline {figure}{\numberline {B.20}{\ignorespaces F4 (defective bearing), severe severity, Session 17: TT-904 with and without the injected fault. The fault lasts 51 minutes, starting 55\% of the way through the session.}}{88}{figure.caption.107}%
+\contentsline {figure}{\numberline {B.21}{\ignorespaces Combo A (F1 severe + F3 small), Session 17: PT-903 with and without the injected faults. The overlap between the two windows is shorter than in Session 16.}}{89}{figure.caption.108}%
+\contentsline {figure}{\numberline {B.22}{\ignorespaces Combo B (F2 medium + F4 severe), Session 16: TT-901 (top) and TT-904 (bottom) with and without the injected faults. The F4 spike on TT-904 occurs entirely within the F2 window on TT-901.}}{89}{figure.caption.109}%
+\contentsline {figure}{\numberline {B.23}{\ignorespaces Combo B (F2 medium + F4 severe), Session 17: TT-901 (top) and TT-904 (bottom) with and without the injected faults. The F4 spike on TT-904 occurs entirely within the F2 window on TT-901.}}{90}{figure.caption.110}%
+\contentsline {figure}{\numberline {B.24}{\ignorespaces Standalone false positive scenario, Session 16: TT-902 with and without the injected spike. The spike stays below the trip threshold and is not propagated to any correlated sensor.}}{90}{figure.caption.111}%
+\contentsline {figure}{\numberline {B.25}{\ignorespaces Standalone false positive scenario, Session 17: TT-903 with and without the injected spike. The spike stays below the trip threshold and is not propagated to any correlated sensor.}}{91}{figure.caption.112}%
 \addvspace {10\p@ }

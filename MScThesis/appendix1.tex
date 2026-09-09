@@ -1,70 +1,208 @@
-\chapter{Loren Ipsum} \label{ap1:loren}
+% !TeX root = thesis.tex
+%
 
-If you are going to use a passage of Lorem Ipsum, you need to be sure
-there isn't anything embarrassing hidden in the middle of text.
+\chapter{Exploratory Data Analysis Plots} \label{ap1:eda_plots}
 
-\section{What is \emph{Loren Ipsum}?}
+This appendix complements the exploratory data analysis presented in
+Section~\ref{sec:eda}. The main text discusses only the variables and phenomena that
+directly motivated a subsequent methodological decision. This appendix reports the
+remaining material in full, so that the behaviour of every continuous process variable
+can be inspected without cluttering the main narrative.
 
-\emph{\textbf{Lorem Ipsum}} is simply dummy text of the printing and
-typesetting industry. Lorem Ipsum has been the industry's standard
-dummy text ever since the 1500s, when an unknown printer took a galley
-of type and scrambled it to make a type specimen book.
-It has survived not only five centuries, but also the leap into
-electronic typesetting, remaining essentially unchanged.
-It was popularised in the 1960s with the release of Letraset sheets
-containing Lorem Ipsum passages, and more recently with desktop
-publishing software like Aldus PageMaker including versions of Lorem
-Ipsum\footnote{Available at \url{http://www.lipsum.com/}}.
+Sections~\ref{ap1:timeseries} and~\ref{ap1:distributions} cover the full collection
+period, prior to any filtering by operating mode or partitioning into sessions, and
+therefore correspond to the same 39{,}175 observations used for
+Table~\ref{tab:eda_summary}. Section~\ref{ap1:correlation} reports the numerical values
+behind the correlation matrix shown in Figure~\ref{fig:eda_correlation}, and
+Section~\ref{ap1:sessions} presents the eleven production sessions retained after data
+cleaning individually.
 
-\section{Where does Loren come from?}
+\section{Time Series Over the Full Collection Period} \label{ap1:timeseries}
 
-Contrary to popular belief, Lorem Ipsum is not simply random text.
-It has roots in a piece of classical Latin literature from 45 BC,
-making it over 2000 years old.
-Richard McClintock, a Latin professor at Hampden-Sydney College in
-Virginia, looked up one of the more obscure Latin words, consectetur,
-from a Lorem Ipsum passage, and going through the cites of the word in
-classical literature, discovered the undoubtable source.
-Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of ``de Finibus
-Bonorum et Malorum'' (The Extremes of Good and Evil) by Cicero,
-written in 45 BC.
-This book is a treatise on the theory of ethics, very popular during
-the Renaissance. T
-he first line of Lorem Ipsum, ``Lorem ipsum dolor sit amet\ldots'',
-comes from a line in section 1.10.32.
+Figures~\ref{fig:ap1_ts_pressure} to~\ref{fig:ap1_ts_vsd} show every continuous process
+variable over the entire collection period, grouped by measurement type. The variables
+are plotted as recorded, without any filtering by operating mode, so that the periods
+during which the plant was not in production remain visible: these appear as the
+intervals where the pump's electrical and mechanical variables drop to zero, and are the
+same intervals removed during data cleaning.
 
-The standard chunk of Lorem Ipsum used since the 1500s is reproduced
-below for those interested.
-Sections 1.10.32 and 1.10.33 from ``de Finibus Bonorum et Malorum'' by
-Cicero are also reproduced in their exact original form, accompanied
-by English versions from the 1914 translation by H. Rackham.
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.95\textwidth]{imgs/eda_appendix_timeseries_pressure.png}
+    \caption{Vacuum pressure variables (PT-901, PT-902, PT-903) over the full collection
+    period.}
+    \label{fig:ap1_ts_pressure}
+\end{figure}
 
-\section{Why using Loren?}
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.95\textwidth]{imgs/eda_appendix_timeseries_temperature.png}
+    \caption{Temperature variables (TT-901 to TT-904) over the full collection period.}
+    \label{fig:ap1_ts_temperature}
+\end{figure}
 
-It is a long established fact that a reader will be distracted by the
-readable content of a page when looking at its layout.
-The point of using Lorem Ipsum is that it has a more-or-less normal
-distribution of letters, as opposed to using ``Content here, content
-here'', making it look like readable English.
-Many desktop publishing packages and web page editors now use Lorem
-Ipsum as their default model text, and a search for ``lorem ipsum''
-will uncover many web sites still in their infancy.
-Various versions have evolved over the years, sometimes by accident,
-sometimes on purpose (injected humour and the like).  
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.95\textwidth]{imgs/eda_appendix_timeseries_flow.png}
+    \caption{Gas flow variables (FT-201, FT-801, FT-901) over the full collection period.}
+    \label{fig:ap1_ts_flow}
+\end{figure}
 
-\section{Where to Find Examples?}
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.95\textwidth]{imgs/eda_appendix_timeseries_vsd.png}
+    \caption{Vacuum pump motor variables (VSD-901\_CORRENT, VSD-901\_POWER,
+    VSD-901\_RPM, VSD-901\_SPEED) over the full collection period.}
+    \label{fig:ap1_ts_vsd}
+\end{figure}
 
-There are many variations of passages of Lorem Ipsum available, but
-the majority have suffered alteration in some form, by injected
-humour, or randomised words which don't look even slightly
-believable.
-If you are going to use a passage of Lorem Ipsum, you need to be sure
-there isn't anything embarrassing hidden in the middle of text.
-All the Lorem Ipsum generators on the Internet tend to repeat
-predefined chunks as necessary, making this the first true generator 
-on the Internet.
-It uses a dictionary of over 200 Latin words, combined with a handful
-of model sentence structures, to generate Lorem Ipsum which looks
-reasonable.
-The generated Lorem Ipsum is therefore always free from repetition,
-injected humour, or non-characteristic words etc. 
+\section{Distributions of the Continuous Process Variables} \label{ap1:distributions}
+
+Figure~\ref{fig:ap1_distributions} presents the distribution of each of the fourteen
+continuous process variables over the full collection period. Two adjustments were made
+so that the shape of the bulk of each distribution remains legible: the frozen PT-903
+readings at $-2.896296$~bar and the isolated FT-801 readings at $-800.000000$, both
+discussed in Section~\ref{sec:eda}, are excluded from their respective histograms, since
+a handful of observations several orders of magnitude away from the rest would otherwise
+compress the entire distribution into a single bin.
+
+The bimodal shape visible in the pump's electrical and mechanical variables reflects the
+two operating regimes present in the unfiltered data, with the mode near zero
+corresponding to the periods during which the plant was not in production.
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.98\textwidth]{imgs/eda_appendix_distributions.png}
+    \caption{Distributions of the fourteen continuous process variables over the full
+    collection period.}
+    \label{fig:ap1_distributions}
+\end{figure}
+
+\section{Correlation Matrix Values} \label{ap1:correlation}
+
+Table~\ref{tab:ap1_correlation} reports the numerical Pearson correlation coefficients
+underlying the matrix shown in Figure~\ref{fig:eda_correlation}. As in the figure, the
+coefficients are computed over the plant's production modes only (Mode 8 and 9), and the
+frozen PT-903 episode and the FT-801 sentinel readings are excluded, since a constant
+reading carries no variance and would distort every coefficient involving the affected
+variable.
+
+These values are what motivates the correlation thresholds used when propagating an
+injected fault to physically related sensors, described in
+Section~\ref{sec:fault_single}.
+
+\begin{table}[htbp]
+\centering
+\caption{Pearson correlation coefficients between the continuous process variables,
+restricted to production modes (Mode 8 and 9).}
+\label{tab:ap1_correlation}
+\tiny
+\input{tables/eda_correlation_values}
+\end{table}
+
+\section{Production Sessions} \label{ap1:sessions}
+
+Figures~\ref{fig:ap1_session_1} to~\ref{fig:ap1_session_17} present each of the eleven
+production sessions retained after data cleaning
+(Table~\ref{tab:cleaning_sessions}) individually, with the variables grouped by
+measurement type. Unlike the figures in Section~\ref{ap1:timeseries}, these correspond to
+the cleaned data: restricted to production modes, resampled to a strict one-minute
+frequency, and with short gaps filled by linear interpolation.
+
+Sessions 16 and 17 are the two used for fault injection
+(Section~\ref{sec:fault_scenarios}); the figures shown here correspond to their original,
+fault-free state, prior to any injection.
+
+Table~\ref{tab:ap1_session_stats} summarises the mean value of a representative subset of
+the variables within each session. The variation across sessions is modest, which is
+consistent with the plant operating under nominal conditions throughout the collection
+period, and supports the assumption stated in Section~\ref{sec:data_acquisition}.
+
+\begin{table}[htbp]
+\centering
+\caption{Per-session mean values of a representative subset of the process variables.}
+\label{tab:ap1_session_stats}
+\small
+\input{tables/eda_session_stats}
+\end{table}
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.95\textwidth]{imgs/eda_appendix_session_1.png}
+    \caption{Session 1 (2026-03-12 15:38 to 2026-03-14 15:57, 2{,}900 observations).}
+    \label{fig:ap1_session_1}
+\end{figure}
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.95\textwidth]{imgs/eda_appendix_session_2.png}
+    \caption{Session 2 (2026-03-14 22:50 to 2026-03-16 04:48, 1{,}799 observations).}
+    \label{fig:ap1_session_2}
+\end{figure}
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.95\textwidth]{imgs/eda_appendix_session_3.png}
+    \caption{Session 3 (2026-03-16 09:02 to 2026-03-19 16:24, 4{,}763 observations).}
+    \label{fig:ap1_session_3}
+\end{figure}
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.95\textwidth]{imgs/eda_appendix_session_5.png}
+    \caption{Session 5 (2026-03-20 03:25 to 2026-03-21 06:10, 1{,}606 observations).}
+    \label{fig:ap1_session_5}
+\end{figure}
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.95\textwidth]{imgs/eda_appendix_session_8.png}
+    \caption{Session 8 (2026-03-21 18:10 to 2026-03-22 14:44, 1{,}235 observations).}
+    \label{fig:ap1_session_8}
+\end{figure}
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.95\textwidth]{imgs/eda_appendix_session_12.png}
+    \caption{Session 12 (2026-03-23 14:22 to 2026-03-25 08:57, 2{,}556 observations).}
+    \label{fig:ap1_session_12}
+\end{figure}
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.95\textwidth]{imgs/eda_appendix_session_13.png}
+    \caption{Session 13 (2026-03-25 09:31 to 2026-03-31 14:28, 8{,}938 observations),
+    the longest session retained.}
+    \label{fig:ap1_session_13}
+\end{figure}
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.95\textwidth]{imgs/eda_appendix_session_14.png}
+    \caption{Session 14 (2026-03-31 15:00 to 2026-04-02 09:06, 2{,}527 observations).}
+    \label{fig:ap1_session_14}
+\end{figure}
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.95\textwidth]{imgs/eda_appendix_session_15.png}
+    \caption{Session 15 (2026-04-02 10:28 to 2026-04-04 16:57, 3{,}270 observations).}
+    \label{fig:ap1_session_15}
+\end{figure}
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.95\textwidth]{imgs/eda_appendix_session_16.png}
+    \caption{Session 16 (2026-04-04 19:45 to 2026-04-07 03:51, 3{,}367 observations),
+    prior to fault injection.}
+    \label{fig:ap1_session_16}
+\end{figure}
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.95\textwidth]{imgs/eda_appendix_session_17.png}
+    \caption{Session 17 (2026-04-07 07:42 to 2026-04-10 09:16, 4{,}415 observations),
+    prior to fault injection. This is the session containing the frozen PT-903 episode
+    discussed in Section~\ref{sec:eda}.}
+    \label{fig:ap1_session_17}
+\end{figure}

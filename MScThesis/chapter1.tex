@@ -29,21 +29,63 @@ monitoring, communicating, and adapting their operation in real time.
 
 The availability of these large-scale industrial datasets has created favourable conditions for the
 widespread adoption of DL techniques in this field. AI systems are increasingly being
-employed to support production planning and scheduling, process monitoring and control, Predictive
-Maintenance (PdM), robotics, quality inspection, and process optimization, contributing to improved efficiency,
+employed to support a variety of tasks, such as production planning and scheduling, process monitoring and control, Predictive
+Maintenance (PdM) and robotics, contributing to improved efficiency,
 reliability, and productivity in modern manufacturing environments (\cite{Cerqueus2025}).
+
+Among these applications, three closely related tasks are central to the monitoring of industrial 
+equipment. Anomaly Detection (AD) is concerned with identifying observations that deviate from the 
+expected behaviour of a system, without necessarily establishing what caused the deviation. Fault 
+Detection (FD) goes one step further, determining whether a fault is present and, where possible, which 
+type of fault is responsible for it. PdM extends the analysis in time, estimating the future evolution of 
+the equipment's condition so that maintenance can be scheduled before a failure occurs. Together they 
+describe successive stages of the same process, from noticing that something is wrong, to identifying the cause and 
+to anticipate its consequences, and all three are addressed jointly in this dissertation.
 
 \section{Motivation} \label{sec:motivation}
 
-Despite the significant advances in AI technologies, the application of DL techniques in
-Anomaly Detection (AD), Fault Detection (FD), and PdM tasks for biomethane
-plants remains limited. This limitation highlights a gap in the literature regarding the development of advanced data-driven solutions for the biomethane 
-upgrading industry. Furthermore, there is a lack of research on multi-task learning models capable of performing different types of predictions
-simultaneously in this industry. Therefore, the development and evaluation of such models
-represent a promising research direction. This thesis aims to train and evaluate different DL
-models (both multi-task and single-task) in order to investigate whether deep multi-task learning
-approaches can improve prediction performance regarding AD, FD, and PdM when compared
-with traditional ML models.
+Biomethane upgrading plants operate continuously, and their output is typically committed to a gas grid 
+or to a downstream customer under contract. In the Vacuum Pressure Swing Adsorption (VPSA) process 
+considered in this dissertation, the vacuum pump is a single point of failure: it is what draws the vacuum that regenerates the adsorption beds between cycles, 
+so if it stops, the entire plant stops with it. An unplanned failure 
+therefore does not degrade production, it interrupts it completly, and the resulting downtime lasts as long as it 
+takes to diagnose the problem, obtain the parts and carry out the repair.
+
+Maintenance of this equipment is currently driven either by the calendar or by the failure itself: 
+components are replaced at the fixed intervals recommended by the manufacturer, regardless of their actual 
+condition, or repaired once they have already broken down. The motivation for this work is to move that 
+decision towards the condition of the equipment itself. If degradation can be recognised from the data the 
+plant already collects, while it is still developing, maintenance can be planned for a moment that suits 
+production rather than forced by a breakdown, and interventions can be limited to the components that 
+genuinely require them. The intended outcome is a plant that runs with fewer unplanned interruptions, 
+lower maintenance costs, and a reduced likelihood of a minor deviation developing into a critical event.
+
+\section{Problem Definition} \label{sec:problem}
+
+Three problems stand in the way of this condition-based approach.
+
+The first is that the plant already has the sensors, but only uses them for fixed alarm limits. The
+manufacturer sets a warning and a trip value for each variable, and the control system reacts when one of
+them is crossed. By that point the fault is usually well developed. The alarm also tells the operator only
+that a limit was passed, not which fault caused it or how far it has progressed, and it looks at one
+sensor at a time, while a real fault affects several at once.
+
+The second is that the behaviour of the pump is too complex to be captured by fixed rules. Its fourteen
+monitored variables are not independent, so a developing fault rarely shows up as a single variable
+crossing a line. Instead, it shows up as a change in how those variables move in relation to one another,
+and in how that pattern evolves over the following hours. Expressing this as a set of rules would require
+knowing every relevant interaction and every fault signature in advance, and the resulting rules would be
+numerous and fragile. DL offers a way around this, since it learns these relationships, and the
+way they change over time directly from the data rather than requiring them to be specified beforehand.
+
+The third is that there is no fault data. The company has never recorded a vacuum pump failure at any of
+its plants. That is good news operationally, but it leaves nothing to learn from: a supervised model needs
+examples of what it is meant to detect, and without them there is also no way to measure how well it
+works. The data has to be created before anything can be trained on it.
+
+This dissertation addresses these problems by building a labelled dataset through controlled fault
+injection, and then developing DL models that perform AD, FD and
+PdM together, using the sensor data the plant already collects.
 
 \section{Objectives} \label{sec:objectives}
 
@@ -55,7 +97,6 @@ The objectives of this thesis are:
     \item To develop and train multi-task DL models using multiple architectural configurations capable of jointly performing several prediction tasks.
     \item To develop and train traditional ML models for each prediction task, providing a baseline for comparison.
     \item To compare and evaluate the performance of all proposed models using appropriate evaluation metrics.
-    \item To evaluate the robustness of the developed models.
     \item To investigate whether multi-task learning improves predictive performance compared with single-task DL models and traditional ML approaches.
 \end{itemize}
 
@@ -70,9 +111,23 @@ This dissertation is organized into XX chapters.
 
 \begin{itemize}
 
-    \item \textbf{Chapter~\ref{chap:intro}} introduces the research context, motivation, objectives, and overall organization of the dissertation.
-    \item \textbf{Chapter~\ref{chap:background}} presents the theoretical background required to understand the problem addressed in this work. It introduces the concepts of biogas 
+    \item \textbf{Chapter 1} introduces the research context, motivation, objectives, and overall organization of the dissertation.
+    \item \textbf{Chapter 2} presents the theoretical background required to understand the problem addressed in this work. It introduces the concepts of biogas 
 and biomethane production, biogas upgrading technologies, the considered Vacuum Pressure Swing Adsorption (VPSA) plant, the operating principle of the vacuum 
 pump, and the monitored instrumentation.
+    \item \textbf{Chapter 3} reviews the theoretical foundations and the state of the art, covering artificial
+    intelligence, machine learning and deep learning, the industrial monitoring and maintenance strategies
+    addressed in this work, and the related literature that defines the research gap.
+
+    \item \textbf{Chapter 4} describes the methodology, including the dataset, the exploratory data analysis,
+    the data cleaning pipeline, the fault injection framework, the compilation of the training and test sets,
+    the task formulation, and the models developed.
+
+    \item \textbf{Chapter 5} presents the experimental results obtained for the three model families across
+    the three tasks and the window sizes tested.
+
+    \item \textbf{Chapter 6} discusses those results, and states the limitations of the study.
+
+    \item \textbf{Chapter 7} presents the conclusions and outlines directions for future work.
 
 \end{itemize}

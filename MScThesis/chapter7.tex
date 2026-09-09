@@ -1,0 +1,91 @@
+% !TeX root = thesis.tex
+
+\chapter{Conclusions and Future Work} \label{chap:conclusions}
+
+\section{Conclusions} \label{sec:conclusions}
+
+This dissertation set out to develop and evaluate a multi-task DL framework capable of jointly
+performing AD, FD and PdM for the vacuum pump of a
+biomethane upgrading plant, and to compare it against single-task DL models and traditional
+ML baselines. The research gap identified in Chapter~\ref{chap:sota} was twofold: existing
+multi-task approaches to industrial condition monitoring combine at most two of these three tasks, and
+none of the approaches reviewed had been applied to a biomethane upgrading context, where no prior work
+addresses the vacuum pump specifically.
+
+Addressing this required first constructing a dataset that did not exist. One month of real operational
+data was obtained from a VPSA plant in Lithuania, but because no vacuum pump fault has ever been recorded
+across the operator's monitored plants, the data contains only normal operation. A cleaning pipeline was
+developed that partitions the record into eleven independent production sessions, and a fault injection
+framework was built on top of it that generates four fault scenarios at three severity levels, two
+combined scenarios in which faults overlap in time, and a false positive scenario, all calibrated to the
+warning and trip thresholds specified by the pump manufacturer. Together with the frozen sensor episode
+identified during exploratory analysis and deliberately retained, this yields a labelled dataset of
+145{,}826 observations supporting all three tasks simultaneously.
+
+Five models were then trained and evaluated on this dataset across eleven window sizes: two traditional
+baselines, three single-task LSTM models, and two multi-task LSTM architectures differing in how the three
+task-specific heads are organised around a shared backbone.
+
+Three conclusions follow from the results. First, the recurrent models substantially outperformed the traditional baselines on all three tasks. The
+margin was largest on PdM.
+
+Second, and central to the research question, a single multi-task model performed comparably to three
+independently trained single-task models. The single-task models obtained the best anomaly detection
+F1-score and the best PdM $R^2$, while the cascaded multi-task
+architecture obtained the best FD mean F1-score. Since the multi-task architecture covers all three tasks with one shared backbone and a
+single forward pass, rather than three separate models to train, tune and maintain, this equivalence
+favours the multi-task formulation for a deployed monitoring system.
+
+Third, of the two multi-task architectures, the cascaded design matched or exceeded the joint design on
+all three tasks, with the largest difference on FD. Conditioning each head on the predictions
+of the preceding ones, mirroring the diagnostic sequence of first establishing whether something is wrong,
+then what it is, and only then how severe it is, therefore proved to be a better way of organising the
+three heads than branching them independently off the shared representation.
+
+Alongside these findings, the results also identify where the approach is weakest. The bearing fault, the
+rarest and shortest of the four scenarios, was detected poorly by every model, and worse by the multi-task
+architectures than by the single-task model or the baselines. Since the conclusions rest on synthetically injected faults
+evaluated on two sessions of a single plant, they establish that the approach is viable rather than that
+it is validated in operation.
+
+\section{Future Work} \label{sec:future_work}
+
+\subsection*{Deployment on the plant}
+
+The natural continuation of this work is to deploy the trained models on live plant data. This has not yet
+been carried out because the operator's server is currently undergoing an infrastructure upgrade and is
+not operational for this purpose, but deployment is planned once the upgrade is complete. Running the
+models against the live SCADA stream would allow their behaviour to be observed under real operating
+conditions and, in particular, would allow the false positive rate to be measured over an extended period
+of normal operation, which is the property that most directly determines whether operators come to trust
+such a system. The models developed here are compatible with this setting: they consume the same fourteen
+process variables the plant already records at one-minute resolution, and produce all three outputs in a
+single forward pass.
+
+\subsection*{Validation against real faults}
+
+The most significant limitation of this dissertation is the absence of real fault data. As failures are
+eventually recorded on the monitored plants, the injected scenarios should be compared against the
+observed signatures, so that the fault injection framework can be recalibrated where it diverges and the
+models retrained on genuine occurrences. This would also allow the performance reported here to be
+reassessed against real degradation rather than against designed deviations.
+
+\subsection*{Extending the models}
+
+The hyperparameter search was intentionally small, and its largest configuration was frequently selected
+as the best, suggesting that larger backbones may yield further gains. Beyond simply enlarging the search,
+architectures better suited to short transient events would be worth investigating, given that the bearing
+fault proved difficult for every model: a convolutional stage preceding the recurrent layers, or an
+attention mechanism over the input window, would both provide a more direct means of localising a brief
+event within a long sequence. The fixed loss weights used by the multi-task models could also be replaced
+by an adaptive weighting scheme, which may reduce the penalty the rarest fault type currently incurs under
+the shared representation.
+
+\subsection*{Broadening the scope}
+
+Finally, the framework is not specific to the vacuum pump. The same pipeline, consisting of session-based
+cleaning, threshold-calibrated fault injection, and a multi-task recurrent model, could be applied to other
+critical assets in the VPSA process, such as the compressors or the adsorption valves, and to the plants
+the operator monitors elsewhere. Applying it across multiple plants would additionally allow the question
+this dataset cannot answer to be addressed, namely whether a model trained on one installation transfers
+to another.

@@ -1,81 +1,228 @@
-\chapter{Conclusions and Future Work} \label{chap:concl}
+% !TeX root = thesis.tex
 
-\section*{}
+\chapter{Results} \label{chap:results}
 
-Nullam eleifend condimentum nibh. Integer leo nibh, consequat eget,
-mollis et, sagittis ac, felis. Duis viverra pede in pede. Phasellus
-molestie placerat leo. Praesent at tellus a augue congue molestie.
-Integer eu ante pellentesque, viverra orci vitae, facilisis
-risus. Nunc eget pulvinar orci.
+This chapter presents the experimental results obtained for the three model families developed in this
+dissertation, the traditional ML baselines, the single-task LSTM models and the two multi-task LSTM
+architectures, across the window sizes tested and the three tasks addressed: AD, FD, and PdM.
 
-Proin sed justo eu sapien eleifend elementum. Pellentesque habitant
-morbi tristique senectus et netus et malesuada fames ac turpis
-egestas.  Praesent id lobortis magna, ut interdum enim.
+Results are organized by task rather than by model family, so that the traditional baselines, the
+single-task models, and the two multi-task architectures can be compared directly with one another within
+each task. Section~\ref{sec:results_ad} presents the AD results,
+Section~\ref{sec:results_fd} the FD results, and Section~\ref{sec:results_pdm} the PdM results. 
+Section~\ref{sec:results_summary} closes the chapter with an objective summary of the
+patterns observed across all three tasks, without yet interpreting their causes, which is left to the
+Discussion Chapter.
 
-\section{Results}
+The DL models were evaluated across all eleven window sizes, from 1 to 1{,}024 observations. The 
+traditional baselines were evaluated up to a window size of 128 for AD and FD, and up to 64 for PdM, 
+within the computational budget available for this dissertation: a single grouped cross-validated grid 
+search for the Random Forest regressor already required over eighty minutes. Entries beyond these limits 
+are therefore reported as unavailable rather than as missing results. In every table, the best value obtained
+by each model across the window sizes tested is set in bold.
 
-Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Etiam non
-felis sed odio rutrum ultrices. Donec tempor dolor. Vivamus justo
-neque, tempus id, ullamcorper in, pharetra non, tellus. Praesent eu
-orci eu dolor congue gravida. Sed eu est. Donec pulvinar, lectus et
-eleifend volutpat, diam sapien sollicitudin arcu, a sagittis libero
-neque et dolor. Nam ligula. Cras tincidunt lectus quis nunc. Cras
-tincidunt congue turpis. Nulla pede velit, sagittis a, faucibus vitae,
-porttitor nec, ante. Nulla ut arcu. Cras eu augue at ipsum feugiat
-hendrerit. Proin sed justo eu sapien eleifend elementum. Pellentesque
-habitant morbi tristique senectus et netus et malesuada fames ac
-turpis egestas. Vivamus quam lacus, pharetra vel, aliquam vel,
-volutpat sed, nisl. 
+\section{Anomaly Detection Results} \label{sec:results_ad}
 
-Nullam erat est, vehicula id, tempor non, scelerisque at,
-tellus. Pellentesque tincidunt, ante vehicula bibendum adipiscing,
-lorem augue tempor felis, in dictum massa justo sed metus. Suspendisse
-placerat, mi eget molestie sodales, tortor ante interdum dui, ac
-sagittis est pede et lacus. Duis sapien. Nam ornare turpis et
-magna. Etiam adipiscing adipiscing ipsum. Fusce sodales nisl a
-arcu. Cras massa leo, vehicula facilisis, commodo a, molestie
-faucibus, metus. Suspendisse potenti. Duis sagittis. Donec porta. Sed
-urna. Maecenas eros. Vivamus erat ligula, pharetra sit amet, bibendum
-et, fermentum sed, dolor. 
+Table~\ref{tab:results_ad_f1} presents the F1-score obtained for AD by each model and
+window size. Figure~\ref{fig:results_ad} shows the same results graphically.
 
-\section{Further Work}
+\begin{table}[htbp]
+\centering
+\caption{Anomaly detection F1-score by model and window size.}
+\label{tab:results_ad_f1}
+\small
+\input{tables/results_ad_f1}
+\end{table}
 
-Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aliquam
-tempor tristique risus. Suspendisse potenti. Fusce id eros. In eu
-enim. Praesent commodo leo. Nullam augue. Pellentesque tellus. Integer
-pulvinar purus a dui convallis consectetuer. In adipiscing, orci vitae
-lacinia semper, sapien elit posuere sem, ac euismod ipsum elit tempus
-urna. Aliquam erat volutpat. Nullam suscipit augue sed
-felis. Phasellus faucibus accumsan est. 
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.85\textwidth]{imgs/results_ad_f1.png}
+    \caption{Anomaly detection F1-score against window size, for all five models.}
+    \label{fig:results_ad}
+\end{figure}
 
-Aliquam felis justo, facilisis sit amet, bibendum ut, tempus ac,
-dolor. Sed malesuada. Nunc non massa. In erat. Nulla
-facilisi. Phasellus blandit, est in accumsan cursus, libero augue
-elementum leo, vitae auctor mauris nisl ac tortor. Cras porttitor
-ornare elit. Fusce at lorem. Sed lectus tortor, vestibulum id, varius
-a, condimentum nec, lectus. Maecenas in nisi et magna pretium
-aliquam. Pellentesque justo elit, feugiat nec, tincidunt a, dignissim
-vel, ipsum. Sed nunc. Vestibulum ante ipsum primis in faucibus orci
-luctus et ultrices posuere cubilia Curae; Aliquam tempus rhoncus
-leo. Donec neque quam, cursus sit amet, ultricies varius, semper non,
-pede. Donec porttitor. Sed aliquet feugiat elit.  
+The three DL models separate clearly from the two traditional baselines at every window size
+tested. The lowest F1-score obtained by any DL model, 0.761 for the joint multi-task
+architecture at a window size of 512, remains above the highest F1-score obtained by either baseline,
+0.460 for XGBoost at a window size of 32. Across the window sizes where all five models are available, the
+DL models score roughly twice as high as the baselines.
 
-Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus
-tellus pede, auctor ut, tincidunt a, consectetuer in, felis. Mauris
-quis dolor et neque accumsan pellentesque. Donec dui magna,
-scelerisque mattis, sagittis nec, porta quis, nulla. Vivamus quis
-nisl. Etiam vitae nisl in diam vehicula viverra. Sed sollicitudin
-scelerisque est. Nunc dapibus. Sed urna. Nulla gravida. Praesent
-faucibus, risus ac lobortis dignissim, est tortor laoreet mauris,
-dictum pellentesque nunc orci tincidunt tellus. Nullam pulvinar, leo
-sed vestibulum euismod, ante ligula elementum pede, sit amet dapibus
-lacus tortor ac nisl. Morbi libero. Integer sed dolor ac lectus
-commodo iaculis. Donec ut odio.  
+The single-task model reaches the highest F1-score observed across all models and window sizes, 0.900 at a
+window size of 64, followed closely by the cascaded multi-task architecture at 0.889 and the joint
+architecture at 0.885, both at a window size of 128. The difference between these three best
+configurations is 0.015.
 
-\section{Impact on Sustainable Development Goals}
+The two families respond differently to the amount of temporal context available. The baselines improve
+from a window size of 1 up to 32, where both peak, and then decline: Random Forest falls from 0.441 to
+0.353 and XGBoost from 0.460 to 0.328 between window sizes 32 and 128. The DL models remain
+comparatively flat, varying between 0.761 and 0.900 across the entire range. Notably, all three DL models already exceed 0.79 at a window size of 1, where no
+temporal context is available at all.
 
-Add in this section a reflection on how your work impacts the United Nations's Sustainable Development Goals (SDG). If you want to read about the SDG, visit the page: \url{https://sdgs.un.org/goals}. To obtain more information on the subject, we suggest the following courses:
-\begin{itemize}
-\item \url{ttps://dl4sd.org/course/view.php?id=4}
-\item \url{https://www.classcentral.com/course/global-sustainable-development-10311}
-\end{itemize}
+Table~\ref{tab:results_ad_roc} reports the corresponding area under the ROC curve, which is independent of
+the decision threshold applied.
+
+\begin{table}[htbp]
+\centering
+\caption{Anomaly detection ROC-AUC by model and window size.}
+\label{tab:results_ad_roc}
+\small
+\input{tables/results_ad_roc}
+\end{table}
+
+The same separation is visible in the ROC-AUC, though compressed by the upper bound of the metric. The
+deep learning models range from 0.928 to 0.985 across all window sizes, while the baselines range from
+0.744 to 0.909. The highest value is 0.985, obtained by the single-task model at a window size of 8, and
+the highest value obtained by a baseline is 0.909, by XGBoost at a window size of 32.
+
+\section{Fault Detection Results} \label{sec:results_fd}
+
+Table~\ref{tab:results_fd_f1} presents the mean F1-score across the four fault types and Figure~\ref{fig:results_fd} shows the same results
+graphically.
+
+\begin{table}[htbp]
+\centering
+\caption{Fault detection mean F1-score by model and window size.}
+\label{tab:results_fd_f1}
+\small
+\input{tables/results_fd_f1}
+\end{table}
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.85\textwidth]{imgs/results_fd_f1.png}
+    \caption{Fault detection mean F1-score against window size, for all five models.}
+    \label{fig:results_fd}
+\end{figure}
+
+The cascaded multi-task architecture reaches the highest mean F1-score observed across all models and
+window sizes, 0.720 at a window size of 64. The single-task model follows at 0.701, obtained at a window
+size of 16, and the joint architecture at 0.640, at a window size of 256. The best values obtained by the
+baselines are lower, 0.504 for XGBoost at a window size of 64 and 0.483 for Random Forest at 32.
+
+The margin between the DL models and the baselines is narrower here than for anomaly detection,
+and is not uniform across window sizes. At window sizes of 4 and below, XGBoost scores between 0.226 and
+0.320 while the DL models score between 0.492 and 0.587. At a window size of 32, however,
+Random Forest reaches 0.483 against 0.572 for the single-task model, and the cascaded architecture drops
+to 0.613, its second lowest value.
+
+The DL models exhibit considerable variation across window sizes, with no clear trend. This contrasts with the baseline models, 
+which show a consistent trend before their performance drops after a window size of 64.
+
+Table~\ref{tab:results_fd_perfault} breaks the results down by individual fault type, taking each model at
+its own best-performing window size identified above, and Figure~\ref{fig:results_fd_perfault} presents
+the same breakdown graphically.
+
+\begin{table}[htbp]
+\centering
+\caption{Fault detection F1-score per fault type, with each model taken at its best window size.}
+\label{tab:results_fd_perfault}
+\scriptsize
+\input{tables/results_fd_perfault}
+\end{table}
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.9\textwidth]{imgs/results_fd_perfault.png}
+    \caption{Fault detection F1-score by fault type, with each model taken at its best window size.}
+    \label{fig:results_fd_perfault}
+\end{figure}
+
+The breakdown shows that the aggregate mean F1-score conceals two opposite patterns. The clogged filters
+fault separates the two families most sharply: the baselines obtain 0.079 for Random Forest and 0.142 for
+XGBoost, the lowest values recorded for any fault type and any model, while the three DL models
+obtain between 0.769 and 0.841 on the same fault. The bearing fault reverses this ordering: the baselines
+obtain 0.498 and 0.484, above the 0.297 of the joint architecture and the 0.368 of the cascaded
+architecture, with only the single-task model higher at 0.518.
+
+The cooling fault is the most consistently detected across all five models, with F1-scores between 0.723
+and 0.828 and a spread of only 0.105 between the best and worst model. The valve fault shows the widest
+spread, from 0.630 for XGBoost to 0.855 for the cascaded architecture.
+
+Considering the balance across fault types rather than the average, the single-task model at a window size
+of 16 shows the narrowest range, from 0.518 to 0.828. The two baselines show the widest, both spanning
+more than 0.6 between their best and worst fault type, driven entirely by their result on the clogged
+filters fault.
+
+\section{Predictive Maintenance Results} \label{sec:results_pdm}
+
+Table~\ref{tab:results_pdm_mae} presents the mean absolute error obtained for predictive maintenance and
+Table~\ref{tab:results_pdm_r2} the corresponding coefficient of determination. Figure~\ref{fig:results_pdm} shows both metrics against window size.
+
+\begin{table}[htbp]
+\centering
+\caption{Predictive maintenance MAE by model and window size.}
+\label{tab:results_pdm_mae}
+\small
+\input{tables/results_pdm_mae}
+\end{table}
+
+\begin{table}[htbp]
+\centering
+\caption{Predictive maintenance $R^2$ by model and window size.}
+\label{tab:results_pdm_r2}
+\small
+\input{tables/results_pdm_r2}
+\end{table}
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.98\textwidth]{imgs/results_pdm.png}
+    \caption{Predictive maintenance MAE (left) and $R^2$ (right) against window size, for all five models.
+    The dashed line on the right marks $R^2 = 0$, the value obtained by always predicting the mean
+    severity of the training data.}
+    \label{fig:results_pdm}
+\end{figure}
+
+This is the task where the two families separate most clearly. The three DL models obtain an
+$R^2$ between 0.356 and 0.678 across every window size tested, while the two baselines obtain values
+between $-0.420$ and $0.069$. The best baseline result, 0.069 for XGBoost at a window size of 16, is
+therefore barely distinguishable from the performance of a model that always predicts the mean severity
+observed in the training data, and both baselines produce a negative $R^2$ at the majority of window sizes
+tested, meaning they perform worse than that constant predictor.
+
+The MAE tells a consistent story. The DL models range from 0.034 to 0.066 across all window
+sizes, while the baselines range from 0.094 to 0.136. The lowest MAE observed is 0.034, obtained by the
+single-task model at a window size of 256, which is also the configuration producing the highest $R^2$,
+0.678. The cascaded architecture follows with an MAE of 0.041 at a window size of 64 and an $R^2$ of 0.655
+at 256.
+
+Among the DL models, the joint architecture is the least stable on this task, with its $R^2$
+falling from 0.615 at a window size of 16 to 0.356 at 512, and its MAE rising from 0.048 to 0.066 over the
+same range. The cascaded architecture and the single-task model remain within a narrower band, between
+0.442 and 0.678 in $R^2$ across all window sizes.
+
+\section{Summary of Findings} \label{sec:results_summary}
+
+This section summarizes, without yet interpreting, the main patterns observed across the three tasks and
+five models compared in this chapter. Table~\ref{tab:results_best} collects the best configuration
+obtained by each model on each task.
+
+\begin{table}[htbp]
+\centering
+\caption{Best configuration obtained by each model on each task.}
+\label{tab:results_best}
+\small
+\input{tables/results_best}
+\end{table}
+
+The three DL models outperformed the two traditional baselines on all three tasks.
+No single model was best on all three tasks. The single-task models obtained the highest AD
+F1-score (0.900 at a window size of 64) and the highest PdM $R^2$ (0.678 at 256), while
+the cascaded multi-task architecture obtained the highest FD mean F1-score (0.720 at 64). In
+each case the margin over the runner-up was small: 0.011 for AD, 0.019 for FD
+and 0.023 for PdM.
+
+Between the two multi-task architectures, the cascaded variant matched or exceeded the joint variant on
+all three tasks, with the largest difference on FD (0.720 against 0.640) and the smallest on
+AD (0.889 against 0.885).
+
+The effect of window size differed by model family. The two baselines improved with increasing window size
+up to 16 or 32 observations and then declined on both classification tasks, while the DL models
+varied within a comparatively narrow band across the entire range and reached values above 0.79 for
+AD even at a window size of 1, where no temporal context is available. No model obtained
+its best result at the largest window size tested for any of the three tasks.
+
+Across fault types, the clogged filters fault produced the widest disagreement between the two families,
+with F1-scores of 0.079 and 0.142 for the baselines against 0.769 to 0.841 for the DL models.
+The bearing fault was the hardest for the multi-task architectures, at 0.297 and 0.368, while both
+baselines obtained higher values on that same fault.

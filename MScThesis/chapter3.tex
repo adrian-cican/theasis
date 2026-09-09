@@ -49,7 +49,7 @@ tasks they are designed to solve (\cite{Murphy2022}).
 
 \subsubsection{Supervised Learning}
 
-Supervised learning is the most widely adopted machine learning paradigm and is used when a dataset contains both the input variables, commonly referred to as \textit{features}, \textit{covariates}, or \textit{predictors}, and 
+Supervised learning is the most widely adopted ML paradigm and is used when a dataset contains both the input variables, commonly referred to as \textit{features}, \textit{covariates}, or \textit{predictors}, and 
 their corresponding desired outputs, known as \textit{labels}. The goal is to learn a mapping between the input variables and the corresponding output so that the model can accurately predict the labels of previously unseen 
 observations \cite{Murphy2022}.
 
@@ -106,16 +106,16 @@ Based on this interaction, the environment transitions to a new state, and the p
 The objective of reinforcement learning is to learn an optimal policy that maximizes the expected cumulative reward over time. Since the consequences of an action may only become apparent after several subsequent decisions, the 
 agent must balance \textit{exploration}, by trying new actions to acquire knowledge about the environment, and \textit{exploitation}, by selecting the actions that are currently believed to yield the highest reward.
 
-Figure~\ref{fig:reinforcement_learning} illustrates the reinforcement learning framework. The agent continuously interacts with the environment by observing its current state, 
-selecting an action, and receiving both a reward and the next state. Through this trial-and-error process, the agent gradually learns a policy that maximizes the expected cumulative 
-reward.
+% Figure~\ref{fig:reinforcement_learning} illustrates the reinforcement learning framework. The agent continuously interacts with the environment by observing its current state, 
+% selecting an action, and receiving both a reward and the next state. Through this trial-and-error process, the agent gradually learns a policy that maximizes the expected cumulative 
+% reward.
 
-\begin{figure}[htbp]
-    \centering
-    \includegraphics[width=0.80\textwidth]{imgs/reinforcement_learning.png}
-    \caption{Agent–environment interaction in reinforcement learning. Adapted from \cite{Sutton2018}}
-    \label{fig:reinforcement_learning}
-\end{figure}
+% \begin{figure}[htbp]
+%     \centering
+%     \includegraphics[width=0.80\textwidth]{imgs/reinforcement_learning.png}
+%     \caption{Agent–environment interaction in reinforcement learning. Adapted from \cite{Sutton2018}}
+%     \label{fig:reinforcement_learning}
+% \end{figure}
 
 \subsubsection{Self-Supervised Learning}
 
@@ -123,12 +123,54 @@ Self-supervised learning is a learning paradigm in which supervision is obtained
 annotations, the learning algorithm constructs auxiliary or \textit{pretext} tasks whose targets are automatically generated from the input data. By solving these tasks, the model learns meaningful representations that capture 
 the underlying structure of the data.
 
-In recent years, self-supervised learning has become one of the most active research areas in machine learning, achieving remarkable success in computer vision, natural language processing and speech processing.
+In recent years, self-supervised learning has become one of the most active research areas in ML, achieving remarkable success in CV, NLP and speech processing.
+
+\subsection{Tree-Based Ensemble Models} \label{sec:tree_ensembles}
+
+Not every learning problem requires deep architectures. For tabular data, where observations are described by a
+moderate number of heterogeneous features, traditional ML algorithms remain highly competitive and are frequently
+adopted as reference baselines. Among these, tree-based ensembles are the most widely used, and two of them,
+Random Forest and XGBoost, are employed in this dissertation as baselines against which the DL models are compared.
+
+The building block of these methods is the \emph{decision tree}, which recursively partitions the feature space
+into increasingly homogeneous regions. At each node, the algorithm selects the feature and the threshold that best
+separate the observations according to a purity criterion, and a prediction is obtained by following the resulting
+sequence of decisions until a leaf is reached. Individual trees are attractive because they are easy to interpret,
+require no feature scaling, and handle features of different natures without preprocessing. However, a single
+sufficiently deep tree tends to fit the noise of the training data, resulting in high variance and poor
+generalisation (\cite{Hastie2009}).
+
+Ensemble methods address this limitation by combining a large number of trees, following one of two complementary
+strategies. In \emph{bagging}, many trees are grown independently on different random samples of the training data
+and their predictions are averaged, which reduces the variance of the ensemble. In \emph{boosting}, trees are
+instead grown sequentially, each one trained to correct the errors made by the ensemble built so far, which
+progressively reduces the bias (\cite{Hastie2009}).
+
+\emph{Random Forest} (\cite{Breiman2001}) is the most established bagging method. In addition to training each
+tree on a bootstrap sample of the data, it restricts each split to a random subset of the available features. This
+additional source of randomness decorrelates the individual trees, so that averaging their predictions yields a
+substantially larger reduction in variance than bagging alone. Random Forests are robust to noise, require little
+hyperparameter tuning, and provide a natural measure of feature importance, which makes them a common first choice
+for tabular problems.
+
+\emph{XGBoost} (\cite{Chen2016}) is the most widely adopted boosting method. Each new tree is fitted to the
+gradient of the loss function with respect to the current predictions of the ensemble, so that successive trees
+concentrate on the observations that remain poorly predicted. To this formulation XGBoost adds explicit
+regularisation of the tree complexity, which limits overfitting, together with a set of algorithmic optimisations
+that allow it to scale efficiently to large datasets. These properties have made it one of the best-performing
+algorithms for tabular data and a standard baseline in applied ML.
+
+Despite their effectiveness, both methods operate on fixed-length feature vectors and have no intrinsic notion of
+temporal ordering. When applied to time-series data, the sequence of observations must therefore be either
+flattened into a single vector or summarised through hand-crafted aggregate statistics, in both cases discarding
+part of the temporal structure of the signal. This limitation is precisely what motivates the recurrent
+architectures introduced in Section~\ref{sec:dparqui}, and is the reason why these models are adopted here as
+baselines rather than as the primary approach.
 
 \subsection{Representation Learning} \label{sec:rep_l}
 
-The machine learning paradigms presented in the previous section describe the different ways in which models can learn from data. Regardless of the learning 
-paradigm, the performance of a machine learning algorithm largely depends on the quality of the data representation used to describe the problem.
+The ML paradigms presented in the previous section describe the different ways in which models can learn from data. Regardless of the learning 
+paradigm, the performance of a ML algorithm largely depends on the quality of the data representation used to describe the problem.
 
 For relatively simple problems, carefully designed features may be sufficient to achieve good performance. For instance, if the objective is to distinguish 
 between male and female speakers, a feature such as the average vocal tract length or the fundamental frequency may already provide enough information for a 
@@ -200,56 +242,79 @@ complex nonlinear functions (\cite{Goodfellow2016}). Figure~\ref{fig:mlp} illust
 
 \subsection{Training Deep Neural Networks} \label{sec:training}
 
-Once the architecture of a neural network has been defined, the next step is to determine the values of its parameters, namely the weights and biases. This process, known as training, consists of finding the set of parameters
-that minimizes a \emph{cost function} $J(\theta)$, defined as the average loss incurred by the model over the training set (\cite{Goodfellow2016}). During training, the network 
-repeatedly processes examples from the training dataset, evaluates the quality of its predictions through a \emph{loss function}, and updates its parameters in order to reduce this cost.
+Once the architecture of a neural network has been defined, the next step is to
+determine the values of its parameters, namely the weights and biases. This
+process, known as training, consists of adjusting those parameters so as to
+minimise a \emph{cost function}, a scalar measure of how far the predictions of
+the model are, on average, from the correct answers over the training set
+(\cite{Goodfellow2016}).
 
-In practice, the cost function is rarely evaluated over the entire training set at every update. Instead, most deep learning models are trained using \emph{stochastic gradient descent} (SGD) or one of its variants, in which 
-the gradient is estimated from a small, randomly sampled \emph{mini-batch} of examples at each iteration. This trades off the accuracy of the gradient estimate for a substantial reduction in computational cost per update, and 
-is essential for training on large datasets (\cite{Goodfellow2016}).
+The search is carried out iteratively by \emph{gradient descent}. At any given
+setting of the parameters, the gradient of the cost indicates how sensitive the
+error is to a change in each individual parameter, and therefore in which
+direction each one should move in order to reduce it. Every parameter is then
+nudged a small amount in that direction. The size of the step is controlled by
+the \emph{learning rate}, a hyperparameter that must be chosen with care: steps
+that are too large overshoot the minimum and cause the training to diverge, while
+steps that are too small make convergence impractically slow. The gradients
+themselves are obtained through \emph{backpropagation}, which applies the chain
+rule of calculus to propagate the error backwards through the network, layer by
+layer, so that the sensitivity of every parameter is recovered in a single
+backward pass (\cite{Rumelhart1986}).
 
-This optimization process can be divided into four main stages: forward propagation, loss (cost) computation, backpropagation, and parameter update. These four stages are repeated iteratively, 
-over mini-batches and across multiple passes (epochs) over the training set, until the model converges or a predefined stopping criterion is reached (\cite{Goodfellow2016}).
+Computing the cost over the entire training set before each update would be
+prohibitively expensive, so the gradient is instead estimated from a small,
+randomly drawn subset of examples called a \emph{mini-batch}. This variant,
+\emph{stochastic gradient descent}, gives a noisier estimate of the gradient but
+allows far more updates for the same computational budget, and the noise itself
+can help the optimiser escape poor solutions (\cite{Goodfellow2016}). Rather than
+applying one common learning rate to every parameter, modern optimisers adapt the
+step size individually, using the history of previous gradients. The most widely
+used is \emph{Adam} (\cite{Kingma2015}), which converges faster than plain
+stochastic gradient descent and is less sensitive to the initial learning rate,
+and is therefore the optimiser adopted for all models trained in this work.
+
+Each iteration thus comprises four stages: the mini-batch is passed through the
+network to obtain predictions, the cost is evaluated, the gradients are computed
+by backpropagation, and the parameters are updated. A complete pass over the
+training set is called an \emph{epoch}, and training proceeds over many epochs
+until the model converges or a predefined stopping criterion is reached, as
+summarised in Figure~\ref{fig:training_pipeline}.
 
 \begin{figure}[htbp]
 \centering
 
 \begin{tikzpicture}[
-    node distance=0.9cm,
-    every node/.style={
-        draw,
-        rounded corners,
-        minimum width=5.5cm,
-        minimum height=0.8cm,
-        align=center,
-        font=\small
+    node distance=0.75cm,
+    box/.style={
+        draw, rounded corners,
+        minimum width=6.5cm, minimum height=0.8cm,
+        align=center, font=\small
     },
-    arrow/.style={
-        -{Latex[length=2.5mm]},
-        thick
-    }
+    arrow/.style={-{Latex[length=2.5mm]}, thick}
 ]
 
-\node (input) {Mini-batch of Training Data};
-\node (forward) [below=of input] {Forward Propagation};
-\node (prediction) [below=of forward] {Prediction $\hat{y}$};
-\node (loss) [below=of prediction] {Cost Function $J(\theta)$};
-\node (backward) [below=of loss] {Backpropagation (Gradient $\nabla_\theta J$)};
-\node (update) [below=of backward] {Parameter Update (SGD / Adam)};
+\node[box] (input)                        {Sample mini-batch from training set};
+\node[box, below=of input]    (forward)   {Forward propagation};
+\node[box, below=of forward]  (loss)      {Cost computation};
+\node[box, below=of loss]     (backward)  {Backpropagation};
+\node[box, below=of backward] (update)    {Parameter update (SGD / Adam)};
 
-\draw[arrow] (input) -- (forward);
-\draw[arrow] (forward) -- (prediction);
-\draw[arrow] (prediction) -- (loss);
-\draw[arrow] (loss) -- (backward);
+\draw[arrow] (input)    -- (forward);
+\draw[arrow] (forward)  -- (loss);
+\draw[arrow] (loss)     -- (backward);
 \draw[arrow] (backward) -- (update);
 
-% Loop back
-\draw[arrow] (update.east) -- ++(2,0)
-                  |- (forward.east);
+\draw[arrow] (update.east) -- ++(1.2,0) coordinate (turn) |- (input.east);
+\node[font=\footnotesize, anchor=west, align=left] at (turn)
+      {next mini-batch\\(until convergence)};
 
 \end{tikzpicture}
 
-\caption{General training pipeline of a deep neural network. Backpropagation computes the gradient of the cost function; the optimization rule (e.g., SGD or Adam) then uses this gradient to update the parameters.}
+\caption[Training pipeline of a deep neural network]{Training pipeline of a deep
+neural network. Each iteration processes one mini-batch through the four stages;
+backpropagation computes the gradients, which the optimiser then uses to update
+the parameters. A complete pass over the training set constitutes one epoch.}
 \label{fig:training_pipeline}
 
 \end{figure}
@@ -387,7 +452,7 @@ electrical variables, and other process parameters. By analyzing these data, it 
 conditions, detect faults, and anticipate potential failures before they lead to unplanned downtime.
 
 To support these objectives, several data-driven monitoring and maintenance strategies have been developed. Among the most widely adopted are anomaly 
-detection (AD), fault detection (FD), and predictive maintenance (PdM). Although these concepts are closely related, they address different stages of the 
+AD, FD, and PdM. Although these concepts are closely related, they address different stages of the 
 equipment health monitoring process and provide complementary information for supporting maintenance decisions. The following sections introduce each of these 
 concepts and discuss their relationship.
 
@@ -397,27 +462,27 @@ Anomaly Detection (AD) is the process of identifying observations, events, or pa
 system (\cite{Chandola2009}). Such observations, commonly referred to as \emph{anomalies} or \emph{outliers}, are rare and differ from the majority of the data, 
 often indicating abnormal operating conditions, equipment degradation, sensor malfunctions, or unexpected process disturbances.
 
-In industrial environments, anomaly detection plays a fundamental role in condition monitoring by continuously analyzing sensor data to identify deviations 
+In industrial environments, AD plays a fundamental role in condition monitoring by continuously analyzing sensor data to identify deviations 
 from normal operation. Since anomalies often represent the earliest indication of an emerging problem, their timely detection enables operators to take corrective 
 actions before faults develop into equipment failures, thereby improving system reliability and reducing unplanned downtime (\cite{Darban2025}).
 
-Unlike fault detection, anomaly detection does not necessarily identify the cause or type of the abnormal behaviour. Instead, its primary objective is to determine 
+Unlike FD, AD does not necessarily identify the cause or type of the abnormal behaviour. Instead, its primary objective is to determine 
 whether the observed system behaviour is consistent with normal operation or represents a significant deviation that requires further investigation.
 
-Depending on the availability of labelled data, AD can be formulated either as a supervised binary classification problem, distinguishing between \textit{normal} and 
-\textit{anomalous} observations, or as an unsupervised task, in which the model learns the distribution of normal operating conditions and flags significant 
+Depending on the availability of labelled data, AD can be formulated either as a supervised binary classification problem, distinguishing between normal and 
+anomalous observations, or as an unsupervised task, in which the model learns the distribution of normal operating conditions and flags significant 
 deviations from it without relying on labelled anomalies (\cite{Chandola2009,Darban2025}). The choice between these formulations largely depends on the availability and 
 reliability of historical fault records.
 
 \subsection{Fault Detection} \label{sec:fd}
 
 Fault Detection (FD) is the process of determining whether a fault has occurred in a monitored system by identifying deviations from its expected 
-operation (\cite{Isermann2006}). In contrast to anomaly detection, which only indicates that abnormal behaviour is present, fault detection aims to identify the 
+operation (\cite{Isermann2006}). In contrast to AD, which only indicates that abnormal behaviour is present, FD aims to identify the 
 existence of a specific fault and, in many cases, determine its type or location. This information enables maintenance personnel to understand the origin of the 
 problem and select appropriate corrective actions.
 
 Since FD is concerned with identifying which type of fault is present rather than merely flagging abnormal behaviour, it is typically formulated as a supervised 
-multiclass classification problem, in which each observation is assigned to one of several predefined fault categories, or to a \textit{no-fault} class representing 
+multiclass classification problem, in which each observation is assigned to one of several predefined fault categories, or to a no-fault class representing 
 normal operation (\cite{Isermann2006}). This formulation requires access to historical data containing examples of the specific faults of interest, which are 
 often obtained either from real fault occurrences or, as in the case of this dissertation, through controlled fault injection.
 
@@ -436,21 +501,21 @@ sensor data.
 
 \subsection{Relationship Between AD, FD and PdM} \label{sec:relationship}
 
-Although anomaly detection, fault detection, and predictive maintenance are closely related, they address different stages of the equipment health monitoring 
-process. Anomaly detection focuses on identifying abnormal behaviour without necessarily determining its cause. Once an anomaly has been detected, fault detection 
-aims to identify the existence and, when possible, the type of fault responsible for the abnormal behaviour. Predictive maintenance extends this process by 
+Although AD, FD, and PdM are closely related, they address different stages of the equipment health monitoring 
+process. AD focuses on identifying abnormal behaviour without necessarily determining its cause. Once an anomaly has been detected, FD 
+aims to identify the existence and, when possible, the type of fault responsible for the abnormal behaviour. PdM extends this process by 
 estimating the future evolution of the equipment condition, enabling maintenance actions to be scheduled before failures occur.
 
 Despite addressing different aspects of equipment health monitoring, AD, FD, and PdM share a common underlying structure: all three tasks can be framed as 
 supervised learning problems, whether classification or regression, applied to the same multivariate time-series data collected from process sensors. This 
-shared structure is what motivates the multi-task learning approach adopted in this dissertation, in which a single model exploits a shared representation of 
+shared structure is what motivates the MTL approach adopted in this dissertation, in which a single model exploits a shared representation of 
 the sensor data to jointly address the three tasks, rather than training a separate model for each one (Section~\ref{sec:learning_strategies}).
 
 \section{Related Work}
 
 \subsection{Deep Learning for Industrial Monitoring}
 
-\textit{Anomaly Detection.} AD in industrial settings is typically formulated either as a supervised binary 
+\textit{Anomaly Detection:} AD in industrial settings is typically formulated either as a supervised binary 
 classification problem or, more commonly, as an unsupervised task in which a model learns the distribution 
 of normal operating data and flags significant deviations from it. According to a systematic review of the 
 field, convolutional, recurrent, autoencoder-based, and hybrid architectures have proven particularly 
@@ -459,13 +524,13 @@ class imbalance (\cite{Zaidi2026}). Reconstruction-based approaches are especial
 trained exclusively on normal operating data, and an observation is classified as anomalous once its 
 reconstruction error exceeds a predefined threshold (\cite{Khan2026}).
 
-\textit{Fault Detection.} FD extends AD by requiring the identification of the specific fault type, and is 
+\textit{Fault Detection:} FD extends AD by requiring the identification of the specific fault type, and is 
 therefore generally formulated as a supervised multiclass classification problem. Convolutional architectures 
 are among the most widely adopted for this stage, frequently combined with recurrent networks to jointly 
 capture spatial and temporal patterns in the sensor signals (\cite{Khan2026,Zaidi2026}).
 
-\textit{Predictive Maintenance.} PdM is commonly addressed either as a regression problem, estimating the 
-Remaining Useful Life (RUL) of a component, or as a classification problem, predicting the likelihood of 
+\textit{Predictive Maintenance:} PdM is commonly addressed either as a regression problem, estimating the 
+RUL of a component, or as a classification problem, predicting the likelihood of 
 failure within a future time window. Recurrent architectures, particularly LSTM networks, remain the 
 dominant choice for this stage, often combined with convolutional layers for feature extraction prior to 
 temporal modelling (\cite{Khan2026}). However, most publicly available datasets used to develop and evaluate 
@@ -483,24 +548,23 @@ with a Multi-gate Mixture-of-Experts (MMoE) layer to jointly perform health-stat
 prediction on sensor-equipped machines.
 
 Both works follow a common architectural pattern, consisting of a shared representation module coupled 
-with task-specific output branches, consistent with the multi-task learning strategy introduced in 
+with task-specific output branches, consistent with the MTL strategy introduced in 
 Section~\ref{sec:learning_strategies}. However, neither work combines all three monitoring stages, AD, FD, 
 and PdM, within a single model, and neither is applied to a biomethane upgrading context.
 
 \subsection{Research Gap}
 
 The literature reviewed in the previous sections reveals that the vast majority of studies addressing industrial condition monitoring focus on a single task 
-in isolation, whether anomaly detection, fault detection, or remaining useful life estimation, each typically supported by a dedicated deep learning model 
-(\cite{Khan2026,Zaidi2026}). Although deep learning has achieved remarkable performance on these individual problems, comparatively few works have investigated 
-multi-task learning strategies capable of jointly addressing multiple monitoring objectives within a single model. The multi-task approaches that do exist are 
-generally limited to combining two of these tasks, such as anomaly detection and remaining useful life estimation (\cite{Yin2026}), or health-state assessment 
-and remaining useful life estimation (\cite{Yan2023}), rather than jointly addressing anomaly detection, fault detection, and predictive maintenance within a 
+in isolation, whether AD, FD, or RUL estimation, each typically supported by a dedicated DL model 
+(\cite{Khan2026,Zaidi2026}). Although DL has achieved remarkable performance on these individual problems, comparatively few works have investigated 
+MTL strategies capable of jointly addressing multiple monitoring objectives within a single model. The multi-task approaches that do exist are 
+generally limited to combining two of these tasks, such as AD and RUL estimation (\cite{Yin2026}), or health-state assessment 
+and RUL estimation (\cite{Yan2023}), rather than jointly addressing AD, FD, and PdM within a 
 unified framework.
 
-Furthermore, the application of these deep learning and multi-task learning approaches to biomethane upgrading plants remains, to the best of our knowledge, 
+Furthermore, the application of these DL and MTL approaches to biomethane upgrading plants remains, to the best of our knowledge, 
 entirely unexplored in the literature, despite the growing industrial relevance of this sector. In particular, no prior work has addressed AI-based condition 
 monitoring for the vacuum pump, a critical asset in the VPSA process considered in this dissertation.
 
-These observations motivate the development and evaluation of a multi-task deep learning framework capable of jointly performing anomaly detection, fault 
-detection, and predictive maintenance for the vacuum pump of a biomethane upgrading plant, and of comparing its performance against both single-task deep 
-learning models and traditional machine learning baselines.
+These observations motivate the development and evaluation of a multi-task DL framework capable of jointly performing AD, FD, 
+and PdM for the vacuum pump of a biomethane upgrading plant, and of comparing its performance against both single-task DL models and traditional ML baselines.

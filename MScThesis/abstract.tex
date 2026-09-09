@@ -1,119 +1,80 @@
 \chapter*{Abstract}
 
-Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Sed vehicula
-lorem commodo dui. Fusce mollis feugiat elit. Cum sociis natoque
-penatibus et magnis dis parturient montes, nascetur ridiculus
-mus. Donec eu quam. Aenean consectetuer odio quis nisi. Fusce molestie
-metus sed neque. Praesent nulla. Donec quis urna. Pellentesque
-hendrerit vulputate nunc. Donec id eros et leo ullamcorper
-placerat. Curabitur aliquam tellus et diam. 
+Biomethane upgrading plants rely on a vacuum pump as a critical component of the vacuum pressure swing
+adsorption (VPSA) process, where an unplanned failure interrupts production for the entire plant. Condition
+monitoring of such assets is usually decomposed into three related tasks, anomaly detection, fault
+detection and predictive maintenance, which the literature typically addresses in isolation, each with a
+dedicated model. The few multi-task approaches proposed to date combine at most two of the three, and none
+has been applied to biomethane upgrading, where no prior work addresses the vacuum pump specifically.
 
-Ut tortor. Morbi eget elit. Maecenas nec risus. Sed ultricies. Sed
-scelerisque libero faucibus sem. Nullam molestie leo quis
-tellus. Donec ipsum. Nulla lobortis purus pharetra turpis. Nulla
-laoreet, arcu nec hendrerit vulputate, tortor elit eleifend turpis, et
-aliquam leo metus in dolor. Praesent sed nulla. Mauris ac augue. Cras
-ac orci. Etiam sed urna eget nulla sodales venenatis. Donec faucibus
-ante eget dui. Nam magna. Suspendisse sollicitudin est et mi. 
+This dissertation develops and evaluates a multi-task deep learning framework that performs the three tasks
+jointly, from a single shared representation of the sensor data. One month of real operational data was
+obtained from a VPSA plant in Lithuania, comprising fourteen process variables sampled at one-minute
+intervals. Since no vacuum pump failure has ever been recorded across the operator's monitored plants, the
+data contains only normal operation. A cleaning pipeline was therefore developed to partition the record
+into eleven independent production sessions, and a fault injection framework was built on top of it,
+generating four fault scenarios derived from the manufacturer's troubleshooting guide at three severity
+levels, two scenarios in which faults overlap in time, and a false positive scenario. Each injected
+deviation is calibrated to the manufacturer's warning and trip thresholds and propagated to the sensors
+physically correlated with the affected one, yielding a labelled dataset of 145{,}826 observations that
+supports all three tasks simultaneously.
 
-Fusce sed ipsum vel velit imperdiet dictum. Sed nisi purus, dapibus
-ut, iaculis ac, placerat id, purus. Integer aliquet elementum
-libero. Phasellus facilisis leo eget elit. Nullam nisi magna, ornare
-at, aliquet et, porta id, odio. Sed volutpat tellus consectetuer
-ligula. Phasellus turpis augue, malesuada et, placerat fringilla,
-ornare nec, eros. Class aptent taciti sociosqu ad litora torquent per
-conubia nostra, per inceptos himenaeos. Vivamus ornare quam nec sem
-mattis vulputate. Nullam porta, diam nec porta mollis, orci leo
-condimentum sapien, quis venenatis mi dolor a metus. Nullam
-mollis. Aenean metus massa, pellentesque sit amet, sagittis eget,
-tincidunt in, arcu. Vestibulum porta laoreet tortor. Nullam mollis
-elit nec justo. In nulla ligula, pellentesque sit amet, consequat sed,
-faucibus id, velit. Fusce purus. Quisque sagittis urna at quam. Ut eu
-lacus. Maecenas tortor nibh, ultricies nec, vestibulum varius, egestas
-id, sapien. 
+Five models were compared across eleven window sizes, from a single observation to 1{,}024: Random Forest
+and XGBoost as traditional baselines, three single-task LSTM models, and two multi-task LSTM architectures
+differing in whether the task-specific heads branch independently off the shared backbone or are chained,
+each conditioned on the predictions of the preceding ones.
 
-Phasellus ullamcorper justo id risus. Nunc in leo. Mauris auctor
-lectus vitae est lacinia egestas. Nulla faucibus erat sit amet lectus
-varius semper. Praesent ultrices vehicula orci. Nam at metus. Aenean
-eget lorem nec purus feugiat molestie. Phasellus fringilla nulla ac
-risus. Aliquam elementum aliquam velit. Aenean nunc odio, lobortis id,
-dictum et, rutrum ac, ipsum. 
-
-Ut tortor. Morbi eget elit. Maecenas nec risus. Sed ultricies. Sed
-scelerisque libero faucibus sem. Nullam molestie leo quis
-tellus. Donec ipsum. Nulla lobortis purus pharetra turpis. Nulla
-laoreet, arcu nec hendrerit vulputate, tortor elit eleifend turpis, et
-aliquam leo metus in dolor. Praesent sed nulla. Mauris ac augue. Cras
-ac orci. Etiam sed urna eget nulla sodales venenatis. Donec faucibus
-ante eget dui. Nam magna. Suspendisse sollicitudin est et mi. 
-
-Phasellus ullamcorper justo id risus. Nunc in leo. Mauris auctor
-lectus vitae est lacinia egestas. Nulla faucibus erat sit amet lectus
-varius semper. Praesent ultrices vehicula orci. 
-
-Ut tortor. Morbi eget elit. Maecenas nec risus. Sed ultricies. Sed
-scelerisque libero faucibus sem. Nullam molestie leo quis
-tellus. Donec ipsum. 
+The recurrent models outperformed the traditional baselines on all three tasks, most markedly on predictive
+maintenance, where the baselines failed to improve on a constant predictor at most window sizes while the
+deep learning models reached a coefficient of determination of 0.678. The single-task models obtained the
+best anomaly detection F1-score (0.900) and the best predictive maintenance $R^2$ (0.678), while the
+cascaded multi-task architecture obtained the best fault detection mean F1-score (0.720), with margins of
+at most 0.023 in every case. A single multi-task model therefore performs comparably to three independently
+trained ones while covering all three tasks in one forward pass, which favours the multi-task formulation
+for a deployed monitoring system.
 
 \vspace*{10mm}\noindent
-\textbf{Keywords}: keyword1, Keyword2, keyword3
+\textbf{Keywords}: Multi-task learning, Anomaly detection, Fault detection, Predictive maintenance,
+Long Short-Term Memory, Fault injection, Biomethane upgrading, Vacuum pump
 
 \chapter*{Resumo}
 
-Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Sed vehicula
-lorem commodo dui. Fusce mollis feugiat elit. Cum sociis natoque
-penatibus et magnis dis parturient montes, nascetur ridiculus
-mus. Donec eu quam. Aenean consectetuer odio quis nisi. Fusce molestie
-metus sed neque. Praesent nulla. Donec quis urna. Pellentesque
-hendrerit vulputate nunc. Donec id eros et leo ullamcorper
-placerat. Curabitur aliquam tellus et diam. 
+As centrais de purificação de biometano dependem de uma bomba de vácuo como componente crítico do processo
+de adsorção por variação de pressão em vácuo (VPSA), no qual uma falha não planeada interrompe a produção
+de toda a instalação. A monitorização da condição destes equipamentos é habitualmente decomposta em três
+tarefas relacionadas, deteção de anomalias, deteção de falhas e manutenção preditiva, que a literatura
+aborda tipicamente de forma isolada, com um modelo dedicado a cada uma. As poucas abordagens multitarefa
+propostas até à data combinam no máximo duas das três, e nenhuma foi aplicada à purificação de biometano,
+onde não existe trabalho anterior dedicado especificamente à bomba de vácuo.
 
-Ut tortor. Morbi eget elit. Maecenas nec risus. Sed ultricies. Sed
-scelerisque libero faucibus sem. Nullam molestie leo quis
-tellus. Donec ipsum. Nulla lobortis purus pharetra turpis. Nulla
-laoreet, arcu nec hendrerit vulputate, tortor elit eleifend turpis, et
-aliquam leo metus in dolor. Praesent sed nulla. Mauris ac augue. Cras
-ac orci. Etiam sed urna eget nulla sodales venenatis. Donec faucibus
-ante eget dui. Nam magna. Suspendisse sollicitudin est et mi. 
+Esta dissertação desenvolve e avalia uma abordagem de aprendizagem profunda multitarefa que executa as três
+tarefas em conjunto, a partir de uma única representação partilhada dos dados dos sensores. Foi obtido um
+mês de dados operacionais reais de uma central VPSA na Lituânia, com catorze variáveis de processo
+amostradas ao minuto. Uma vez que nunca foi registada qualquer avaria da bomba de vácuo nas centrais
+monitorizadas pelo operador, os dados contêm apenas operação normal. Foi por isso desenvolvido um processo
+de limpeza que particiona o registo em onze sessões de produção independentes, sobre o qual foi construído
+um sistema de injeção de falhas que gera quatro cenários derivados do guia de resolução de problemas do
+fabricante, em três níveis de severidade, dois cenários com falhas sobrepostas no tempo e um cenário de
+falso positivo. Cada desvio injetado é calibrado pelos limiares de aviso e de disparo do fabricante e
+propagado aos sensores fisicamente correlacionados com o afetado, resultando num conjunto de dados
+etiquetado com 145{,}826 observações que suporta as três tarefas em simultâneo.
 
-Fusce sed ipsum vel velit imperdiet dictum. Sed nisi purus, dapibus
-ut, iaculis ac, placerat id, purus. Integer aliquet elementum
-libero. Phasellus facilisis leo eget elit. Nullam nisi magna, ornare
-at, aliquet et, porta id, odio. Sed volutpat tellus consectetuer
-ligula. Phasellus turpis augue, malesuada et, placerat fringilla,
-ornare nec, eros. Class aptent taciti sociosqu ad litora torquent per
-conubia nostra, per inceptos himenaeos. Vivamus ornare quam nec sem
-mattis vulputate. Nullam porta, diam nec porta mollis, orci leo
-condimentum sapien, quis venenatis mi dolor a metus. Nullam
-mollis. Aenean metus massa, pellentesque sit amet, sagittis eget,
-tincidunt in, arcu. Vestibulum porta laoreet tortor. Nullam mollis
-elit nec justo. In nulla ligula, pellentesque sit amet, consequat sed,
-faucibus id, velit. Fusce purus. Quisque sagittis urna at quam. Ut eu
-lacus. Maecenas tortor nibh, ultricies nec, vestibulum varius, egestas
-id, sapien. 
+Foram comparados cinco modelos ao longo de onze dimensões de janela temporal, de uma única observação até
+1{,}024: Random Forest e XGBoost como referências tradicionais, três modelos LSTM de tarefa única e duas
+arquiteturas LSTM multitarefa, que diferem entre si consoante as cabeças específicas de cada tarefa derivam
+independentemente da representação partilhada ou são encadeadas, cada uma condicionada pelas previsões das
+anteriores.
 
-Phasellus ullamcorper justo id risus. Nunc in leo. Mauris auctor
-lectus vitae est lacinia egestas. Nulla faucibus erat sit amet lectus
-varius semper. Praesent ultrices vehicula orci. Nam at metus. Aenean
-eget lorem nec purus feugiat molestie. Phasellus fringilla nulla ac
-risus. Aliquam elementum aliquam velit. Aenean nunc odio, lobortis id,
-dictum et, rutrum ac, ipsum. 
-
-Ut tortor. Morbi eget elit. Maecenas nec risus. Sed ultricies. Sed
-scelerisque libero faucibus sem. Nullam molestie leo quis
-tellus. Donec ipsum. Nulla lobortis purus pharetra turpis. Nulla
-laoreet, arcu nec hendrerit vulputate, tortor elit eleifend turpis, et
-aliquam leo metus in dolor. Praesent sed nulla. Mauris ac augue. Cras
-ac orci. Etiam sed urna eget nulla sodales venenatis. Donec faucibus
-ante eget dui. Nam magna. Suspendisse sollicitudin est et mi. 
-
-Phasellus ullamcorper justo id risus. Nunc in leo. Mauris auctor
-lectus vitae est lacinia egestas. Nulla faucibus erat sit amet lectus
-varius semper. Praesent ultrices vehicula orci. 
-
-Ut tortor. Morbi eget elit. Maecenas nec risus. Sed ultricies. Sed
-scelerisque libero faucibus sem. Nullam molestie leo quis
-tellus. Donec ipsum. 
+Os modelos recorrentes superaram as referências tradicionais nas três tarefas, de forma mais acentuada na
+manutenção preditiva, onde as referências não conseguiram superar um preditor constante na maioria das
+dimensões de janela, enquanto os modelos de aprendizagem profunda alcançaram um coeficiente de determinação
+de 0,678. Os modelos de tarefa única obtiveram o melhor F1 na deteção de anomalias (0,900) e o melhor $R^2$
+na manutenção preditiva (0,678), ao passo que a arquitetura multitarefa encadeada obteve o melhor F1 médio
+na deteção de falhas (0,720), com margens não superiores a 0,023 em todos os casos. Um único modelo
+multitarefa apresenta assim um desempenho comparável ao de três modelos treinados de forma independente,
+cobrindo as três tarefas numa única passagem pela rede, o que favorece a formulação multitarefa para um
+sistema de monitorização em produção.
 
 \vspace*{10mm}\noindent
-\textbf{Keywords}: keyword1, Keyword2, keyword3
+\textbf{Palavras-chave}: Aprendizagem multitarefa, Deteção de anomalias, Deteção de falhas,
+Manutenção preditiva, Long Short-Term Memory, Injeção de falhas, Purificação de biometano, Bomba de vácuo
