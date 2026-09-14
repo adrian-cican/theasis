@@ -1,5 +1,118 @@
-\chapter{Transparency on the Use of AI} 
+% !TeX root = thesis.tex
+%
+% Requires \usepackage{longtable} in the preamble.
+
+\chapter{Transparency on the Use of AI}
 \label{ap2:ai-transparency}
 
+This appendix reports the use of Artificial Intelligence tools in the preparation of this dissertation, in
+accordance with the MECD \emph{Guidelines for the Use of AI Tools} (V1, 24 May 2026).
 
+\section{Tools Used}
 
+Three tools were used, with different roles. \textbf{Claude} (Anthropic) was the main tool, used
+throughout the writing and implementation phases. \textbf{Gemini} (Google) and \textbf{ChatGPT} (OpenAI)
+were used occasionally, for brainstorming and for summarising papers during the literature review; no text
+produced by either was incorporated into this dissertation.
+
+All tools were used interactively. Source code, result files and working text were supplied to Claude, and
+its responses were reviewed, corrected or rejected by the author before use.
+
+\section{Use by Section}
+
+Table~\ref{tab:ai_by_section} reports the use of AI at the granularity of the section, as required by the
+guidelines. Unless stated otherwise, the tool used was Claude.
+
+\begin{longtable}{p{3.4cm}p{3.0cm}p{7.3cm}}
+\caption{Use of AI tools by section.}
+\label{tab:ai_by_section} \\
+\hline
+\textbf{Section} & \textbf{Type of use} & \textbf{Description} \\
+\hline
+\endfirsthead
+\multicolumn{3}{l}{\small\emph{continued from previous page}} \\
+\hline
+\textbf{Section} & \textbf{Type of use} & \textbf{Description} \\
+\hline
+\endhead
+\hline
+\endfoot
+
+Chapter~\ref{chap:sota}, all sections & Conceptual support, writing support & Gemini and ChatGPT were used
+to summarise papers during the literature review. Claude was used to produce
+Section~\ref{sec:tree_ensembles} and to rewrite Section~\ref{sec:training}, and for reformulation
+elsewhere. \\
+
+Chapter~\ref{chap:methodology}, all sections & Writing support, conceptual support & Reformulation for
+clarity, and identification of passages where the text no longer matched the implemented code. The two
+figures in Sections~\ref{sec:stl_models} and~\ref{sec:mtl_models} were generated from the author's
+specification. \\
+
+Chapter~\ref{chap:results}, Chapter~\ref{chap:discussion}, Chapter~\ref{chap:conclusions} & Content
+generation & Text produced with the tool from the result files of the
+author's own training runs and from the author's analysis of them. The author defined the structure and
+the arguments, and revised the text over several iterations. \\
+
+Sections~\ref{sec:motivation} and~\ref{sec:problem} & Content generation & Text produced with the tool from the
+author's instructions on the motivation and on the problems to be addressed. \\
+
+Abstract, Resumo, Acknowledgments & Content generation & Text produced with the tool from the completed chapters and
+from a list of names supplied by the author. The Portuguese text was checked by the author, a native speaker. \\
+
+Appendix~\ref{ap1:eda_plots}, Appendix~\ref{app:fault_plots}, this appendix & Content generation &
+Text produced with the tool and reviewed by the author. \\
+
+Supporting code & Code generation & Modifications to the fault injection framework, alignment of the two
+training notebooks, and generation of the notebooks that produce the figures and LaTeX tables. \\
+\end{longtable}
+
+\section{Representative Prompts}
+
+The interaction was conversational and iterative. The prompts below are representative of each category of
+use, reproduced as issued, in the mixture of Portuguese and English in which the work was conducted.
+
+\begin{itemize}
+    \item \emph{``como é que funciona a correlação?''}
+    \item \emph{``esta tabela esta correta?''}
+    \item \emph{``what is wrong here?''}
+    \item \emph{``quero simplificar a injeção correlacionada. quero que o propagation scale seja igual em
+          todas as falhas e que seja de 0.9''}
+    \item \emph{``podes gerar uma imagem para o Single-Task Deep Learning Models''}
+    \item \emph{``quero simplificar muito mais este paragrafo para nao confundir o leitor''}
+\end{itemize}
+
+\section{Examples of Iteration}
+
+\subsection*{Section~\ref{sec:problem}, Problem Definition}
+
+The author specified that the section should present the absence of fault data as one problem, and that a
+second problem was needed to justify the use of machine learning. The first version was rejected as too
+elaborate; a simplified version was requested. The author then rejected the second paragraph, instructing
+that it should justify deep learning through the complexity of the interaction between sensors rather than
+through the inadequacy of fixed limits. The author edited the resulting text directly and requested a final
+correction pass.
+
+\subsection*{Chapter~\ref{chap:discussion}, Discussion}
+
+The first version contained five sections. The author removed one section and several paragraphs and
+requested a shorter chapter. The condensed version was rejected as still too elaborate, and a simpler
+version was produced. The author then instructed that one specific argument be removed, and the affected
+section was rewritten around a different argument supported by the same results.
+
+\subsection*{Section~\ref{sec:training}, Training Deep Neural Networks}
+
+The author asked for the section to be extended to introduce gradient descent, and for an assessment of
+the accompanying figure. The first version included equations and identified three inconsistencies between
+the figure and the text. The author requested a shorter version without equations, and the figure was
+adjusted to match.
+
+\section{Validation and Responsibility}
+
+All numerical values reported in Chapter~\ref{chap:results} were obtained from the result files produced
+by the author's own training runs and cross-checked against them. All code was executed by the author and
+its outputs inspected. All bibliographic references suggested by the tools were verified against the
+original publications, since AI tools can produce plausible but nonexistent references.
+
+The author assumes full responsibility for all content presented in this dissertation, including text,
+code, figures and tables, and is able to explain and justify every section, result and implementation
+decision it contains.

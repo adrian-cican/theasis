@@ -19,40 +19,40 @@ A level-1 auxiliary file: appendix-AItransparency.aux
 The style file: plainnat.bst
 Database file #1: myrefs.bib
 Warning--entry type for "Isermann2006" isn't style-file defined
---line 205 of file myrefs.bib
+--line 207 of file myrefs.bib
 You've used 34 entries,
             2773 wiz_defined-function locations,
-            823 strings with 17614 characters,
-and the built_in function-call counts, 32524 in all, are:
-= -- 2432
-> -- 3848
-< -- 27
-+ -- 1288
-- -- 1254
-* -- 3159
-:= -- 5344
+            824 strings with 12382 characters,
+and the built_in function-call counts, 18560 in all, are:
+= -- 1595
+> -- 1336
+< -- 28
++ -- 451
+- -- 417
+* -- 1475
+:= -- 2833
 add.period$ -- 104
 call.type$ -- 34
-change.case$ -- 515
+change.case$ -- 235
 chr.to.int$ -- 34
 cite$ -- 68
-duplicate$ -- 823
-empty$ -- 1289
-format.name$ -- 1298
-if$ -- 6431
+duplicate$ -- 822
+empty$ -- 1288
+format.name$ -- 462
+if$ -- 3919
 int.to.chr$ -- 1
 int.to.str$ -- 1
 missing$ -- 37
 newline$ -- 179
 num.names$ -- 136
-pop$ -- 1079
+pop$ -- 520
 preamble$ -- 1
-purify$ -- 486
+purify$ -- 206
 quote$ -- 0
-skip$ -- 1018
+skip$ -- 741
 stack$ -- 0
 substring$ -- 517
-swap$ -- 191
+swap$ -- 190
 text.length$ -- 14
 text.prefix$ -- 0
 top$ -- 0

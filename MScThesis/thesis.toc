@@ -89,4 +89,9 @@
 \contentsline {section}{\numberline {B.3}Combined Fault Scenarios}{89}{section.B.3}%
 \contentsline {section}{\numberline {B.4}False Positive Scenarios}{89}{section.B.4}%
 \contentsline {chapter}{\numberline {C}Transparency on the Use of AI}{93}{appendix.C}%
-\contentsline {chapter}{References}{95}{section*.113}%
+\contentsline {section}{\numberline {C.1}Tools Used}{93}{section.C.1}%
+\contentsline {section}{\numberline {C.2}Use by Section}{93}{section.C.2}%
+\contentsline {section}{\numberline {C.3}Representative Prompts}{94}{section.C.3}%
+\contentsline {section}{\numberline {C.4}Examples of Iteration}{95}{section.C.4}%
+\contentsline {section}{\numberline {C.5}Validation and Responsibility}{95}{section.C.5}%
+\contentsline {chapter}{References}{97}{section*.116}%
